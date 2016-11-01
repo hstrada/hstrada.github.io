@@ -147,6 +147,14 @@ footer a {
     background-color: darkgrey;
 }
 
+#progress_bootstrap {
+    background-color: gold;
+}
+
+#progress_angular {
+    background-color: lightgray;
+}
+
 #job hr {
     margin-bottom: 10px;
     margin-top: 10px;
