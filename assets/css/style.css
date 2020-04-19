@@ -365,7 +365,7 @@ span {
 }
 
 /* Professional */
-#professional p {
+.section--professional-text p {
   font-family: var(--primary-paragraph-font);
   text-align: center;
 }
