@@ -1,0 +1,450 @@
+/* fonts */
+@font-face {
+  font-family: "ralewaybold";
+  src: url("../fonts/raleway-bold-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ralewaylight";
+  src: url("../fonts/raleway-light-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ralewaymedium";
+  src: url("../fonts/raleway-medium-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ralewayregular";
+  src: url("../fonts/raleway-regular-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ralewaysemibold";
+  src: url("../fonts/raleway-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/raleway-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "zilla_slabbold";
+  src: url("../fonts/zillaslab-bold-webfont.woff2") format("woff2"),
+    url("../fonts/zillaslab-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "zilla_slablight";
+  src: url("../fonts/zillaslab-light-webfont.woff2") format("woff2"),
+    url("../fonts/zillaslab-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "zilla_slabmedium";
+  src: url("../fonts/zillaslab-medium-webfont.woff2") format("woff2"),
+    url("../fonts/zillaslab-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* variables */
+:root {
+  --primary-color: #ffc400;
+  --white-color: #ffffff;
+  --light-gray-color: #f0f0f1;
+  --medium-gray-color: #e9e9e9;
+  --gray-color: #838389;
+  --black-color: #000000;
+  --text-font: ralewaylight;
+  --default-font-size: 14px;
+  --primary-title: zilla_slabbold;
+  --primary-title-size: 48px;
+  --secondary-title: zilla_slabmedium;
+  --secondary-title-size: 42px;
+  --tertiary-title: zilla_slablight;
+  --default-min-height: 300px;
+  --primary-paragraph-size: 14px;
+  --primary-paragraph-font: ralewayregular;
+  --secondary-paragraph-font: ralewaysemibold;
+}
+
+/* general */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--light-gray-color);
+  font-family: var(--text-font), Helvetica, Arial, sans-serif;
+  color: var(--black-color);
+  font-size: var(--default-font-size);
+}
+
+h1 {
+  font-family: var(--primary-title);
+  font-size: var(--primary-title-size);
+}
+
+/* fontes */
+h2 {
+  font-family: var(--secondary-title);
+  font-size: var(--secondary-title-size);
+  margin-bottom: 0;
+}
+
+h2 span {
+  font-family: var(--tertiary-title);
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* header */
+#name--header {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* background-image: url("../../header_background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+#name--header h2 {
+  font-family: var(--text-font);
+  font-size: 20px;
+  color: var(--gray-color);
+}
+
+#name--header h2::after {
+  background: var(--primary-color);
+  content: "";
+  display: block;
+  height: 5px;
+  position: relative;
+  margin-top: 10px;
+  width: 15%;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5px;
+}
+
+.name--professional::before {
+  content: url("../images/circle.png");
+  position: absolute;
+  margin-bottom: 5px;
+  margin-left: 380px;
+}
+
+.name--professional {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 50px;
+}
+
+.social--network {
+  flex: 1;
+}
+
+.social--network img {
+  width: 20px;
+  margin: 30px 10px 0px 10px;
+}
+
+.social--network a {
+  text-decoration: none;
+}
+
+/* About */
+#section--about {
+  background: var(--white-color);
+  padding: 10px;
+}
+
+.section--about_text {
+  padding-top: 20px;
+  line-height: 20px;
+}
+
+.section--img-overlay_right {
+  position: relative;
+  right: 0px;
+  float: right;
+  top: -40px;
+}
+
+.section--img-overlay_left {
+  position: relative;
+  left: 0px;
+  float: left;
+  top: -40px;
+}
+
+#profile,
+#volunteer,
+#education,
+#courses,
+#professional,
+#skills {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+
+.section--line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section--number {
+  font-size: 62px;
+  font-family: var(--secondary-title);
+  opacity: 7%;
+  margin: -5px 0px 0px -15px;
+}
+
+span {
+  content: "";
+  height: 7px;
+  width: 60px;
+  border-radius: 2px;
+}
+
+span {
+  background: none repeat scroll 0 0 var(--primary-color);
+}
+
+/* Academic */
+.section--academic-education_container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.section--academic-education_container-date {
+  margin-right: 20px;
+}
+
+.education__year {
+  font-family: var(--secondary-paragraph-font);
+  margin-bottom: 6px;
+}
+
+.section--academic-education_container-title {
+  max-width: 300px;
+  line-height: 20px;
+}
+
+/* Professional */
+#section--professional {
+  background-color: var(--white-color);
+  padding: 10px;
+}
+
+.section--courses-title,
+.section--skills-title {
+  font-family: var(--secondary-paragraph-font);
+  padding-bottom: 5px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  min-height: 130px;
+}
+
+.slideshow-container {
+  padding-top: 20px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  /* text-align: center; */
+  padding: 20px 20px 20px 0px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: 20px;
+}
+
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+#courses li,
+#skills li {
+  list-style: none;
+  margin-bottom: 6px;
+}
+
+#courses li::before,
+#skills li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Professional */
+#professional p {
+  font-family: var(--primary-paragraph-font);
+  text-align: center;
+}
+
+/* ---- Timeline ---- */
+#section--professional ol {
+  position: relative;
+  display: block;
+  margin-top: 90px;
+  height: 4px;
+  background: #f0f0f1;
+  width: 700px;
+}
+
+/* ---- Timeline elements ---- */
+#section--professional li {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  float: left;
+}
+#section--professional li .professional--year {
+  position: absolute;
+  top: -47px;
+  left: 35%;
+}
+#section--professional li .point {
+  content: "";
+  top: -4px;
+  left: 50%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 4px solid #f0f0f1;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+}
+#section--professional li .description {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+
+/* Skills */
+.skills--items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills--items div {
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .skills--items div {
+    flex: 1 1 300px;
+    padding-bottom: 20px;
+  }
+}
+
+/*Footer*/
+
+.footer {
+  display: flex;
+  background: var(--primary-color);
+  height: 30px;
+  align-items: center;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--black-color);
+}
