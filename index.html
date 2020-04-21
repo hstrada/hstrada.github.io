@@ -12,16 +12,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script type="text/javascript" src="i18n/pt-br.json"></script>
+    <script type="text/javascript" src="i18n/en.json"></script>
   </head>
   <body>
     <header>
       <div class="section--img-overlay_left">
         <img src="assets/images/dots.png" />
       </div>
+      <div class="section--txt-overlay_right">
+        <a id="btnLanguage"
+          ><span id="aPt">PT</span>_<span id="aEn">EN</span></a
+        >
+      </div>
       <div id="name--header">
         <div class="name--professional">
-          <h1>Helena Strada</h1>
-          <h2>Engenheira de Software</h2>
+          <h1 data-i18n="name">Helena Strada</h1>
+          <h2 data-i18n="profession">Engenheira de Software</h2>
         </div>
         <div class="social--network">
           <a href="http://github.com/hstrada" target="_blank">
@@ -47,14 +54,14 @@
       <div class="container">
         <div id="profile">
           <div>
-            <h2>Perfil</h2>
+            <h2 data-i18n="profile.title">Perfil</h2>
             <div class="section--line">
               <span></span>
               <p class="section--number">01</p>
             </div>
           </div>
           <div>
-            <p class="section--about_text">
+            <p data-i18n="profile.description" class="section--about_text">
               Atuo como Engenheira de Software tendo como principais interesses
               Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de
               Dados. Apaixonada por livros e tecnologia - principalmente, os
@@ -65,14 +72,16 @@
         <div id="volunteer">
           <div>
             <div>
-              <h2>Projeto <span>Voluntário</span></h2>
+              <h2 data-i18n="volunteer.title">
+                Projeto <span>Voluntário</span>
+              </h2>
               <div class="section--line">
                 <span></span>
                 <p class="section--number">02</p>
               </div>
             </div>
             <div>
-              <p class="section--about_text">
+              <p class="section--about_text" data-i18n="volunteer.description">
                 Participo como voluntária na <b>{reprograma}</b>. ONG que
                 promove a inclusão de mulheres na área de tecnologia da
                 informação.
@@ -90,7 +99,7 @@
       <div class="container">
         <div id="education">
           <div>
-            <h2>Formação <span>Acadêmica</span></h2>
+            <h2 data-i18n="education.title">Formação <span>Acadêmica</span></h2>
             <div class="section--line">
               <span></span>
               <p class="section--number">03</p>
@@ -99,29 +108,42 @@
           <div>
             <div class="section--academic-education_container">
               <div class="section--academic-education_container-date">
-                <p class="education__year">2016 - 2017</p>
-                <p>FIAP</p>
+                <p class="education__year">
+                  2016 - 2017
+                </p>
+                <p data-i18n="education.mostRecentAcademic">FIAP</p>
               </div>
-              <p class="section--academic-education_container-title">
+              <p
+                data-i18n="education.mostRecentFormation"
+                class="section--academic-education_container-title"
+              >
                 MBA em Desenvolvimento de Aplicações Java - SOA e Internet das
                 Coisas
               </p>
             </div>
             <div class="section--academic-education_container">
               <div class="section--academic-education_container-date">
-                <p class="education__year">2012 - 2016</p>
-                <p>PUC-SP</p>
+                <p class="education__year">
+                  2012 - 2016
+                </p>
+                <p data-i18n="education.secondAcademic">PUC-SP</p>
               </div>
-              <p class="section--academic-education_container-title">
+              <p
+                data-i18n="education.secondFormation"
+                class="section--academic-education_container-title"
+              >
                 Sistemas de Informação
               </p>
             </div>
             <div class="section--academic-education_container">
               <div class="section--academic-education_container-date">
                 <p class="education__year">2010 - 2012</p>
-                <p>SENAC</p>
+                <p data-i18n="education.firstAcademic">SENAC</p>
               </div>
-              <p class="section--academic-education_container-title">
+              <p
+                data-i18n="education.firstFormation"
+                class="section--academic-education_container-title"
+              >
                 Técnico em Informática
               </p>
             </div>
@@ -130,7 +152,7 @@
         <div id="courses">
           <div>
             <div>
-              <h2>Cursos</h2>
+              <h2 data-i18n="courses.title">Cursos</h2>
               <div class="section--line">
                 <span></span>
                 <p class="section--number">04</p>
@@ -218,7 +240,9 @@
       <div class="container">
         <div id="professional">
           <div>
-            <h2>Histórico <span>Profissional</span></h2>
+            <h2 data-i18n="professional.title">
+              Histórico <span>Profissional</span>
+            </h2>
             <div class="section--line">
               <span></span>
               <p class="section--number">05</p>
@@ -229,19 +253,21 @@
               <li>
                 <p class="professional--year">2016 - 2018</p>
                 <span class="point"></span>
-                <p class="description">Desenvolvedor BackEnd/FrontEnd</p>
+                <p data-i18n="professional.olderRole" class="description">
+                  Desenvolvedor BackEnd/FrontEnd
+                </p>
               </li>
               <li>
                 <p class="professional--year">2017 - 2019</p>
                 <span class="point"></span>
-                <p class="description">
+                <p data-i18n="professional.middleRole" class="description">
                   Instrutor de Formação Profissional III
                 </p>
               </li>
               <li>
                 <p class="professional--year">2019 - Atual</p>
                 <span class="point"></span>
-                <p class="description">
+                <p data-i18n="professional.recentRole" class="description">
                   Engenheiro de Software
                 </p>
               </li>
@@ -293,7 +319,7 @@
               </ul>
             </div>
             <div>
-              <p class="section--skills-title">
+              <p data-i18n="skills.database" class="section--skills-title">
                 Banco de Dados
               </p>
               <ul>
@@ -303,7 +329,7 @@
               </ul>
             </div>
             <div>
-              <p class="section--skills-title">
+              <p data-i18n="skills.tools" class="section--skills-title">
                 Diversos/Ferramentas
               </p>
               <ul>
@@ -321,37 +347,49 @@
       <p>Helena Strada - Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+    <script type="text/javascript" src="js/loadSlides.js"></script>
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
+    <script type="text/javascript">
+      let selectedLanguage = ptbr;
+      let aPt = document.getElementById("aPt");
+      let aEn = document.getElementById("aEn");
+
+      const defaultColor = "#ffc400";
+
+      aPt.style.backgroundColor = defaultColor;
+
+      window.onload = loadLanguage(selectedLanguage);
+
+      function loadLanguage(language) {
+        let translation = JSON.stringify(language);
+        let i18n = JSON.parse(translation);
+
+        let data = document.querySelectorAll("[data-i18n]");
+        data.forEach((element) => {
+          if (!element.dataset.i18n.includes("."))
+            element.innerHTML = i18n[element.dataset.i18n];
+          else {
+            element.innerHTML =
+              i18n[element.dataset.i18n.split(".")[0]][
+                element.dataset.i18n.split(".")[1]
+              ];
+          }
+        });
       }
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
+      let btnChangeLanguage = document.getElementById("btnLanguage");
+      btnChangeLanguage.onclick = function () {
+        if (selectedLanguage === ptbr) {
+          selectedLanguage = en;
+          aEn.style.backgroundColor = defaultColor;
+          aPt.style.backgroundColor = "transparent";
+        } else {
+          selectedLanguage = ptbr;
+          aPt.style.backgroundColor = defaultColor;
+          aEn.style.backgroundColor = "transparent";
         }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
+        loadLanguage(selectedLanguage);
+      };
     </script>
   </body>
 </html>

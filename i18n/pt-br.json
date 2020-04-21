@@ -1,0 +1,34 @@
+(ptbr = {
+  "name": "Helena Strada",
+  "profession": "Engenheira de Software",
+  "profile": {
+    "title": "Perfil",
+    "description": "Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos."
+  },
+  "volunteer": {
+    "title": "Projeto <span>Voluntário</span>",
+    "description": "Participo como voluntária na <b>{reprograma}</b>. ONG que promove a inclusão de mulheres na área de tecnologia da informação."
+  },
+  "education": {
+    "title": "Formação <span>Acadêmica</span>",
+    "mostRecentAcademic" : "FIAP",
+    "mostRecentFormation" : "MBA em Desenvolvimento de Aplicações Java - SOA e Internet das Coisas",
+    "secondAcademic" : "PUC-SP",
+    "secondFormation" : "Sistemas de Informação",
+    "firstAcademic" : "SENAC",
+    "firstFormation" : "Técnico em Informática"
+  },
+  "courses" : {
+    "title" : "Cursos"
+  },
+  "professional" : {
+    "title" : "Histórico <span>Profissional</span>",
+    "olderRole" : "Desenvolvedor BackEnd/FrontEnd",
+    "middleRole" : "Instrutor de Formação Profissional III",
+    "recentRole" : "Engenheiro de Software"
+  },
+  "skills" : {
+    "database" : "Banco de Dados",
+    "tools" : "Diversos/Ferramentas"
+  }
+})

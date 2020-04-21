@@ -149,6 +149,11 @@ h2 span {
   color: var(--gray-color);
 }
 
+#aPt, #aEn {
+  background-color: transparent;
+  cursor: pointer;
+}
+
 #name--header h2::after {
   background: var(--primary-color);
   content: "";
@@ -162,11 +167,35 @@ h2 span {
   border-radius: 5px;
 }
 
+#btnLanguage::after {
+  background: var(--primary-color);
+  content: "";
+  display: block;
+  height: 5px;
+  position: relative;
+  margin-top: 10px;
+  width: 40px;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5px;
+}
+
 .name--professional::before {
   content: url("../images/circle.png");
   position: absolute;
   margin-bottom: 5px;
   margin-left: 380px;
+}
+
+@media only screen and (max-width: 768px) {
+  .name--professional::before {
+    content: url("../images/circle.png");
+    /* position: absolute; */
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .name--professional {
@@ -215,6 +244,15 @@ h2 span {
   left: 0px;
   float: left;
   top: -40px;
+  z-index: 99999;
+}
+
+.section--txt-overlay_right {
+  position: relative;
+  right: 0px;
+  float: right;
+  top: 20px;
+  right: 20px;
 }
 
 #profile,
