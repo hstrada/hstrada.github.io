@@ -184,7 +184,7 @@ h2 span {
   content: url("../images/circle.png");
   position: absolute;
   margin-bottom: 5px;
-  margin-left: 380px;
+  margin-left: 180px;
 }
 
 @media only screen and (max-width: 768px) {
