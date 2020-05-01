@@ -11,7 +11,9 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
 ## Formação Acadêmica
 
 **FIAP** - MBA em Desenvolvimento de Aplicações Java - SOA e Internet das Coisas
+
 **PUC-SP** - Sistemas de Informação
+
 **SENAC** - Técnico em Informática
 
 ## Histórico Profissional
