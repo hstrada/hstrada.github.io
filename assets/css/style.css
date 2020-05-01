@@ -84,16 +84,11 @@
   --secondary-paragraph-font: ralewaysemibold;
 }
 
-/* general */
-body,
-h1,
-h2,
-p,
-ul,
-li,
-a {
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -149,7 +144,8 @@ h2 span {
   color: var(--gray-color);
 }
 
-#aPt, #aEn {
+#aPt,
+#aEn {
   background-color: transparent;
   cursor: pointer;
 }
@@ -253,6 +249,15 @@ h2 span {
   float: right;
   top: 20px;
   right: 20px;
+}
+
+.section--img-overlay_right img {
+  right: 0;
+}
+
+.section--img-overlay_right img,
+.section--img-overlay_left img {
+  position: absolute;
 }
 
 #profile,

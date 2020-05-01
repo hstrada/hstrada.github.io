@@ -7,13 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <script type="text/javascript" src="i18n/pt-br.json"></script>
-    <script type="text/javascript" src="i18n/en.json"></script>
+    <script type="text/javascript" src="./assets/i18n/pt-br.json"></script>
+    <script type="text/javascript" src="./assets/i18n/en.json"></script>
   </head>
   <body>
     <header>
@@ -89,9 +85,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section--img-overlay_right">
-        <img src="assets/images/dots.png" />
       </div>
     </section>
 
@@ -275,10 +268,10 @@
           </div>
         </div>
       </div>
-      <div class="section--img-overlay_left">
-        <img src="assets/images/dots.png" />
-      </div>
     </section>
+    <div class="section--img-overlay_left">
+      <img src="assets/images/dots.png" />
+    </div>
 
     <section id="section--skills">
       <div class="container">
@@ -347,49 +340,8 @@
       <p>Helena Strada - Todos os direitos reservados.</p>
     </footer>
 
-    <script type="text/javascript" src="js/loadSlides.js"></script>
+    <script type="text/javascript" src="./assets/js/loadSlides.js"></script>
 
-    <script type="text/javascript">
-      let selectedLanguage = ptbr;
-      let aPt = document.getElementById("aPt");
-      let aEn = document.getElementById("aEn");
-
-      const defaultColor = "#ffc400";
-
-      aPt.style.backgroundColor = defaultColor;
-
-      window.onload = loadLanguage(selectedLanguage);
-
-      function loadLanguage(language) {
-        let translation = JSON.stringify(language);
-        let i18n = JSON.parse(translation);
-
-        let data = document.querySelectorAll("[data-i18n]");
-        data.forEach((element) => {
-          if (!element.dataset.i18n.includes("."))
-            element.innerHTML = i18n[element.dataset.i18n];
-          else {
-            element.innerHTML =
-              i18n[element.dataset.i18n.split(".")[0]][
-                element.dataset.i18n.split(".")[1]
-              ];
-          }
-        });
-      }
-
-      let btnChangeLanguage = document.getElementById("btnLanguage");
-      btnChangeLanguage.onclick = function () {
-        if (selectedLanguage === ptbr) {
-          selectedLanguage = en;
-          aEn.style.backgroundColor = defaultColor;
-          aPt.style.backgroundColor = "transparent";
-        } else {
-          selectedLanguage = ptbr;
-          aPt.style.backgroundColor = defaultColor;
-          aEn.style.backgroundColor = "transparent";
-        }
-        loadLanguage(selectedLanguage);
-      };
-    </script>
+    <script type="text/javascript" src="./assets/js/i18n.js"></script>
   </body>
 </html>

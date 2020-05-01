@@ -7,7 +7,7 @@
   },
   "volunteer": {
     "title": "Volunteer",
-    "description": "I participate as a volunteer in {reprograma}. NGO that promotes the inclusion of women in the information technology area."
+    "description": "I participate as a volunteer in <b>{reprograma}</b>. NGO that promotes the inclusion of women in the information technology area."
   },
   "education": {
     "title": "Academic <span>Formation</span>",
