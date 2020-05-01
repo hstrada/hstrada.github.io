@@ -19,16 +19,20 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
 ## Histórico Profissional
 
 **Engenheiro de Software** - Jan/2020 - Atual
+
 **Instrutor de Formação Profissional III** - 2017 - 2019
+
 **Desenvolvedor BackEnd/FrontEnd** - 2016 - 2018
 
 ## Conhecimentos Técnicos
 
 **Backend**
+
     - Java, Spring Boot, Spring MVC, Spring Security, Hibernate
     - C#, .NET Core, EF Core
 
 **FrontEnd/Mobile**
+
     - HTML5, CSS3
     - ReactJs / React Native
     - Global State (Redux / Context + Hooks)
@@ -38,11 +42,13 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
     - Typescript
 
 **Banco de Dados**
+
     - SQL Server
     - MySQL
     - MongoDB
 
 **Diversos/Ferramentas**
+
     - Git + GitHub
     - Scrum
     - Sass
