@@ -1,7 +1,7 @@
 :root {
   --background: #222222;
-  --text: #FFFFFF;
-  --primary: #00FF0A;
+  --text: #ffffff;
+  --primary: #00ff0a;
 }
 
 * {
@@ -25,13 +25,14 @@
 body {
   background: var(--background);
   color: var(--text);
+  padding: 64px 128px 0 128px;
 }
 
 body,
 input,
 textarea,
 button {
-  font: 400 1rem 'JetBrains Mono', sans-serif;
+  font: 400 1rem 'JetBrains Mono ExtraLight', sans-serif;
 }
 
 button {

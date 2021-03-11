@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/pages/Home.module.css';
+import { Menu } from '../components/Menu';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <title>hstrada</title>
       </Head>
       <header>
-        
+        <Menu />
       </header>
 
       <main>
