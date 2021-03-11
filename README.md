@@ -1,54 +1,34 @@
-# hstrada.github.io
-resume
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-- Engenheira de Software
-- São Paulo/SP
-- h.strada@hotmail.com
-- https://linkedin.com/in/helenastrada
+## Getting Started
 
-Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos.
+First, run the development server:
 
-## Formação Acadêmica
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**FIAP** - MBA em Desenvolvimento de Aplicações Java - SOA e Internet das Coisas
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**PUC-SP** - Sistemas de Informação
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-**SENAC** - Técnico em Informática
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-## Histórico Profissional
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-**Engenheiro de Software** - Jan/2020 - Atual
+## Learn More
 
-**Instrutor de Formação Profissional III** - 2017 - 2019
+To learn more about Next.js, take a look at the following resources:
 
-**Desenvolvedor BackEnd/FrontEnd** - 2016 - 2018
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Conhecimentos Técnicos
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-**Backend**
+## Deploy on Vercel
 
-    - Java, Spring Boot, Spring MVC, Spring Security, Hibernate
-    - C#, .NET Core, EF Core
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-**FrontEnd/Mobile**
-
-    - HTML5, CSS3
-    - ReactJs / React Native
-    - Global State (Redux / Context + Hooks)
-    - Styled-Components
-    - ES6
-    - Testes integração/unitário (Jest / Enzyme)
-    - Typescript
-
-**Banco de Dados**
-
-    - SQL Server
-    - MySQL
-    - MongoDB
-
-**Diversos/Ferramentas**
-
-    - Git + GitHub
-    - Scrum
-    - Sass
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
