@@ -1,0 +1,36 @@
+.profile {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 72px;
+  margin: 24px 0 18px 0;
+}
+
+.description {
+  font-size: 1.25rem;
+  max-width: 820px;
+  line-height: 36px;
+}
+
+.highlight {
+  margin-top: 18px;
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  max-width: 820px;
+  line-height: 36px;
+}
+
+.highlight span {
+  color: var(--primary);
+  font-weight: 400;
+}
+
+.icons img {
+  margin-right: 14px;
+  width: 24px;
+  height: 24px;
+}
