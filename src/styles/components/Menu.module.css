@@ -1,5 +1,55 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+}
+
+.line {
+    border: 1px solid var(--primary);
+    width: 7rem;
+    margin: auto;
+    margin-right: 1rem;
+}
+
+.toggle span {
+    display: none;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: var(--primary);
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+    .toggle span {
+        display: flex;
+    }
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 48px;
+}
+
+.menu li span {
+    color: var(--primary);
+    margin-right: 8px;
 }

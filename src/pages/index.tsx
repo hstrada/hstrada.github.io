@@ -3,6 +3,12 @@ import styles from '../styles/pages/Home.module.css';
 import { Menu } from '../components/Menu';
 
 export default function Home() {
+
+  const changeMe = () => {
+    if (document.body !== undefined) 
+      document.body.style.setProperty('--primary', 'blue');
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,8 +19,8 @@ export default function Home() {
       </header>
 
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 onClick={changeMe}>
+          Hello
         </h1>
       </main>
 
