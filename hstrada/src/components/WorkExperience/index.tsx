@@ -21,7 +21,7 @@ const works = [
 ];
 
 export const WorkExperience = () => {
-  const [work, setWork] = useState(0);
+  const [work, setWork] = useState<number>(0);
 
   return (
     <section id="workExperience">
@@ -37,7 +37,7 @@ export const WorkExperience = () => {
                     listStyleImage: isCurrentIndex
                       ? `url('/assets/icons/play.svg')`
                       : `url('/assets/icons/play-white.svg')`,
-                    color: isCurrentIndex ? 'var(--text)' : '#474747',
+                    color: !isCurrentIndex && '#474747',
                   }}
                   key={index}
                   onClick={() => setWork(index)}

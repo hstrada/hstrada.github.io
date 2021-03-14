@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/pages/Home.module.css';
-import { Profile } from '@/components/Profile';
 import { Menu } from '@/components/Shared/Menu';
+import { Profile } from '@/components/Profile';
 import { WorkExperience } from '@/components/WorkExperience';
+import { OpenSource } from '@/components/OpenSource';
 
 export default function Home() {
   const changeMe = () => {
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Profile />
         <WorkExperience />
+        <OpenSource />
       </main>
 
       <footer>

@@ -1,0 +1,9 @@
+.container {
+  margin-top: 124px;
+}
+
+.openSourceProjects {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: row;
+}
