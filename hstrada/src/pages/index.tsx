@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import styles from '../styles/pages/Home.module.css';
-import {Profile} from '../components/Profile'
-import { Menu } from '../components/Menu';
+import styles from '@/styles/pages/Home.module.css';
+import { Profile } from '@/components/Profile';
+import { Menu } from '@/components/Shared/Menu';
+import { WorkExperience } from '@/components/WorkExperience';
 
 export default function Home() {
   const changeMe = () => {
@@ -20,6 +21,7 @@ export default function Home() {
 
       <main>
         <Profile />
+        <WorkExperience />
       </main>
 
       <footer>

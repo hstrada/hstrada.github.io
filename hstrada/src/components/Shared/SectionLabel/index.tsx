@@ -1,4 +1,4 @@
-import styles from '../styles/components/SectionLabel.module.css';
+import styles from './SectionLabel.module.css';
 
 interface ISectionLabelProps {
   number: string;

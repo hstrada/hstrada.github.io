@@ -1,12 +1,12 @@
 .container {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 0 24px 0;
-  display: flex;
+  /* margin: 0 0 24px 0;
   position: fixed;
   top: 0;
   width: 1400px;
-  padding: 64px 0 64px 0;
+  padding: 64px 0 64px 0; */
 }
 
 .logo {
