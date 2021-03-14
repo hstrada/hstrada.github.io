@@ -4,7 +4,7 @@ import { SectionLabel } from '@/components/Shared/SectionLabel';
 
 export const Profile = () => {
   return (
-    <section className={styles.profile}>
+    <section id="profile" className={styles.profile}>
       <SectionLabel number="01." text="Olá, eu sou a" />
       <h1 className={styles.title}>Helena Strada</h1>
       <p className={styles.description}>

@@ -1,36 +1,36 @@
 .profile {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
-    font-size: 72px;
-    margin: 24px 0 18px 0;
+  font-size: 72px;
+  margin: 24px 0 18px 0;
 }
 
 .description {
-    font-size: 1rem;
-    max-width: 820px;
-    line-height: 1.75rem;
+  font-size: 1rem;
+  max-width: 820px;
+  line-height: 1.75rem;
 }
 
 .highlight {
-    margin-top: 18px;
-    margin-bottom: 24px;
-    font-size: 1rem;
-    max-width: 820px;
-    line-height: 1.75rem;
+  margin-top: 18px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  max-width: 820px;
+  line-height: 1.75rem;
 }
 
 .highlight span {
-    color: var(--primary);
-    font-weight: 400;
+  color: var(--primary);
+  font-weight: 400;
 }
 
 .icons img {
-    margin-right: 14px;
-    width: 24px;
-    height: 24px;
+  margin-right: 14px;
+  width: 24px;
+  height: 24px;
 }

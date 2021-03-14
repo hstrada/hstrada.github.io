@@ -1,7 +1,6 @@
 import styles from './WorkExperience.module.css';
 import { SectionLabel } from '@/components/Shared/SectionLabel';
 import { useState } from 'react';
-import { ArrowList } from './Play';
 
 const works = [
   {
@@ -25,7 +24,7 @@ export const WorkExperience = () => {
   const [work, setWork] = useState(0);
 
   return (
-    <section>
+    <section id="workExperience">
       <SectionLabel number="02." text="Onde eu tenho trabalhado?" />
       <div className={styles.container}>
         <div className={styles.workList}>
@@ -40,6 +39,7 @@ export const WorkExperience = () => {
                       : `url('/assets/icons/play-white.svg')`,
                     color: isCurrentIndex ? 'var(--text)' : '#474747',
                   }}
+                  key={index}
                   onClick={() => setWork(index)}
                 >
                   {item.company}

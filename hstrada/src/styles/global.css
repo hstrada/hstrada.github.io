@@ -2,6 +2,7 @@
   --background: #222222;
   --text: #ffffff;
   --primary: #00ff0a;
+  --selection: #ccc;
 }
 
 * {
@@ -49,4 +50,11 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background: var(--selection);
+}
+::-moz-selection {
+  background: var(--selection);
 }

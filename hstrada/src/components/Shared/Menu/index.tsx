@@ -15,12 +15,12 @@ export const Menu = () => {
       <div className={styles.menu}>
         <ul>
           <li>
-            <a href="#">
+            <a href="#profile">
               <span>01.</span>Perfil
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#workExperience">
               <span>02.</span>Experiência
             </a>
           </li>
