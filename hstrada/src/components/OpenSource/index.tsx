@@ -8,8 +8,16 @@ export const OpenSource = () => {
       <div className={styles.container}>
         <SectionLabel number="03." text="O que eu tenho criado?" />
         <div className={styles.openSourceProjects}>
-          <OpenSourceCard />
-          <OpenSourceCard />
+          <OpenSourceCard
+            imageName="open-readit"
+            projectName="readit"
+            projectUrl="readit-readme.netlify.app"
+          />
+          <OpenSourceCard
+            imageName="open-purecss"
+            projectName="purê-css"
+            projectUrl="pure-css.netlify.app"
+          />
         </div>
       </div>
     </section>
