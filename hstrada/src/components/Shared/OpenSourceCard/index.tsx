@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './OpenSourceCard.module.css';
 
-export const OpenSourceCard = ({
+const OpenSourceCard = ({
   imageName,
   projectName,
   projectUrl,
@@ -23,3 +24,5 @@ export const OpenSourceCard = ({
     </div>
   );
 };
+
+export const MemoizeOpenSourceCard = React.memo(OpenSourceCard);
