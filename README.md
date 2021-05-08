@@ -30,15 +30,16 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
 
     - Java, Spring Boot, Spring MVC, Spring Security, Hibernate
     - C#, .NET Core, EF Core
+    - API, REST, GraphQL, CQRS
 
 **FrontEnd/Mobile**
 
     - HTML5, CSS3
     - ReactJs / React Native
-    - Global State (Redux / Context + Hooks)
+    - Global State (Redux / Context)
     - Styled-Components
     - ES6
-    - Testes integração/unitário (Jest / Enzyme)
+    - Testes (Jest / Enzyme / React Testing Library)
     - Typescript
 
 **Banco de Dados**
@@ -50,5 +51,4 @@ Atuo como Engenheira de Software tendo como principais interesses Arquitetura de
 **Diversos/Ferramentas**
 
     - Git + GitHub
-    - Scrum
-    - Sass
+    - CircleCI, GitHub Actions
