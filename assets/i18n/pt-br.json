@@ -5,10 +5,6 @@
     "title": "Perfil",
     "description": "Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos."
   },
-  "volunteer": {
-    "title": "Projeto <span>Voluntário</span>",
-    "description": "Participo como voluntária na <b>{reprograma}</b>. ONG que promove a inclusão de mulheres na área de tecnologia da informação."
-  },
   "education": {
     "title": "Formação <span>Acadêmica</span>",
     "mostRecentAcademic" : "FIAP",

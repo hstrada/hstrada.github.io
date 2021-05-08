@@ -5,10 +5,6 @@
     "title": "Profile",
     "description": "I work as a Software Engineer with main interests in Software Architecture (Mobile, FrontEnd and BackEnd) and Database. Passionate about books and technology - mainly, both together."
   },
-  "volunteer": {
-    "title": "Volunteer",
-    "description": "I participate as a volunteer in <b>{reprograma}</b>. NGO that promotes the inclusion of women in the information technology area."
-  },
   "education": {
     "title": "Academic <span>Formation</span>",
     "mostRecentAcademic": "FIAP",
