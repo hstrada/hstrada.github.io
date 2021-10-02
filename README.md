@@ -3,7 +3,6 @@ resume
 
     - Engenheira de Software
     - São Paulo/SP
-    - h.strada@hotmail.com
     - https://linkedin.com/in/helenastrada
 
 Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos.
