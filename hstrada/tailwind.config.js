@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{tsx,jsx}"],
+  content: ['./src/**/*.{tsx,jsx}'],
   theme: {
     colors: {
       blue: '#1fb6ff',
@@ -11,8 +11,13 @@ module.exports = {
       gray: {
         300: '#cccccc',
         400: '#aaaaaa',
-        500: '#000000'
+        700: '#707070',
+        900: '#262626'
       }
+    },
+    fontFamily: {
+      sora: ['Sora', 'ui-system', 'sans-serif'],
+      epilogue: ['Epilogue', 'ui-system', 'sans-serif']
     },
     extend: {}
   },
