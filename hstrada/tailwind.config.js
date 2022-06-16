@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{tsx,jsx}'],
   theme: {
@@ -15,11 +17,11 @@ module.exports = {
         900: '#262626'
       }
     },
-    fontFamily: {
-      sora: ['Sora', 'ui-system', 'sans-serif'],
-      epilogue: ['Epilogue', 'ui-system', 'sans-serif']
-    },
-    extend: {}
+    extend: {
+      fontFamily: {
+        sora: ['Sora', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
   plugins: []
 };

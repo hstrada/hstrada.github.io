@@ -1,21 +1,24 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   render() {
+    console.log('document');
     return (
-      <Html>
+      <Html lang="en">
         <Head>
-          <meta name="description" content="hstrada.github.io" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
-            crossOrigin=""
+            crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Epilogue&family=Sora:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&family=Sora:wght@100;200;300;400;500;600;700&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
             rel="stylesheet"
+          />
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
           />
         </Head>
         <body>
@@ -26,3 +29,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

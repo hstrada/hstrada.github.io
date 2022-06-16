@@ -8,7 +8,9 @@ const Home: NextPage = () => {
       <main>
         <section className="h-screen px-6">
           <div className="max-w-screen-lg h-full flex justify-center items-start flex-col mx-auto">
-            <span className="text-gray-700 text-xl pb-4 font-light font-epilogue">Helena Strada</span>
+            <span className="text-gray-700 text-xl pb-4 font-light font-epilogue">
+              Helena Strada
+            </span>
             <h1 className="text-8xl font-bold font-sora max-w-screen-lg">
               Software Engineer <br /> @ BackEnd
             </h1>
