@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +11,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        logo
+      <header className="px-6 pt-6 flex flex-row justify-between">
+        <Image
+          src="/hs.png"
+          alt="Helena Strada Profile Logo"
+          width={23}
+          height={36}
+        />
+        <Image
+          src="/hs.png"
+          alt="Helena Strada Profile Logo"
+          width={23}
+          height={36}
+        />
       </header>
 
       <main>
@@ -36,7 +47,7 @@ const Home: NextPage = () => {
 
       <footer>Todos os direitos reservados.</footer>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
