@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Header } from '../components/organisms/Header'
 
 import { Hero } from '../components/organisms/Hero'
+import { WorkExperience } from '../components/organisms/Work'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
 
       <main>
         <Hero />
+        <WorkExperience />
       </main>
 
       <footer>Todos os direitos reservados.</footer>

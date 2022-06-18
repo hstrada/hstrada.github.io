@@ -16,7 +16,7 @@ const TranslationContext = createContext<TranslationContextData>(
 )
 
 export function TranslationProvider({ children }: TranslationProviderProps) {
-  const [country, setCountry] = useState<TranslationCountry>('pt')
+  const [country, setCountry] = useState<TranslationCountry>('en')
 
   const changeCountry = () => {
     if (country === 'pt') {

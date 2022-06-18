@@ -1,6 +1,47 @@
 {
   "hero": {
-    "title": "Software Engineer @ BackEnd",
+    "title": "Software Engineer",
+    "area": "@ BackEnd",
     "description": "Working as a software engineer and passionate about books and technology. Main interests in software architecture, clean code and always looking for something to improve and/or learn."
+  },
+  "work": {
+    "title": "Work Experience",
+    "jobs": {
+      "0": {
+        "date": "2020 - Current",
+        "job": {
+          "title": "Software Engineer",
+          "company": "Creditas"
+        }
+      },
+      "1": {
+        "date": "2020 - 2021",
+        "job": {
+          "title": "Content Creator",
+          "company": "Escola SENAI de Informática"
+        }
+      },
+      "2": {
+        "date": "2020 - 2020",
+        "job": {
+          "title": "Bootcamp Tech Lead",
+          "company": "{reprograma}"
+        }
+      },
+      "3": {
+        "date": "2017 - 2019",
+        "job": {
+          "title": "Training Instructor III",
+          "company": "Escola SENAI de Informática"
+        }
+      },
+      "4": {
+        "date": "2016 - 2018",
+        "job": {
+          "title": "BackEnd/FrontEnd Developer",
+          "company": "MesclaLab"
+        }
+      }
+    }
   }
 }

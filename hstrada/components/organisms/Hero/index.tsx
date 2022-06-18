@@ -13,6 +13,8 @@ export const Hero = () => {
         </span>
         <h1 className="text-7xl leading-tight font-bold max-w-screen-lg font-sans">
           {t('hero.title')}
+          <br />
+          {t('hero.area')}
         </h1>
         <p className="pt-8 max-w-screen-sm text-gray-700 text-base font-light font-display leading-[2]">
           {t('hero.description')}

@@ -1,6 +1,10 @@
 {
   "hero": {
-    "title": "Software Engineer @ BackEnd",
+    "title": "Software Engineer",
+    "area": "@ BackEnd",
     "description": "Atuo como engenheira de software e sou apaixonada por livros e tecnologia. Principais interesses em arquitetura de software, código limpo e sempre estou buscando algo para aprimorar e/ou aprender."
+  },
+  "work": {
+    "title": "Experiência Profissional"
   }
 }
