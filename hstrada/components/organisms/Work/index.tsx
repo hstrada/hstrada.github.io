@@ -1,4 +1,3 @@
-import { title } from 'process'
 import { t } from '../../../core/utils/translate'
 import { WorkItem } from '../../molecules/WorkItem'
 

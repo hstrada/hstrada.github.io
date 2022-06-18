@@ -29,19 +29,22 @@
         }
       },
       "3": {
-        "date": "2017 - 2019",
+        "date": "2017 - 2020",
         "job": {
           "title": "Training Instructor III",
           "company": "Escola SENAI de Informática"
         }
       },
       "4": {
-        "date": "2016 - 2018",
+        "date": "2016 - 2018 ",
         "job": {
           "title": "BackEnd/FrontEnd Developer",
           "company": "MesclaLab"
         }
       }
     }
+  },
+  "educational": {
+    "title": "Educational Background"
   }
 }

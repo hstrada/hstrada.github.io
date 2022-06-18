@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Educational } from '../components/organisms/Educational'
 import { Header } from '../components/organisms/Header'
 
 import { Hero } from '../components/organisms/Hero'
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <WorkExperience />
+        <Educational />
       </main>
 
       <footer>Todos os direitos reservados.</footer>
