@@ -1,8 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Outline } from '../components/atoms/Button/Outline'
 import { Solid } from '../components/atoms/Button/Solid'
+import { FaGithub, FaBehance, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +22,7 @@ const Home: NextPage = () => {
           width={23}
           height={36}
         />
-        <a>
-          link
-        </a>
+        <a>link</a>
       </header>
 
       <main>
@@ -41,10 +41,18 @@ const Home: NextPage = () => {
               aprender.
             </p>
             <div className="pt-8 space-x-4">
-              <Solid>GH</Solid>
-              <Outline>IN</Outline>
-              <Outline>B</Outline>
-              <Outline>M</Outline>
+              <Solid>
+                <FaGithub size={24} />
+              </Solid>
+              <Outline>
+                <FaLinkedinIn size={24} />
+              </Outline>
+              <Outline>
+                <FaBehance size={24} />
+              </Outline>
+              <Outline>
+                <FaMediumM size={24} />
+              </Outline>
             </div>
           </div>
         </section>
