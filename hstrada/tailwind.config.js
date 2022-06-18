@@ -11,6 +11,9 @@ module.exports = {
       neutral: {
         900: '#161616',
       },
+      gray: {
+        700: '#707070',
+      },
       yellow: {
         500: '#FFCC00',
       },
@@ -21,6 +24,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Sora', ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        hero: "url('/images/bg-hero.png')",
       },
     },
   },
