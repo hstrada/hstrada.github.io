@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <Educational />
       </main>
 
-      <footer>Todos os direitos reservados.</footer>
+      <footer className="mt-12">Todos os direitos reservados.</footer>
     </div>
   )
 }

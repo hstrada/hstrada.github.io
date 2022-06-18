@@ -45,6 +45,23 @@
     }
   },
   "educational": {
-    "title": "Educational Background"
+    "title": "Educational Background",
+    "xp": {
+      "0": {
+        "level": "Graduate Course",
+        "title": "Java Application Development - SOA and IoT",
+        "place": "FIAP [2016-2017]"
+      },
+      "1": {
+        "level": "Undergraduate",
+        "title": "Information Systems, IT",
+        "place": "PUCSP [2012-2016]"
+      },
+      "2": {
+        "level": "Technical Course",
+        "title": "Computer Technician, IT",
+        "place": "SENAC [2010-2012]"
+      }
+    }
   }
 }

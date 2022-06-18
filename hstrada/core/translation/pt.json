@@ -45,6 +45,23 @@
     }
   },
   "educational": {
-    "title": "Educational Background"
+    "title": "Educational Background",
+    "xp": {
+      "0": {
+        "level": "MBA",
+        "title": "Desenvolvimento de Aplicações Java - SOA e Internet das Coisas",
+        "place": "FIAP [2016-2017]"
+      },
+      "1": {
+        "level": "Graduação",
+        "title": "Sistemas de Informação",
+        "place": "PUCSP [2012-2016]"
+      },
+      "2": {
+        "level": "Curso Técnico",
+        "title": "Técnico em Informática",
+        "place": "SENAC [2010-2012]"
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@ import { t } from '../../../core/utils/translate'
 import { WorkItem } from '../../molecules/WorkItem'
 
 export const WorkExperience = () => {
-  let out = Array.from(Array(5), (_,x) => x);
+  const out = Array.from(Array(5), (_,x) => x);
   return (
     <section className="px-6">
       <div className="max-w-screen-lg flex flex-col mx-auto">
