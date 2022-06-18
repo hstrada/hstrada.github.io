@@ -4,7 +4,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Outline } from '../components/atoms/Button/Outline'
 import { Solid } from '../components/atoms/Button/Solid'
-import { FaGithub, FaBehance, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaBehance,
+  FaMediumM,
+  FaLinkedinIn,
+  FaGlobeAmericas,
+  FaBars,
+} from 'react-icons/fa'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +29,14 @@ const Home: NextPage = () => {
           width={23}
           height={36}
         />
-        <a>link</a>
+        <div className="flex flex-row space-x-4">
+          <a>
+            <FaGlobeAmericas />
+          </a>
+          <a>
+            <FaBars />
+          </a>
+        </div>
       </header>
 
       <main>
@@ -42,16 +56,16 @@ const Home: NextPage = () => {
             </p>
             <div className="pt-8 space-x-4">
               <Solid>
-                <FaGithub size={24} />
+                <FaGithub />
               </Solid>
               <Outline>
-                <FaLinkedinIn size={24} />
+                <FaLinkedinIn />
               </Outline>
               <Outline>
-                <FaBehance size={24} />
+                <FaBehance />
               </Outline>
               <Outline>
-                <FaMediumM size={24} />
+                <FaMediumM />
               </Outline>
             </div>
           </div>
