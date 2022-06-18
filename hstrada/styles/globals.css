@@ -18,3 +18,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.base-button {
+  @apply border-neutral-900 border border-solid text-sm font-display py-[13px] px-[24px] cursor-pointer relative select-none touch-manipulation;
+}

@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Outline } from '../components/atoms/Button/Outline'
+import { Solid } from '../components/atoms/Button/Solid'
 
 const Home: NextPage = () => {
   return (
@@ -18,12 +20,9 @@ const Home: NextPage = () => {
           width={23}
           height={36}
         />
-        <Image
-          src="/hs.png"
-          alt="Helena Strada Profile Logo"
-          width={23}
-          height={36}
-        />
+        <a>
+          link
+        </a>
       </header>
 
       <main>
@@ -41,6 +40,12 @@ const Home: NextPage = () => {
               código limpo e sempre estou buscando algo para aprimorar e/ou
               aprender.
             </p>
+            <div className="pt-8 space-x-4">
+              <Solid>GH</Solid>
+              <Outline>IN</Outline>
+              <Outline>B</Outline>
+              <Outline>M</Outline>
+            </div>
           </div>
         </section>
       </main>
