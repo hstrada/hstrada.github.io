@@ -45,7 +45,8 @@
     }
   },
   "educational": {
-    "title": "Educational Background",
+    "title": "Experiência Acadêmica",
+    "tooltip": "Você pode encontrar outros cursos intensivos, livres e certificados em meu LinkedIn.",
     "xp": {
       "0": {
         "level": "MBA",

@@ -46,6 +46,7 @@
   },
   "educational": {
     "title": "Educational Background",
+    "tooltip": "You can find another courses and certificates at my LinkedIn profile.",
     "xp": {
       "0": {
         "level": "Graduate Course",
