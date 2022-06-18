@@ -16,9 +16,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <section className="h-screen px-6">
-          <Hero />
-        </section>
+        <Hero />
       </main>
 
       <footer>Todos os direitos reservados.</footer>
