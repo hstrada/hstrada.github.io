@@ -66,6 +66,10 @@
     }
   },
   "opensource": {
+    "datase": {
+      "description": "Datase é uma DSL para ajudar na criação de consultas e queries SQL.",
+      "button": "datase"
+    },
     "readit": {
       "description": "O readit-readme é um projeto focado em criar e gerar readme’s para os seus projetos de forma pragmática e interativa.",
       "button": "readit-readme"

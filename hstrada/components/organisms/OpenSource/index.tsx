@@ -9,7 +9,11 @@ export const OpenSource = () => {
         <h2 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
           Open Source
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-16">
+          <OpenSourceItem
+            description={t('opensource.datase.description')}
+            button={t('opensource.datase.button')}
+          />
           <OpenSourceItem
             description={t('opensource.readit.description')}
             button={t('opensource.readit.button')}
