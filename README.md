@@ -1,55 +1,56 @@
 # hstrada.github.io
 resume
 
-    - Engenheira de Software
+    - Software Engineer
     - São Paulo/SP
     - https://linkedin.com/in/helenastrada
 
-Atuo como Engenheira de Software tendo como principais interesses Arquitetura de Software (Mobile, FrontEnd e BackEnd) e Banco de Dados. Apaixonada por livros e tecnologia - principalmente, os dois juntos.
+"Working as a software engineer and passionate about books and technology. Main interests in software architecture, clean code and always looking for something to improve and/or learn."
 
 *Acredito que a dedicação seja transformação.*
 
-## Formação Acadêmica
+## Educational Background
 
-**FIAP** - MBA em Desenvolvimento de Aplicações Java - SOA e Internet das Coisas
+**FIAP** - MBA / Java Application Development - SOA and IoT
 
-**PUC-SP** - Sistemas de Informação
+**PUC-SP** - Undergraduate / Information Systems, IT
 
-**SENAC** - Técnico em Informática
+**SENAC** - Technical Course / Computer Technician, IT
 
-## Histórico Profissional
+## Work Experience
 
-**Engenheiro de Software** - Jan/2020 - Atual
+**Software Engineer** - Jan/2020 - Atual
 
-**Instrutor de Formação Profissional III** - 2017 - 2019
+**Content Creator** - 2020 - 2021
 
-**Desenvolvedor BackEnd/FrontEnd** - 2016 - 2018
+**Bootcamp Tech Lead** - 2020 - 2020
 
-## Conhecimentos Técnicos
+**Training Instructor III** - 2017 - 2020
+
+**BackEnd/FrontEnd Developer** - 2016 - 2018
+
+## Skills
 
 **Backend**
 
-    - Java, Spring Boot, Spring MVC, Spring Security, Hibernate
-    - C#, .NET Core, EF Core
-    - API, REST, GraphQL, CQRS
+    - Java, Spring Boot, Spring MVC, Spring Security, Hibernate;
+    - C#, .NET Core, EF Core;
+    - API, REST, GraphQL, CQRS;
+    - Clean Code, Clean Architecture, Design Patterns;
+    - SQL Server, MySQL, Redis.
 
 **FrontEnd/Mobile**
 
-    - HTML5, CSS3
-    - ReactJs / React Native
-    - Global State (Redux / Context)
-    - Styled-Components
-    - ES6
-    - Testes (Jest / Enzyme / React Testing Library)
-    - Typescript
-
-**Banco de Dados**
-
-    - SQL Server
-    - MySQL
-    - MongoDB
+    - HTML5, CSS3;
+    - ReactJs / React Native;
+    - Global State (Redux / Context);
+    - Styled-Components;
+    - ES6;
+    - Testes (Jest / Enzyme / React Testing Library);
+    - Typescript.
 
 **Diversos/Ferramentas**
 
-    - Git + GitHub
-    - CircleCI, GitHub Actions
+    - Git + GitHub;
+    - GitHub Packages;
+    - CI/CD (CircleCI, GitHub Actions).

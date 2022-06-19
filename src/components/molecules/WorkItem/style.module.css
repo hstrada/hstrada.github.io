@@ -1,0 +1,11 @@
+.work::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 32px;
+  background: linear-gradient(#ffcc00, #F0B724);
+  position: absolute;
+  margin-left: -6px;
+  margin-top: 10px;
+  border-radius: 1px 0px 0px 1px;
+}

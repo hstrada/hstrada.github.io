@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "title": "Software Engineer",
+    "area": "@ BackEnd",
+    "description": "Atuo como engenheira de software e sou apaixonada por livros e tecnologia. Principais interesses em arquitetura de software, código limpo e sempre estou buscando algo para aprimorar e/ou aprender."
+  },
+  "work": {
+    "title": "Experiência Profissional",
+    "jobs": {
+      "0": {
+        "date": "2020 - Atual",
+        "job": {
+          "title": "Engenheiro de Software",
+          "company": "Creditas"
+        }
+      },
+      "1": {
+        "date": "2020 - 2021",
+        "job": {
+          "title": "Professor Conteudista",
+          "company": "Escola SENAI de Informática"
+        }
+      },
+      "2": {
+        "date": "2020 - 2020",
+        "job": {
+          "title": "Bootcamp Tech Lead",
+          "company": "{reprograma}"
+        }
+      },
+      "3": {
+        "date": "2017 - 2020",
+        "job": {
+          "title": "Instrutor de Formação Profissional III",
+          "company": "Escola SENAI de Informática"
+        }
+      },
+      "4": {
+        "date": "2016 - 2018",
+        "job": {
+          "title": "Desenvolvedor BackEnd/FrontEnd",
+          "company": "MesclaLab"
+        }
+      }
+    }
+  },
+  "educational": {
+    "title": "Experiência Acadêmica",
+    "tooltip": "Você pode encontrar outros cursos intensivos, livres e certificados em meu LinkedIn.",
+    "xp": {
+      "0": {
+        "level": "MBA",
+        "title": "Desenvolvimento de Aplicações Java - SOA e Internet das Coisas",
+        "place": "FIAP [2016-2017]"
+      },
+      "1": {
+        "level": "Graduação",
+        "title": "Sistemas de Informação",
+        "place": "PUCSP [2012-2016]"
+      },
+      "2": {
+        "level": "Curso Técnico",
+        "title": "Técnico em Informática",
+        "place": "SENAC [2010-2012]"
+      }
+    }
+  },
+  "opensource": {
+    "datase": {
+      "description": "Datase é uma DSL para ajudar na criação de consultas e queries SQL.",
+      "button": "datase"
+    },
+    "readit": {
+      "description": "O readit-readme é um projeto focado em criar e gerar readme’s para os seus projetos de forma pragmática e interativa.",
+      "button": "readit-readme"
+    },
+    "pure": {
+      "description": "purê-css é um projeto para auxiliar os desenvolvedores a criarem visualmente as bordas css.",
+      "button": "purê-css"
+    }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas"
+  },
+  "blog": {
+    "title": "Últimas Publicações"
+  }
+}

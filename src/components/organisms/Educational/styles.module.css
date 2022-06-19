@@ -1,0 +1,16 @@
+/* Tooltip text */
+.tooltip .text {
+  visibility: hidden;
+  padding: 8px 4px;
+  border-radius: 4px;
+  background: #fafafa;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .text {
+  cursor: pointer;
+  visibility: visible;
+  margin-left: 30px;
+  width: 220px;
+}

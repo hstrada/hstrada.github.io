@@ -1,0 +1,16 @@
+.button:after {
+  content: '';
+  background-color: #ffcc00;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 4px;
+  left: 4px;
+  transition: 0.2s;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+}
