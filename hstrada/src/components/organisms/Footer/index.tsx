@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const Footer = () => {
   return (
-    <footer className="px-6 py-6 flex flex-row items-end justify-between">
+    <footer className="px-6 pb-6 pt-16 flex flex-row items-end justify-between">
       <div>
         <Image
           src="/images/hs.png"
