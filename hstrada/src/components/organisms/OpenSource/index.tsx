@@ -1,5 +1,4 @@
 import { t } from '../../../core/utils/translate'
-import Button from '../../atoms/Button'
 import { SectionDiv } from '../../atoms/SectionDiv'
 import { OpenSourceItem } from '../../molecules/OpenSourceItem'
 

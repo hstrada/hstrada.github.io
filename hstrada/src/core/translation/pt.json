@@ -78,5 +78,8 @@
       "description": "purê-css é um projeto para auxiliar os desenvolvedores a criarem visualmente as bordas css.",
       "button": "purê-css"
     }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas"
   }
 }

@@ -78,5 +78,8 @@
       "description": "purê-css is a project to help developers visually create css borders in a fun and interactive way.",
       "button": "purê-css"
     }
+  },
+  "skills": {
+    "title": "Skills"
   }
 }

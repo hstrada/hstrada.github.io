@@ -1,3 +1,4 @@
+import { Skills } from 'components/organisms/Skills'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Educational } from '../components/organisms/Educational'
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <WorkExperience />
         <Educational />
         <OpenSource />
+        <Skills />
       </main>
 
       <footer className="mt-12">Todos os direitos reservados.</footer>
