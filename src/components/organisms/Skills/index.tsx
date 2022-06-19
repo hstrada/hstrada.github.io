@@ -56,7 +56,7 @@ export const Skills = () => {
   }
 
   return (
-    <section className="px-6 mt-28">
+    <section className="px-6 mt-48">
       <SectionDiv title={t('skills.title')}>
         <div className="grid grid-cols-12 gap-4 pt-16">
           <div className="col-span-5 sm:col-span-3">

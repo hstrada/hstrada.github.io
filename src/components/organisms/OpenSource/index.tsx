@@ -4,7 +4,7 @@ import { OpenSourceItem } from '../../molecules/OpenSourceItem'
 
 export const OpenSource = () => {
   return (
-    <section className="px-6 mt-28">
+    <section className="px-6 mt-48">
       <SectionDiv title="Open Source">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-16">
           <OpenSourceItem

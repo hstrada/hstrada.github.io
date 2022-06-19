@@ -22,7 +22,7 @@ const posts = [
 
 export const Blog = () => {
   return (
-    <section className="px-6 mt-28">
+    <section className="px-6 mt-48">
       <SectionDiv title={t('blog.title')}>
         <div className="pt-16">
           {posts.map((index) => (
