@@ -11,7 +11,7 @@ export const OpenSourceItem = ({
 }: TOpenSourceItemProps): JSX.Element => {
   return (
     <div>
-      <p className="font-display pb-4 h-32 md:h-20 font-light text-gray-700 text-sm">
+      <p className="font-display pb-4 h-12 sm:h-24 md:h-24 font-light text-gray-700 text-sm">
         {description}
       </p>
 
