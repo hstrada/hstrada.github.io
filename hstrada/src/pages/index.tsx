@@ -1,3 +1,5 @@
+import { Blog } from 'components/organisms/Blog'
+import { Footer } from 'components/organisms/Footer'
 import { Skills } from 'components/organisms/Skills'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -25,9 +27,10 @@ const Home: NextPage = () => {
         <Educational />
         <OpenSource />
         <Skills />
+        <Blog />
       </main>
 
-      <footer className="mt-12">Todos os direitos reservados.</footer>
+      <Footer />
     </div>
   )
 }

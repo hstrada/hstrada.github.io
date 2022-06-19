@@ -81,5 +81,8 @@
   },
   "skills": {
     "title": "Skills"
+  },
+  "blog": {
+    "title": "Last Posts"
   }
 }

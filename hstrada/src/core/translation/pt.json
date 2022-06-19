@@ -81,5 +81,8 @@
   },
   "skills": {
     "title": "Habilidades Técnicas"
+  },
+  "blog": {
+    "title": "Últimas Publicações"
   }
 }
