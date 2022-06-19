@@ -4,6 +4,7 @@ import { Educational } from '../components/organisms/Educational'
 import { Header } from '../components/organisms/Header'
 
 import { Hero } from '../components/organisms/Hero'
+import { OpenSource } from '../components/organisms/OpenSource'
 import { WorkExperience } from '../components/organisms/Work'
 
 const Home: NextPage = () => {
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <Hero />
         <WorkExperience />
         <Educational />
+        <OpenSource />
       </main>
 
       <footer className="mt-12">Todos os direitos reservados.</footer>
