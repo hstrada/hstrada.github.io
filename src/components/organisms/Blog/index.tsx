@@ -26,7 +26,7 @@ export const Blog = () => {
       <SectionDiv title={t('blog.title')}>
         <div className="pt-16">
           {posts.map((index) => (
-            <div className="relative flex py-2 items-center">
+            <div key={index.title} className="relative flex py-2 items-center">
               <span className="flex-shrink mr-12 font-display font-light leading-6 text-gray-700 text-sm">
                 {index.title}
               </span>

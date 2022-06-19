@@ -11,6 +11,7 @@ export const WorkExperience = () => {
           {out.map((index) => {
             return (
               <WorkItem
+                key={index}
                 date={t(`work.jobs.${index}.date`)}
                 job={{
                   title: t(`work.jobs.${index}.job.title`),
