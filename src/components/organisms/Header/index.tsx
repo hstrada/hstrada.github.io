@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { FaGlobeAmericas, FaBars } from 'react-icons/fa'
+import { FaGlobeAmericas } from 'react-icons/fa'
 import { useTranslation } from '../../../core/hooks/useTranslate'
 
 const myLoader = ({ src, width, quality }) => {
@@ -21,9 +21,6 @@ export const Header = () => {
       <div className="flex flex-row space-x-4">
         <a onClick={changeCountry}>
           <FaGlobeAmericas />
-        </a>
-        <a>
-          <FaBars />
         </a>
       </div>
     </header>
