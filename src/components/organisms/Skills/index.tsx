@@ -88,7 +88,7 @@ export const Skills = () => {
             </ul>
           </div>
           <div
-            className="col-span-6 font-display font-light leading-6 text-gray-700 text-sm"
+            className="col-span-6 font-display space-y-2 font-light leading-6 text-gray-700 text-sm"
             dangerouslySetInnerHTML={{ __html: details }}
           ></div>
         </div>
