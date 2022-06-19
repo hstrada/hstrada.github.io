@@ -4,9 +4,11 @@ type TEducationalItemProps = {
   level: string
   title: string
   place: string
+  key: string
 }
 
 export const EducationalItem = ({
+  key,
   level,
   title,
   place,
@@ -17,6 +19,7 @@ export const EducationalItem = ({
         styles.educational +
         ' flex flex-col justify-between h-56 col-span-9 sm:col-span-12 md:col-span-4 bg-neutral-900 py-4 pl-4 pr-8 rounded'
       }
+      key={key}
     >
       <span className="text-slate-400 font-light text-xs font-display">
         {level}

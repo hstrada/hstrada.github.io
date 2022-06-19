@@ -22,6 +22,7 @@ export const Educational = () => {
         <div className="pt-16 grid grid-cols-12 gap-12">
           {out.map((index) => (
             <EducationalItem
+              key={`educational.xp.${index}.level` + index}
               level={t(`educational.xp.${index}.level`)}
               title={t(`educational.xp.${index}.title`)}
               place={t(`educational.xp.${index}.place`)}

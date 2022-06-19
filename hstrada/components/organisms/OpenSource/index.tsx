@@ -1,14 +1,12 @@
 import { t } from '../../../core/utils/translate'
 import Button from '../../atoms/Button'
+import { SectionDiv } from '../../atoms/SectionDiv'
 import { OpenSourceItem } from '../../molecules/OpenSourceItem'
 
 export const OpenSource = () => {
   return (
     <section className="px-6 mt-28">
-      <div className="max-w-screen-lg flex flex-col mx-auto">
-        <h2 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
-          Open Source
-        </h2>
+      <SectionDiv title="Open Source">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-16">
           <OpenSourceItem
             description={t('opensource.datase.description')}
@@ -23,7 +21,7 @@ export const OpenSource = () => {
             button={t('opensource.pure.button')}
           />
         </div>
-      </div>
+      </SectionDiv>
     </section>
   )
 }

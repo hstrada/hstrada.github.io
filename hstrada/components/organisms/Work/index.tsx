@@ -1,14 +1,12 @@
 import { t } from '../../../core/utils/translate'
+import { SectionDiv } from '../../atoms/SectionDiv'
 import { WorkItem } from '../../molecules/WorkItem'
 
 export const WorkExperience = () => {
-  const out = Array.from(Array(5), (_,x) => x);
+  const out = Array.from(Array(5), (_, x) => x)
   return (
     <section className="px-6">
-      <div className="max-w-screen-lg flex flex-col mx-auto">
-        <h2 className="text-5xl leading-tight font-bold max-w-screen-lg font-sans">
-          {t('work.title')}
-        </h2>
+      <SectionDiv title={t('work.title')}>
         <div className="pt-16 space-y-5">
           {out.map((index) => {
             return (
@@ -22,7 +20,7 @@ export const WorkExperience = () => {
             )
           })}
         </div>
-      </div>
+      </SectionDiv>
     </section>
   )
 }
