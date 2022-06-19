@@ -3,11 +3,13 @@ import Button from '../../atoms/Button'
 type TOpenSourceItemProps = {
   description: string
   button: string
+  url: string
 }
 
 export const OpenSourceItem = ({
   description,
   button,
+  url,
 }: TOpenSourceItemProps): JSX.Element => {
   return (
     <div>
@@ -15,7 +17,7 @@ export const OpenSourceItem = ({
         {description}
       </p>
 
-      <Button.Solid>{button}</Button.Solid>
+      <Button.Solid url={url}>{button}</Button.Solid>
     </div>
   )
 }

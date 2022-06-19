@@ -1,10 +1,13 @@
+import Link from 'next/link'
 import { TButtonSolidProps } from '../interface'
 
-const Outline = ({ children }: TButtonSolidProps) => {
+const Outline = ({ children, url }: TButtonSolidProps) => {
   return (
-    <button className="base-button" role="button">
-      {children}
-    </button>
+    <Link href={url}>
+      <button className="base-button" role="button">
+        {children}
+      </button>
+    </Link>
   )
 }
 
