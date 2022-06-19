@@ -64,5 +64,15 @@
         "place": "SENAC [2010-2012]"
       }
     }
+  },
+  "opensource": {
+    "readit": {
+      "description": "readit-readme is a project focused on creating and generating readme's for your projects in a pragmatic and interactive way.",
+      "button": "readit-readme"
+    },
+    "pure": {
+      "description": "purê-css is a project to help developers visually create css borders in a fun and interactive way.",
+      "button": "purê-css"
+    }
   }
 }
