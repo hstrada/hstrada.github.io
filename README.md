@@ -12,7 +12,7 @@ resume
 
 *Acredito que a dedicação seja transformação.*
 
-## Educational Background
+## 📚 Educational Background
 
 **FIAP** - MBA / Java Application Development - SOA and IoT
 
@@ -20,9 +20,9 @@ resume
 
 **SENAC** - Technical Course / Computer Technician, IT
 
-## Work Experience
+## ⏳ Work Experience
 
-**Software Engineer** - Jan/2020 - Atual
+**Software Engineer** - 2020 - Current
 
 **Content Creator** - 2020 - 2021
 
@@ -32,7 +32,7 @@ resume
 
 **BackEnd/FrontEnd Developer** - 2016 - 2018
 
-## Skills
+## 💻 Skills
 
 **Backend**
 
