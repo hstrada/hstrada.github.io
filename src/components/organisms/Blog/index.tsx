@@ -27,7 +27,7 @@ export const Blog = () => {
         <div className="pt-16">
           {posts.map((index) => (
             <div key={index.title} className="relative flex py-2 items-center">
-              <span className="flex-shrink mr-12 font-display font-light leading-6 text-gray-700 text-sm">
+              <span className="flex-shrink truncate mr-12 font-display font-light leading-6 text-gray-700 text-sm">
                 {index.title}
               </span>
               <div className="flex-grow border-b pt-2 border-dotted border-gray-400"></div>
