@@ -3,7 +3,7 @@
   display: block;
   width: 6px;
   height: 32px;
-  background: linear-gradient(#ffcc00, #F0B724);
+  background: linear-gradient(var(--primary-500-color), var(--primary-600-color));
   position: absolute;
   margin-left: -6px;
   margin-top: 10px;
