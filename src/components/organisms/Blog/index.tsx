@@ -3,6 +3,10 @@ import { t } from '../../../core/utils/translate'
 
 const posts = [
   {
+    title: 'Criando workflows reutilizáveis com GitHub Actions',
+    year: 2022,
+  },
+  {
     title: 'Mantendo suas dependências atualizadas com o Dependabot',
     year: 2022,
   },
