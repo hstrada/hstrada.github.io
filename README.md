@@ -5,7 +5,6 @@
 resume
 
     - Software Engineer
-    - São Paulo/SP
     - https://linkedin.com/in/helenastrada
 
 "Working as a software engineer and passionate about books and technology. Main interests in software architecture, clean code and always looking for something to improve and/or learn."
