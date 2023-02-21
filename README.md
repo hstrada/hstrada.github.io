@@ -9,7 +9,7 @@ resume
 
 "Working as a software engineer and passionate about books and technology. Main interests in software architecture, clean code and always looking for something to improve and/or learn."
 
-*Acredito que a dedicação seja transformação.*
+*Focus, Persistence and Consistency.*
 
 ## 📚 Educational Background
 
