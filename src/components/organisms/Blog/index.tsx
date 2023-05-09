@@ -1,5 +1,5 @@
 import { SectionDiv } from 'components/atoms/SectionDiv'
-import { t } from '../../../core/utils/translate'
+import { Translate } from '../../../core/utils/translate'
 
 const posts = [
   {
@@ -32,7 +32,7 @@ const posts = [
 export const Blog = () => {
   return (
     <section className="px-6 mt-48">
-      <SectionDiv title={t('blog.title')}>
+      <SectionDiv title={Translate('blog.title')}>
         <div className="pt-16">
           {posts.map((index) => (
             <div key={index.title} className="relative flex py-2 items-center">

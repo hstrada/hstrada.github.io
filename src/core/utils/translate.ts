@@ -9,7 +9,7 @@ const deepPick = (fields: any, object: any = {}): string => {
     : object[first]
 }
 
-export const t = (path: string) => {
+export const Translate = (path: string) => {
   const { country } = useTranslation()
 
   if (country === 'en') return deepPick(path, en)

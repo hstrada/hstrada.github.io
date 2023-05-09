@@ -2,7 +2,7 @@ import Button from '../../atoms/Button'
 
 import { FaGithub, FaBehance, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
 
-import { t } from '../../../core/utils/translate'
+import { Translate } from '../../../core/utils/translate'
 import { SocialMedia } from 'components/molecules/SocialMedia'
 
 export const Hero = () => {
@@ -13,12 +13,12 @@ export const Hero = () => {
           Helena Strada
         </span>
         <h1 className="text-7xl leading-tight font-bold max-w-screen-lg font-sans">
-          {t('hero.title')}
+          {Translate('hero.title')}
           <br />
-          {t('hero.area')}
+          {Translate('hero.area')}
         </h1>
         <p className="pt-8 max-w-screen-sm text-gray-700 text-base font-light font-display leading-[2]">
-          {t('hero.description')}
+          {Translate('hero.description')}
         </p>
         <div className="pt-8 space-x-4">
           <SocialMedia />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { t } from '../../../core/utils/translate';
+import { Translate } from '../../../core/utils/translate';
 import { SectionDiv } from '../../atoms/SectionDiv';
 import styles from './styles.module.css';
 
@@ -57,7 +57,7 @@ export const Skills = () => {
 
   return (
     <section className="px-6 mt-48">
-      <SectionDiv title={t('skills.title')}>
+      <SectionDiv title={Translate('skills.title')}>
         <div className="grid grid-cols-12 gap-4 pt-16">
           <div className="col-span-5 sm:col-span-3">
             <ul className="list-none space-y-4">
