@@ -9,9 +9,9 @@ export default function Blog() {
       <section className="px-6">
         <div className="max-w-screen-lg flex flex-col mx-auto">
           <div className="flex flex-row justify-between content-center items-center">
-            <h2 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
+            <h1 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
               Blog<span>.</span>
-            </h2>
+            </h1>
             <h3>foco, persistência e consistência.</h3>
           </div>
 
@@ -28,20 +28,20 @@ export default function Blog() {
                 trabalho entre os diferentes repositórios da sua organização.
               </p>
               <div className="flex flex-row mt-2">
-                <div className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2">
+                <span className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2 text-xs flex items-center">
                   BackEnd
-                </div>
-                <div className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600">
+                </span>
+                <span className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 text-xs flex items-center">
                   CI/CD
-                </div>
+                </span>
               </div>
             </div>
 
             <div className="mb-8">
-              <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
+              <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans ">
                 Mantendo suas dependências atualizadas com o Dependabot
               </h2>
-              <p className="mt-2 font-sans font-light leading-6 text-gray-600 text-sm">
+              <p className="mt-2 font-sans font-light leading-6 text-gray-600 text-sm flex items-center">
                 Deixar as dependências sempre atualizadas é um dos pontos mais
                 importantes quando falamos em manter um projeto. A vantagem de
                 nos preocuparmos é que garantimos segurança, disponibilidade de
@@ -49,12 +49,12 @@ export default function Blog() {
                 performance em nosso código.
               </p>
               <div className="flex flex-row mt-2">
-                <div className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2">
+                <span className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2 text-xs flex items-center">
                   GitHub
-                </div>
-                <div className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600">
+                </span>
+                <span className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 text-xs flex items-center">
                   Dependabot
-                </div>
+                </span>
               </div>
             </div>
           </div>
