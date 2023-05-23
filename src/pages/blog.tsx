@@ -10,11 +10,48 @@ export default function Blog() {
       </Head>
       <section className="px-6">
         <div className="max-w-screen-lg flex flex-col mx-auto">
-          <div className="flex flex-row justify-between content-center items-center">
+          <div className="mt-24 flex flex-row justify-between content-center items-center">
             <h1 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
               Blog<span>.</span>
             </h1>
             <h3>foco, persistência e consistência.</h3>
+          </div>
+          <div className="mt-24 mb-8">
+            <ul className="flex flex-wrap border-b border-gray-200 dark:border-gray-700">
+              <li className="mr-2">
+                <a
+                  href="#"
+                  aria-current="page"
+                  className="inline-block text-gray-900 rounded-t-lg border-b border-gray-900 py-4 px-4 text-sm font-medium text-center active dark:bg-gray-800 dark:text-blue-500"
+                >
+                  Ver todos
+                </a>
+              </li>
+              <li className="mr-2">
+                <a
+                  href="#"
+                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                >
+                  BackEnd
+                </a>
+              </li>
+              <li className="mr-2">
+                <a
+                  href="#"
+                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                >
+                  Banco de Dados
+                </a>
+              </li>
+              <li className="mr-2">
+                <a
+                  href="#"
+                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                >
+                  CI/CD
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="mt-12">
@@ -61,13 +98,15 @@ export default function Blog() {
             </div>
           </div>
 
-          <div className="flex flex-row justify-between font-sans">
+          <div className="flex flex-row justify-between font-sans mt-4">
             <div className="border px-3 py-2 rounded-md flex content-center items-center space-x-2">
               <BsArrowLeft size={16} />
               <p>Anterior</p>
             </div>
             <ul className="flex flex-row space-x-2 items-center">
-              <li className="px-3 py-1 rounded-md bg-slate-800 text-slate-100">1</li>
+              <li className="px-3 py-1 rounded-md bg-slate-800 text-slate-100">
+                1
+              </li>
               <li className="border px-3 py-1 rounded-md">2</li>
               <li className="border px-3 py-1 rounded-md">3</li>
               <li className="border px-3 py-1 rounded-md">4</li>
