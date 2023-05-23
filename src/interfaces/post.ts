@@ -5,7 +5,7 @@ type PostType = {
     coverImage: string
     author: string
     excerpt: string
-    categories?: string
+    categories?: []
     content: string
 }
 

@@ -3,8 +3,8 @@ title: 'Mantendo suas dependências atualizadas com o dependabot.'
 excerpt: 'Caso você tenha um repositório criado em seu GitHub e que provavelmente o gerenciador de pacotes do seu projeto seja o npm, você já deve ter se deparado com o cenário abaixo em que alguns pull requests foram criados (misteriosamente).'
 coverImage: '/assets/blog/mantendo-dependencias-atualizadas-dependabot/cover.webp'
 date: '2022-05-06T09:00:00.000Z'
-author:
-  name: Helena Strada
+author: Helena Strada
+categories: ['Dependabot', 'GitHub']
 ---
 
 Caso você tenha um repositório criado em seu GitHub e que provavelmente o gerenciador de pacotes do seu projeto seja o npm, você já deve ter se deparado com o cenário abaixo em que alguns pull requests foram criados (misteriosamente).

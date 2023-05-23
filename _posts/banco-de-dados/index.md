@@ -3,8 +3,8 @@ title: 'O que são Bancos de Dados?'
 excerpt: 'O que são bancos de dados e quais são os tipos.'
 coverImage: '/assets/blog/banco-de-dados/cover.jpg'
 date: '2023-05-10T19:00:00.000Z'
-author:
-  name: Helena Strada
+author: Helena Strada
+categories: ['Banco de Dados', 'SQL']
 ---
 
 ## Contexto

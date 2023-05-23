@@ -1,15 +1,18 @@
 import Head from 'next/head';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
-import { getAllPosts } from 'lib/api';
+import { getAllCategories, getAllPosts } from 'lib/api';
 import Post from '../interfaces/post';
+import { Categories } from 'components/blog/Categories';
 
 type Props = {
   allPosts: Post[];
+  allCategories: string[];
 };
 
-export default function Blog({ allPosts }: Props) {
-  console.log(allPosts);
+export default function Blog({ allPosts, allCategories }: Props) {
+  const originalPosts = allPosts;
+
   return (
     <>
       <Head>
@@ -34,30 +37,7 @@ export default function Blog({ allPosts }: Props) {
                   Ver todos
                 </a>
               </li>
-              <li className="mr-2">
-                <a
-                  href="#"
-                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
-                >
-                  BackEnd
-                </a>
-              </li>
-              <li className="mr-2">
-                <a
-                  href="#"
-                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
-                >
-                  Banco de Dados
-                </a>
-              </li>
-              <li className="mr-2">
-                <a
-                  href="#"
-                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
-                >
-                  CI/CD
-                </a>
-              </li>
+              <Categories categories={allCategories} />
             </ul>
           </div>
 
@@ -66,7 +46,7 @@ export default function Blog({ allPosts }: Props) {
               <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
                 Criando workflows reutilizáveis com GitHub Actions
               </h2>
-              <p className="mt-2 font-sans font-light leading-6 text-gray-600 text-sm">
+              <p className="mt-2 font-sans font-light text-justify leading-6 text-gray-600 text-sm">
                 O GitHub Actions é uma ferramenta de fluxo de trabalho (ou
                 workflow) presente no GitHub que permite a automação de nosso
                 fluxo de trabalho. Neste breve artigo, vamos apresentar duas
@@ -87,7 +67,7 @@ export default function Blog({ allPosts }: Props) {
               <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans ">
                 Mantendo suas dependências atualizadas com o Dependabot
               </h2>
-              <p className="mt-2 font-sans font-light leading-6 text-gray-600 text-sm flex items-center">
+              <p className="mt-2 font-sans font-light text-justify leading-6 text-gray-600 text-sm flex items-center">
                 Deixar as dependências sempre atualizadas é um dos pontos mais
                 importantes quando falamos em manter um projeto. A vantagem de
                 nos preocuparmos é que garantimos segurança, disponibilidade de
@@ -131,9 +111,18 @@ export default function Blog({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'excerpt']);
+  const allPosts = getAllPosts([
+    'title',
+    'date',
+    'slug',
+    'author',
+    'excerpt',
+    'categories'
+  ]);
+
+  const allCategories = getAllCategories(allPosts);
 
   return {
-    props: { allPosts }
+    props: { allPosts, allCategories }
   };
 };
