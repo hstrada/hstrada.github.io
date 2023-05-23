@@ -3,12 +3,12 @@ import { IconContext } from 'react-icons';
 import { TranslationProvider } from '../core/hooks/useTranslate';
 import '../styles/globals.css';
 
-import { Oxygen, Sora } from 'next/font/google';
+import { Open_Sans, Sora } from 'next/font/google';
 
-const oxygen = Oxygen({
+const openSans = Open_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '700'],
-  variable: '--font-oxygen'
+  variable: '--font-openSans'
 });
 
 const sora = Sora({
@@ -19,7 +19,7 @@ const sora = Sora({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${oxygen.variable} ${sora.variable}`}>
+    <main className={`${openSans.variable} ${sora.variable}`}>
       <TranslationProvider>
         <IconContext.Provider value={{ color: '#121212', size: '24px' }}>
           <Component {...pageProps} />

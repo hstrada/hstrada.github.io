@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+
 export default function Blog() {
   return (
     <>
@@ -56,6 +58,24 @@ export default function Blog() {
                   Dependabot
                 </span>
               </div>
+            </div>
+          </div>
+
+          <div className="flex flex-row justify-between font-sans">
+            <div className="border px-3 py-2 rounded-md flex content-center items-center space-x-2">
+              <BsArrowLeft size={16} />
+              <p>Anterior</p>
+            </div>
+            <ul className="flex flex-row space-x-2 items-center">
+              <li className="px-3 py-1 rounded-md bg-slate-800 text-slate-100">1</li>
+              <li className="border px-3 py-1 rounded-md">2</li>
+              <li className="border px-3 py-1 rounded-md">3</li>
+              <li className="border px-3 py-1 rounded-md">4</li>
+              <li className="border px-3 py-1 rounded-md">5</li>
+            </ul>
+            <div className="border px-3 py-2 rounded-md flex content-center items-center space-x-2">
+              <p>Próxima</p>
+              <BsArrowRight size={16} />
             </div>
           </div>
         </div>
