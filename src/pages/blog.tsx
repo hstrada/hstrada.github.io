@@ -1,8 +1,15 @@
 import Head from 'next/head';
-
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
-export default function Blog() {
+import { getAllPosts } from 'lib/api';
+import Post from '../interfaces/post';
+
+type Props = {
+  allPosts: Post[];
+};
+
+export default function Blog({ allPosts }: Props) {
+  console.log(allPosts);
   return (
     <>
       <Head>
@@ -30,7 +37,7 @@ export default function Blog() {
               <li className="mr-2">
                 <a
                   href="#"
-                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
                 >
                   BackEnd
                 </a>
@@ -38,7 +45,7 @@ export default function Blog() {
               <li className="mr-2">
                 <a
                   href="#"
-                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-300"
                 >
                   Banco de Dados
                 </a>
@@ -46,7 +53,7 @@ export default function Blog() {
               <li className="mr-2">
                 <a
                   href="#"
-                  className="inline-block text-gray-500 hover:text-gray-600 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                  className="inline-block text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-t-lg py-4 px-4 text-sm font-medium text-center dark:text-gray-400  dark:hover:bg-gray-800 dark:hover:text-gray-300"
                 >
                   CI/CD
                 </a>
@@ -122,3 +129,11 @@ export default function Blog() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'author', 'excerpt']);
+
+  return {
+    props: { allPosts }
+  };
+};
