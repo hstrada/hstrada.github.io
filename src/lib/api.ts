@@ -40,7 +40,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 export function getAllPosts(fields: string[] = []) {
   const slugs = getPostSlugs()
   const posts = slugs
-    .filter(item => item.isDirectory())
+    .filter((item) => item.isDirectory())
     .map((slug) => getPostBySlug(slug.name, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
@@ -48,7 +48,12 @@ export function getAllPosts(fields: string[] = []) {
 }
 
 export function getAllCategories(allPosts: Items[]) {
-  const searchForCategories = allPosts.map(post => post.categories)
-  const combineCategories = searchForCategories.flat(1)
+  const searchForCategories = allPosts.map((post) => post.categories)
+  const combineCategories = [...new Set(searchForCategories.flat(1))]
   return combineCategories
+}
+
+export function getTotalPosts() {
+  const allPosts = getAllPosts()
+  return allPosts.length
 }

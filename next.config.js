@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     loader: 'custom',
   },
+  async rewrites() {
+    return [
+      {
+        source: '/blog',
+        destination: '/blog/1',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
