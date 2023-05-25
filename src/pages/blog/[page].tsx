@@ -9,6 +9,7 @@ import {
 import Post from '../../interfaces/post';
 import { GetStaticPathsResult } from 'next';
 import { Pagination } from 'components/blog/pagination';
+import { Profile } from 'components/organisms/Profile';
 
 type Props = {
   posts: Post[];
@@ -22,13 +23,18 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
       <Head>
         <title>blog | hstrada</title>
       </Head>
+      <header className="px-6">
+        <div className="max-w-screen-lg mx-auto mt-6 flex flex-row justify-between">
+          <Profile />
+          <h3 className="font-sans">foco, persistência e consistência.</h3>
+        </div>
+      </header>
       <section className="px-6">
         <div className="max-w-screen-lg flex flex-col mx-auto">
-          <div className="mt-24 flex flex-row justify-between content-center items-center">
+          <div className="mt-32 flex flex-row justify-between content-center items-center">
             <h1 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
               Blog<span>.</span>
             </h1>
-            <h3>foco, persistência e consistência.</h3>
           </div>
           <div className="mt-24 mb-8">
             <ul className="flex flex-wrap border-b border-gray-200 dark:border-gray-700">
