@@ -1,4 +1,3 @@
-import { loader } from 'core/utils/loader'
 import Image from 'next/image'
 
 import { FaGlobeAmericas } from 'react-icons/fa'
@@ -9,7 +8,6 @@ export const Header = () => {
   return (
     <header className="px-6 pt-6 flex flex-row justify-between">
       <Image
-        loader={loader}
         src="/images/hs.png"
         alt="Helena Strada Profile Logo"
         width={23}

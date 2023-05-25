@@ -1,7 +1,3 @@
-import Button from '../../atoms/Button'
-
-import { FaGithub, FaBehance, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
-
 import { Translate } from '../../../core/utils/translate'
 import { SocialMedia } from 'components/molecules/SocialMedia'
 
