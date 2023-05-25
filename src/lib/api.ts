@@ -2,6 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import Post from '../interfaces/post'
+import PostType from '../interfaces/post'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -56,4 +57,23 @@ export function getAllCategories(allPosts: Items[]) {
 export function getTotalPosts() {
   const allPosts = getAllPosts()
   return allPosts.length
+}
+
+export function renderPostsByPage(posts: Items[], pageNumber: number) {
+  const INITIAL_NUMBER_TO_RENDER = 0;
+  const POSTS_PER_PAGE = 3;
+
+  const renderPosts = {
+    1: posts.slice(INITIAL_NUMBER_TO_RENDER, POSTS_PER_PAGE),
+    2: posts.slice(POSTS_PER_PAGE, POSTS_PER_PAGE * pageNumber)
+  };
+
+  const filteredPosts =
+    renderPosts[pageNumber] ||
+    posts.slice(
+      POSTS_PER_PAGE * pageNumber - POSTS_PER_PAGE,
+      POSTS_PER_PAGE * pageNumber
+    );
+
+  return filteredPosts
 }

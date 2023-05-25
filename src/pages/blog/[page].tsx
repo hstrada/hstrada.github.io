@@ -1,15 +1,20 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import { getAllCategories, getAllPosts, getTotalPosts } from 'lib/api'
-import Post from '../../interfaces/post'
-import { GetStaticPathsResult } from 'next'
-import { Pagination } from 'components/blog/pagination'
+import {
+  getAllCategories,
+  getAllPosts,
+  getTotalPosts,
+  renderPostsByPage
+} from 'lib/api';
+import Post from '../../interfaces/post';
+import { GetStaticPathsResult } from 'next';
+import { Pagination } from 'components/blog/pagination';
 
 type Props = {
-  posts: Post[]
-  allCategories: string[]
-  numberOfPages: number
-}
+  posts: Post[];
+  allCategories: string[];
+  numberOfPages: number;
+};
 
 export default function Blog({ posts, allCategories, numberOfPages }: Props) {
   return (
@@ -52,7 +57,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
           <div className="mt-12">
             {posts.map((post) => {
               return (
-                <div className="mb-8">
+                <div className="mb-8" key={post.slug}>
                   <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
                     {post.title}
                   </h2>
@@ -62,14 +67,17 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
                   <div className="flex flex-row mt-2">
                     {post.categories.map((category) => {
                       return (
-                        <span className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2 text-xs flex items-center">
+                        <span
+                          key={category}
+                          className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2 text-xs flex items-center"
+                        >
                           {category}
                         </span>
-                      )
+                      );
                     })}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
 
@@ -77,27 +85,27 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   // Get total number of posts from md resources.
-  const totalPosts = await getTotalPosts()
-  const numberOfPages = Math.ceil(totalPosts / 3)
+  const totalPosts = await getTotalPosts();
+  const numberOfPages = Math.ceil(totalPosts / 3);
 
   // Build paths `blog/1`, `blog/2` ...etc.
   const paths = Array(numberOfPages)
     .fill(0)
     .map((_, page) => ({
       params: {
-        page: `${page + 1}`,
-      },
-    }))
+        page: `${page + 1}`
+      }
+    }));
 
   return {
     paths,
-    fallback: false,
-  }
+    fallback: false
+  };
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -107,29 +115,16 @@ export const getStaticProps = async ({ params }) => {
     'slug',
     'author',
     'excerpt',
-    'categories',
-  ])
+    'categories'
+  ]);
 
-  const numberOfPages = Math.ceil(allPosts.length / 3)
+  const numberOfPages = Math.ceil(allPosts.length / 3);
 
-  const INITIAL_NUMBER_TO_RENDER = 0
-  const POSTS_PER_PAGE = 3
+  const posts = renderPostsByPage(allPosts, params.page);
 
-  const renderPosts = {
-    1: allPosts.slice(INITIAL_NUMBER_TO_RENDER, POSTS_PER_PAGE),
-    2: allPosts.slice(POSTS_PER_PAGE, POSTS_PER_PAGE * params.page),
-  }
-
-  const posts =
-    renderPosts[params.page] ||
-    allPosts.slice(
-      POSTS_PER_PAGE * params.page - POSTS_PER_PAGE,
-      POSTS_PER_PAGE * params.page
-    )
-
-  const allCategories = getAllCategories(allPosts)
+  const allCategories = getAllCategories(allPosts);
 
   return {
-    props: { posts, allCategories, numberOfPages },
-  }
-}
+    props: { posts, allCategories, numberOfPages }
+  };
+};
