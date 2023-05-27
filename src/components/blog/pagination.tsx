@@ -6,12 +6,12 @@ interface Props {
   numberOfPages: number
 }
 
-export const Pagination = ({ numberOfPages }) => {
+const defaultClassName = 'border px-3 py-1 rounded-md'
+const selectedClassName = 'px-3 py-1 rounded-md bg-slate-800 text-slate-100'
+
+export const Pagination = ({ numberOfPages }: Props) => {
   const router = useRouter()
   const actualPage = Number(router.query.page)
-
-  const defaultClassName = 'border px-3 py-1 rounded-md'
-  const selectedClassName = 'px-3 py-1 rounded-md bg-slate-800 text-slate-100'
 
   return (
     <div className="flex flex-row justify-between font-sans mt-4">
