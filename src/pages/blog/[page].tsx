@@ -49,7 +49,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   // Get total number of posts from md resources.
   const totalPosts = await getTotalPosts();
-  const numberOfPages = Math.ceil(totalPosts / 3);
+  const numberOfPages = Math.ceil(totalPosts / 10);
 
   // Build paths `blog/1`, `blog/2` ...etc.
   const paths = Array(numberOfPages)
