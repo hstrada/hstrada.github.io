@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-sora)'],
-        display: ['var(--font-openSans)']
+        display: ['var(--font-poppins)']
       },
       backgroundImage: {
         hero: "url('/images/bg-hero.png')"

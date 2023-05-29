@@ -13,7 +13,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="text-sm font-sans text-center">{author}</div>
+      <div className="text-sm font-display text-center">{author}</div>
       <div className="mt-12 mb-8 md:mb-16 sm:mx-0">
         <CoverImage title={title} src={coverImage} />
       </div>

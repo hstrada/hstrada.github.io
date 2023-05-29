@@ -20,10 +20,10 @@ export const Posts = ({ posts }: Props) => {
                 {post.title}
               </Link>
             </h2>
-            <p className="mt-2 font-sans font-light text-justify leading-6 text-gray-600 text-sm">
+            <p className="mt-1 font-display font-light text-justify leading-6 text-gray-600 text-sm">
               {post.excerpt}
             </p>
-            <div className="flex flex-row mt-2">
+            <div className="flex flex-row mt-3">
               {post.categories.map((category) => {
                 return (
                   <span

@@ -19,13 +19,24 @@ Pesquisando por uma notícia ou aplicativo que você utiliza para consultar suas
 
 Mas então, qual é a diferença entre um banco de dados e uma planilha?
 
-- Segurança: podemos definir os níveis de acesso aos dados utilizando processos de segurança.
-- Performance: os dados podem ser gerenciados, pesquisados e modificados através de estruturas arquitetadas para que tal operação seja rápida de busca.
-- Armazenamento: a quantidade de armazenamento é superior aos dados de uma planilha.
-- Tipos: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano.
+- **Segurança**: podemos definir os níveis de acesso aos dados utilizando processos de segurança.
+
+- **Performance**: os dados podem ser gerenciados, pesquisados e modificados através de estruturas arquitetadas para que tal operação seja rápida de busca.
+
+- **Armazenamento**: a quantidade de armazenamento é superior aos dados de uma planilha.
+
+- **Tipos**: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano.
+
+## Tipos de banco de dados
+
+Existem diferentes tipos de bancos de dados disponíveis no mercado que fornecem maneiras abrangentes de organização desses dados, como por exemplo, relacionais, não relacionais e/ou gráficos entre outros modelos.
+
+Um dos tipos mais comuns utilizados são os bancos de dados relacionais que são organizados em tabelas com colunas e linhas. Entre alguns exemplos, podemos destacar: MS SQL Server e o MySQL.
 
 ## Como são gerenciados
 
-Um banco de dados é controlado por um sistema de gerenciamento de banco de dados, também conhecido como SGBD ou em inglês, *DBMS*.
+Um banco de dados é controlado por um sistema de gerenciamento de banco de dados, também conhecido como SGBD ou em inglês, *DBMS* que provê uma interface para o usuário permitindo que ele realize ações contemplando o manuseamento dessas informações até as configurações de backup e controle de acesso.
 
-## Tipos de banco de dados
+## SQL
+
+*SQL* (Structured Query Language ou Linguagem de Consulta Estruturada) é uma linguagem utilizada na maioria dos bancos de dados relacionais para definir, criar, consultar e manipular dados e foi desenvolvida pela IBM em 1970 com base no modelo de dados relacionais.
