@@ -1,6 +1,6 @@
 import { Profile } from 'components/organisms/Profile';
 
-export const PostHeader = () => {
+export const BlogHeader = () => {
   return (
     <header className="px-6">
       <div className="max-w-screen-lg mx-auto mt-8 flex flex-row justify-between">

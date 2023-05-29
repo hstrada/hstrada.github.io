@@ -1,17 +1,24 @@
-import PostType from 'interfaces/post';
+import TPost from 'interfaces/post';
+import Link from 'next/link';
 
 interface Props {
-  posts: PostType[];
+  posts: TPost[];
 }
 
 export const Posts = ({ posts }: Props) => {
   return (
-    <div className="mt-12">
+    <div className="mt-24">
       {posts.map((post) => {
         return (
           <div className="mb-8" key={post.slug}>
             <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
-              {post.title}
+              <Link
+                as={`/blog/post/${post.slug}`}
+                href="/blog/post/[slug]"
+                className="hover:underline font-sans"
+              >
+                {post.title}
+              </Link>
             </h2>
             <p className="mt-2 font-sans font-light text-justify leading-6 text-gray-600 text-sm">
               {post.excerpt}

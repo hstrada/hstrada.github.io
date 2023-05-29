@@ -1,4 +1,4 @@
-type PostType = {
+type TPost = {
     slug: string
     title: string
     date: string
@@ -9,4 +9,4 @@ type PostType = {
     content: string
 }
 
-export default PostType
+export default TPost

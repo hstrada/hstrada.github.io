@@ -12,7 +12,7 @@ import Post from '../../interfaces/post';
 
 import { Pagination } from 'components/blog/pagination';
 import { Posts } from 'components/blog/posts';
-import { PostHeader } from 'components/blog/post-header';
+import { BlogHeader } from 'components/blog/blog-header';
 import { Categories } from 'components/blog/categories';
 
 type Props = {
@@ -27,7 +27,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
       <Head>
         <title>blog | hstrada</title>
       </Head>
-      <PostHeader />
+      <BlogHeader />
       <section className="px-6">
         <div className="max-w-screen-lg flex flex-col mx-auto">
           <div className="mt-32 flex flex-row justify-between content-center items-center">
@@ -35,7 +35,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
               Blog<span>.</span>
             </h1>
           </div>
-          <Categories categories={allCategories} />
+          {/* <Categories categories={allCategories} /> */}
 
           <Posts posts={posts} />
 
