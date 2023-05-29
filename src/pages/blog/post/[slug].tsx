@@ -20,7 +20,7 @@ export default function Post({ post }: Props) {
 
   return (
     <>
-      <article className="mb-32">
+      <article className="mt-24 mb-32">
         <Head>
           <title>{title}</title>
           <meta property="og:image" content={post.coverImage} />
