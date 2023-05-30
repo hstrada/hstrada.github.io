@@ -1,19 +1,14 @@
 import { GetStaticPathsResult } from 'next';
 import Head from 'next/head';
 
-import {
-  getAllCategories,
-  getAllPosts,
-  getTotalPosts,
-  renderPostsByPage
-} from 'lib/api';
+import { getAllPosts, getTotalPosts, renderPostsByPage } from 'lib/api';
 
 import Post from '../../interfaces/post';
 
 import { Pagination } from 'components/blog/pagination';
 import { Posts } from 'components/blog/posts';
 import { BlogHeader } from 'components/blog/blog-header';
-import { Categories } from 'components/blog/categories';
+import { BlogSpan } from 'components/blog/blog-span';
 
 type Props = {
   posts: Post[];
@@ -21,7 +16,7 @@ type Props = {
   numberOfPages: number;
 };
 
-export default function Blog({ posts, allCategories, numberOfPages }: Props) {
+export default function Blog({ posts, numberOfPages }: Props) {
   return (
     <>
       <Head>
@@ -30,11 +25,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
       <BlogHeader />
       <section className="px-6">
         <div className="max-w-screen-lg flex flex-col mx-auto">
-          <div className="mt-32 flex flex-row justify-between content-center items-center">
-            <h1 className="text-5xl flex flex-row leading-tight font-bold max-w-screen-lg font-sans">
-              Blog<span>.</span>
-            </h1>
-          </div>
+          <BlogSpan />
           {/* <Categories categories={allCategories} /> */}
 
           <Posts posts={posts} />
@@ -46,7 +37,7 @@ export default function Blog({ posts, allCategories, numberOfPages }: Props) {
   );
 }
 
-export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   // Get total number of posts from md resources.
   const totalPosts = await getTotalPosts();
   const numberOfPages = Math.ceil(totalPosts / 10);
@@ -80,9 +71,9 @@ export const getStaticProps = async ({ params }) => {
 
   const posts = renderPostsByPage(allPosts, params.page);
 
-  const allCategories = getAllCategories(allPosts);
+  // const allCategories = getAllCategories(allPosts);
 
   return {
-    props: { posts, allCategories, numberOfPages }
+    props: { posts, numberOfPages }
   };
 };
