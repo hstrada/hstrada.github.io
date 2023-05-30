@@ -1,9 +1,12 @@
 import type { AppProps } from 'next/app';
+import { Sora, Poppins } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+
 import { IconContext } from 'react-icons';
+
 import { TranslationProvider } from '../core/hooks/useTranslate';
 import '../styles/globals.css';
 
-import { Sora, Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -23,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <TranslationProvider>
         <IconContext.Provider value={{ color: '#121212', size: '24px' }}>
           <Component {...pageProps} />
+          <Analytics />
         </IconContext.Provider>
       </TranslationProvider>
     </main>
