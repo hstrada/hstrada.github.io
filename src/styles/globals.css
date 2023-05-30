@@ -28,3 +28,7 @@ a {
   --primary-500-color: #FFCC00;
   --primary-600-color: #f0b724;
 }
+
+span {
+  color: var(--primary-600-color)
+}

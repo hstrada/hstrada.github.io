@@ -24,10 +24,10 @@ export const EducationalItem = ({
       <span className="text-slate-400 font-light text-xs font-display">
         {level}
       </span>
-      <h3 className="text-gray-100 text-base font-display font-bold">
+      <h3 className="text-gray-100 text-sm font-display font-bold">
         {title}
       </h3>
-      <span className="text-slate-300 font-light text-xs font-display">
+      <span className="text-slate-400 text-xs font-display">
         {place}
       </span>
     </div>

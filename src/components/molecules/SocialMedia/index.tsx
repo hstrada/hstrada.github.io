@@ -1,5 +1,11 @@
-import Button from 'components/atoms/Button'
-import { FaBehance, FaGithub, FaLinkedinIn, FaMediumM } from 'react-icons/fa'
+import Button from 'components/atoms/Button';
+import {
+  FaBehance,
+  FaGithub,
+  FaLinkedinIn,
+  FaMediumM,
+  FaMicrosoft
+} from 'react-icons/fa';
 
 export const SocialMedia = () => {
   return (
@@ -16,6 +22,9 @@ export const SocialMedia = () => {
       <Button.Outline url="https://hstrada.medium.com/">
         <FaMediumM />
       </Button.Outline>
+      <Button.Outline url="/blog">
+        <FaMicrosoft />
+      </Button.Outline>
     </>
-  )
-}
+  );
+};

@@ -1,7 +1,3 @@
-import Button from '../../atoms/Button'
-
-import { FaGithub, FaBehance, FaMediumM, FaLinkedinIn } from 'react-icons/fa'
-
 import { Translate } from '../../../core/utils/translate'
 import { SocialMedia } from 'components/molecules/SocialMedia'
 
@@ -17,7 +13,7 @@ export const Hero = () => {
           <br />
           {Translate('hero.area')}
         </h1>
-        <p className="pt-8 max-w-screen-sm text-gray-700 text-base font-light font-display leading-[2]">
+        <p className="pt-8 max-w-screen-sm text-gray-700 text-sm font-light font-display leading-[2]">
           {Translate('hero.description')}
         </p>
         <div className="pt-8 space-x-4">
