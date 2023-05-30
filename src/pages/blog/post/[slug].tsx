@@ -1,21 +1,21 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import TPost from 'interfaces/post'
-import PostHeader from 'components/blog/post/post-header'
-import Head from 'next/head'
-import PostBody from 'components/blog/post/post-body'
-import markdownToHtml from 'lib/markdownToHtml'
-import { getAllPosts, getPostBySlug } from 'lib/api'
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
+import TPost from 'interfaces/post';
+import PostHeader from 'components/blog/post/post-header';
+import Head from 'next/head';
+import PostBody from 'components/blog/post/post-body';
+import markdownToHtml from 'lib/markdownToHtml';
+import { getAllPosts, getPostBySlug } from 'lib/api';
 
 type Props = {
-  post: TPost
-}
+  post: TPost;
+};
 
 export default function Post({ post }: Props) {
-  const router = useRouter()
-  const title = `blog | ${post.title}`
+  const router = useRouter();
+  const title = `blog | ${post.title}`;
   if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
+    return <ErrorPage statusCode={404} />;
   }
 
   return (
@@ -24,22 +24,24 @@ export default function Post({ post }: Props) {
         <title>{title}</title>
         <meta property="og:image" content={post.coverImage} />
       </Head>
-      <PostHeader
-        title={post.title}
-        coverImage={post.coverImage}
-        date={post.date}
-        author={post.author}
-      />
-      <PostBody content={post.content} />
+      <div className="max-w-screen-lg flex flex-col mx-auto">
+        <PostHeader
+          title={post.title}
+          coverImage={post.coverImage}
+          date={post.date}
+          author={post.author}
+        />
+        <PostBody content={post.content} />
+      </div>
     </article>
-  )
+  );
 }
 
 type Params = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
@@ -48,32 +50,32 @@ export async function getStaticProps({ params }: Params) {
     'slug',
     'author',
     'content',
-    'coverImage',
-  ])
+    'coverImage'
+  ]);
 
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(post.content || '');
 
   return {
     props: {
       post: {
         ...post,
-        content,
-      },
-    },
-  }
+        content
+      }
+    }
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug']);
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
-        },
-      }
+          slug: post.slug
+        }
+      };
     }),
-    fallback: false,
-  }
+    fallback: false
+  };
 }

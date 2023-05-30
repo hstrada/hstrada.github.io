@@ -10,7 +10,7 @@ export const Posts = ({ posts }: Props) => {
     <div className="mt-24">
       {posts.map((post) => {
         return (
-          <div className="mb-8" key={post.slug}>
+          <div className="mb-16" key={post.slug}>
             <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
               <Link
                 as={`/blog/post/${post.slug}`}
