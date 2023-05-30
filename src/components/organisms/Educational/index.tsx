@@ -1,10 +1,10 @@
-import { FaInfo } from 'react-icons/fa'
-import { Translate } from '../../../core/utils/translate'
-import { EducationalItem } from '../../molecules/EducationalItem'
-import styles from './styles.module.css'
+import { FaInfo } from 'react-icons/fa';
+import { Translate } from '../../../core/utils/translate';
+import { EducationalItem } from '../../molecules/EducationalItem';
+import styles from './styles.module.css';
 
 export const Educational = () => {
-  const out = Array.from(Array(3), (_, x) => x)
+  const out = Array.from(Array(3), (_, x) => x);
   return (
     <section className="px-6 mt-48">
       <div className="max-w-screen-lg flex flex-col mx-auto">
@@ -22,7 +22,7 @@ export const Educational = () => {
         <div className="pt-16 grid grid-cols-12 gap-12">
           {out.map((index) => (
             <EducationalItem
-              key={`educational.xp.${index}.level` + index}
+              key={index}
               level={Translate(`educational.xp.${index}.level`)}
               title={Translate(`educational.xp.${index}.title`)}
               place={Translate(`educational.xp.${index}.place`)}
@@ -31,5 +31,5 @@ export const Educational = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
