@@ -67,7 +67,9 @@ export const getStaticProps = async ({ params }) => {
     'categories'
   ]);
 
-  const numberOfPages = Math.ceil(allPosts.length / 3);
+  const numberOfPostsPerPage = 10;
+
+  const numberOfPages = Math.ceil(allPosts.length / numberOfPostsPerPage);
 
   const posts = renderPostsByPage(allPosts, params.page);
 

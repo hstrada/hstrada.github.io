@@ -7,7 +7,7 @@ interface Props {
 
 export const Posts = ({ posts }: Props) => {
   return (
-    <div className="mt-24">
+    <div>
       {posts.map((post) => {
         return (
           <div className="mb-16" key={post.slug}>

@@ -6,6 +6,7 @@ import Head from 'next/head';
 import PostBody from 'components/blog/post/post-body';
 import markdownToHtml from 'lib/markdownToHtml';
 import { getAllPosts, getPostBySlug } from 'lib/api';
+import { BlogSpan } from 'components/blog/blog-span';
 
 type Props = {
   post: TPost;
@@ -19,12 +20,13 @@ export default function Post({ post }: Props) {
   }
 
   return (
-    <article className="mt-24 mb-32">
+    <article className="mb-32">
       <Head>
         <title>{title}</title>
         <meta property="og:image" content={post.coverImage} />
       </Head>
-      <div className="max-w-screen-lg flex flex-col mx-auto">
+      <div className="max-w-3xl mx-auto px-6 flex flex-col">
+        <BlogSpan />
         <PostHeader
           title={post.title}
           coverImage={post.coverImage}
