@@ -1,23 +1,23 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 interface Props {
-  numberOfPages: number
+  numberOfPages: number;
 }
 
-const defaultClassName = 'border px-3 py-1 rounded-md'
-const selectedClassName = 'px-3 py-1 rounded-md bg-slate-800 text-slate-100'
+const defaultClassName = 'border px-3 py-1 rounded-md';
+const selectedClassName = 'px-3 py-1 rounded-md bg-slate-800 text-slate-100';
 
-const disabledIconColor = '#b8b8b8'
-const activeIconColor = '#121212'
+const disabledIconColor = '#b8b8b8';
+const activeIconColor = '#121212';
 
 export const Pagination = ({ numberOfPages }: Props) => {
-  const router = useRouter()
-  const actualPage = Number(router.query.page)
+  const router = useRouter();
+  const actualPage = Number(router.query.page);
 
-  const hasPreviousPage = numberOfPages >= 2 && actualPage >= 2
-  const hasNextPage = actualPage < numberOfPages
+  const hasPreviousPage = numberOfPages >= 2 && actualPage >= 2;
+  const hasNextPage = actualPage < numberOfPages;
 
   return (
     <div className="flex flex-row justify-between font-sans mt-24">
@@ -39,13 +39,14 @@ export const Pagination = ({ numberOfPages }: Props) => {
         {Array.from(Array(numberOfPages).keys()).map((page) => {
           return (
             <li
+              key={page}
               className={
                 actualPage === page + 1 ? selectedClassName : defaultClassName
               }
             >
               <Link href={`/blog/${page + 1}`}>{page + 1}</Link>
             </li>
-          )
+          );
         })}
       </ul>
       <Link href={`/blog/${actualPage + 1}`}>
@@ -62,5 +63,5 @@ export const Pagination = ({ numberOfPages }: Props) => {
         </button>
       </Link>
     </div>
-  )
-}
+  );
+};
