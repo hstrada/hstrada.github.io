@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <main className={`${poppins.variable} ${sora.variable}`}>
       <TranslationProvider>
-        <IconContext.Provider value={{ color: '#121212', size: '24px' }}>
+        <IconContext.Provider value={{ className: 'icon-shared', color: '#121212', size: '20px' }}>
           <Component {...pageProps} />
           <Analytics />
         </IconContext.Provider>
