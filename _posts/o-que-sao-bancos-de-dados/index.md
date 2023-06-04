@@ -42,7 +42,7 @@ E as informações precisam ser persistidas (armazenadas) de uma maneira segura 
 ![Banco de Dados](/assets/blog/o-que-sao-bancos-de-dados/bd.png)
 *Banco de Dados*
 
-Essas informações normalmente são modeladas em linhas e colunas, semelhantes a uma planilha eletrônica, mas apesar deste tipo ser o mais comum, existem outros que serão apresentados.
+Essas informações normalmente são modeladas em linhas e colunas, semelhantes a uma planilha (Google Sheets, Microsoft Excel), mas apesar deste tipo ser o mais comum, existem outros que serão apresentados.
 
 ![Planilha Eletrônica.](/assets/blog/o-que-sao-bancos-de-dados/google-sheets.png)
 *Exemplo de uma planilha no Google Sheets*
@@ -52,13 +52,13 @@ Essas informações normalmente são modeladas em linhas e colunas, semelhantes 
 
 Mas então, qual é a diferença entre um banco de dados e uma planilha?
 
-- **Segurança**: podemos definir os níveis de acesso aos dados utilizando processos de segurança.
+- **Segurança**: nem todas as operações podem ser realizadas por todos os usuários, logo podemos definir os níveis de acesso aos dados utilizando processos de segurança.
 
 - **Performance**: os dados podem ser gerenciados, pesquisados e modificados através de estruturas arquitetadas para que tal operação seja rápida de busca.
 
-- **Armazenamento**: a quantidade de armazenamento é superior aos dados de uma planilha.
+- **Armazenamento**: ainda que uma planilha possa ter um alto volume de dados, a quantidade de armazenamento de um banco de dados é superior aos dados de uma planilha e as regras de backup e segurança são mais robustas, quando realizadas.
 
-- **Tipos**: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano.
+- **Tipos**: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano, garantindo uma melhor consistência das informações a serem armazenadas.
 
 ## Tipos de banco de dados
 
