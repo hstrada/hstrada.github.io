@@ -18,9 +18,9 @@ categories: ['Banco de Dados', 'SQL']
 
 Pesquisando por uma notícia ou aplicativo que você utiliza para ver os conteúdos mais recentes publicados ou navegar em sua rede social favorita, uma arquitetura compõe a base da aplicação que você está utilizando.
 
-Para contextualizar sobre banco de dados, iremos apresentar o site de uma tela de um site que exibe as categorias disponíveis para seleção em um e-commerce e os respectivos produtos que compõem cada categoria.
+Para contextualizar sobre banco de dados, iremos apresentar o site de uma tela que exibe as categorias disponíveis para seleção em um e-commerce e os respectivos produtos que compõem cada categoria.
 
-![Loja virtual.](/assets/blog/o-que-sao-bancos-de-dados/shopping.png?preview=true)
+![Loja virtual.](/assets/blog/o-que-sao-bancos-de-dados/shopping.png)
 *Exemplo de um site de produtos e categorias*
 
 Nesse fluxo de informações, dentre um desenho de arquiteturas e sistemas disponíveis, para explicar o contexto de banco de dados, vamos sintetizar a apresentação dessa tela que você acessou no seu navegador, em três itens:
@@ -37,7 +37,7 @@ Seja do administrador da página, salvando um produto com valor ausente, seja do
 ![BackEnd](/assets/blog/o-que-sao-bancos-de-dados/backend.png)
 *BackEnd*
 
-E as informações precisam ser persistidas (armazenadas) de uma maneira segura e que possam ser recuperadas de forma consistente quando solicitadas. Sendo assim, as informações são armazenadas em bancos de dados.
+E as informações precisam ser persistidas (armazenadas) de uma maneira segura para que possam ser recuperadas de forma consistente quando solicitadas. Sendo assim, as informações são armazenadas em bancos de dados.
 
 ![Banco de Dados](/assets/blog/o-que-sao-bancos-de-dados/bd.png)
 *Banco de Dados*
