@@ -52,13 +52,15 @@ Essas informações normalmente são modeladas em linhas e colunas, semelhantes 
 
 Mas então, qual é a diferença entre um banco de dados e uma planilha?
 
-- **Segurança**: nem todas as operações podem ser realizadas por todos os usuários, logo podemos definir os níveis de acesso aos dados utilizando processos de segurança.
+- **Segurança**: nem todas as operações podem ser realizadas por todos os usuários, logo podemos definir os níveis de acesso aos dados utilizando processos de segurança;
 
-- **Performance**: os dados podem ser gerenciados, pesquisados e modificados através de estruturas arquitetadas para que tal operação seja rápida de busca.
+- **Performance**: os dados podem ser gerenciados, pesquisados e modificados através de estruturas arquitetadas para que tal operação seja rápida de busca;
 
-- **Armazenamento**: ainda que uma planilha possa ter um alto volume de dados, a quantidade de armazenamento de um banco de dados é superior aos dados de uma planilha e as regras de backup e segurança são mais robustas, quando realizadas.
+- **Armazenamento**: ainda que uma planilha possa ter um alto volume de dados, a quantidade de armazenamento de um banco de dados é superior aos dados de uma planilha e as regras de backup e segurança são mais robustas, quando realizadas;
 
-- **Tipos**: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano, garantindo uma melhor consistência das informações a serem armazenadas.
+- **Tipos**: podemos restringir os tipos de dados que poderão ser armazenados em um campo, como aceitar somente números ou um booleano, garantindo uma melhor consistência das informações a serem armazenadas;
+
+- **Integridade**: integridade referencial dos dados.
 
 ## Tipos de banco de dados
 
