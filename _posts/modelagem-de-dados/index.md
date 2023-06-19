@@ -1,7 +1,7 @@
 ---
 title: 'Modelagem de dados'
 excerpt: 'O que é e por quê realizar a modelagem de dados.'
-coverImage: '/assets/blog/o-que-sao-bancos-de-dados/cover.jpg'
+coverImage: '/assets/blog/modelagem-de-dados/cover.jpg'
 date: '2023-06-04T16:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'Modelagem BD']
@@ -23,11 +23,11 @@ Essa etapa é importante por quê ela define não somente **onde** esses dados s
 
 Isso por quê:
 
-- Pensar na análise de domínio reduz o risco de erros de desenvolvimento tanto do banco de dados, quanto nos processos subsequentes, como na arquitetura do backend, envolvendo regras de negócios da sua aplicação;
+- Pensar na análise de domínio reduz o **risco** de erros de desenvolvimento tanto do banco de dados, quanto nos processos subsequentes, como na arquitetura do backend, envolvendo regras de negócios da sua aplicação;
 
-- Facilita a comunicação entre as partes envolvidas reduzindo a complexidade e criando consistência na documentação;
+- **Facilita** a comunicação entre as partes envolvidas reduzindo a complexidade e criando consistência na documentação;
 
-- Elimina a redundância e retrabalho durante o desenvolvimento.
+- Elimina a **redundância** e retrabalho durante o desenvolvimento.
 
 Imagina que você acessa seu aplicativo que consta uma informação sobre a sua conta, mas ao acessar a aplicação web ou até mesmo continuar um processo de pedido dentro do aplicativo, a cada sessão diferente que você clica, uma informação diferente sobre o mesmo serviço aparece para você. Claro que dentro desse exemplo, essa inconsistência pode ocorrer devido a fatores totalmente diferentes do contexto, mas é um exemplo do que algo não bem descrito pode ocorrer de exemplo dentro da sua organização.
 
@@ -43,10 +43,26 @@ A modelagem é/pode ser realizada em três etapas: **conceitual**, **lógica** e
 
 ### Modelo de dados conceitual
 
-O nível conceitual oferece uma visão mais simplificada dos dados, identificando as entidades, quais são os tipos de dados que essas entidades irão precisar armazenar, é sobre o design e projeção dos seus dados.
+O nível conceitual oferece uma visão mais simplificada dos dados, identificando as entidades, quais são os tipos de dados que essas entidades irão precisar armazenar, é sobre o design e projeção dos seus dados, mas não possuem detalhes de implementação.
 
 No exemplo do shopping apresentado, podemos destacar:
 
--> As categorias (com nome) que a loja possui;
+-> As categorias que representam as categorias disponíveis para a loja;
 
--> Os produtos (com nome, descrição e preço) que pertence a uma categoria.
+-> Os produtos que compõem as categorias.
+
+### Modelo de dados lógico
+
+O modelo de dados lógico está mais próximo ao modelo físico do banco de dados, onde os tipos de dados, relacionamentos e restrições a partir do modelo conceitual, começcam a aparecer. Não são dependentes da tecnologia, então você pode transformar e implementar o modelo em qualquer linguagem de sua escolha.
+
+-> As categorias possuem nome;
+
+-> Cada produto pertence a uma categoria e os produtos contém nome, descrição e preço.
+
+![Modelo lógico.](/assets/blog/modelagem-de-dados/modelo-logico.png)
+*Exemplo de um modelo lógico com produtos e categorias.*
+
+### Modelo de dados físicos
+
+A partir do modelo lógico, faremos a implementação física do banco de dados escolhendo o SGBD que será utilizado. Conforme o SGBD escolhido, os tipos de dados serão definidos, relações de dados e implementações como restrições.
+
