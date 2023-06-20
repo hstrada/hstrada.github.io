@@ -15,7 +15,10 @@ categories: ['Banco de Dados', 'SQL', 'Modelagem BD']
 
 ## Contexto & Explicação
 
-Ao iniciar o desenvolvimento de um site, sistema ou aplicativo, uma das etapas fundamentais do processo é pensar em "como os dados serão armazenados" dentro de cada aplicação.
+Ao iniciar o desenvolvimento de um site, sistema ou aplicativo, uma das etapas fundamentais do processo é pensar em "como os dados serão armazenados" dentro de cada aplicação. Normalmente, em fluxo de trabalho de desenvolvimento, uma das etapas é pensar na arquitetura de como o fluxo será realizado e quais são os critérios e regras de negócio associadas para o desenvolvimento de tais ambientes.
+
+![Loja virtual.](/assets/blog/o-que-sao-bancos-de-dados/shopping.png)
+*Exemplo de um site de produtos e categorias*
 
 Essa etapa é importante por quê ela define não somente **onde** esses dados serão armazenados, mas também **como**. Ela envolve não somente diferentes áreas de negócios, modelos e até mesmo o custo de armazenamento das ferramentas para a empresa, pois existem técnicas e análises diferentes para cada grupo de categorias. Podemos pensar desde o dado sendo armazenado dentro do banco de dados, até uma análise feita na jornada de um usuário dentro da aplicação para ofertar ou realizar descontos em produtos.
 
@@ -62,7 +65,6 @@ O modelo de dados lógico está mais próximo ao modelo físico do banco de dado
 ![Modelo lógico.](/assets/blog/modelagem-de-dados/modelo-logico.png)
 *Exemplo de um modelo lógico com produtos e categorias.*
 
-### Modelo de dados físicos
+### Modelo de dados físico
 
 A partir do modelo lógico, faremos a implementação física do banco de dados escolhendo o SGBD que será utilizado. Conforme o SGBD escolhido, os tipos de dados serão definidos, relações de dados e implementações como restrições.
-
