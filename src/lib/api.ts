@@ -61,7 +61,7 @@ export function getTotalPosts() {
 
 export function renderPostsByPage(posts: Items[], pageNumber: number) {
   const INITIAL_NUMBER_TO_RENDER = 0;
-  const POSTS_PER_PAGE = 3;
+  const POSTS_PER_PAGE = 10;
 
   const renderPosts = {
     1: posts.slice(INITIAL_NUMBER_TO_RENDER, POSTS_PER_PAGE),
