@@ -23,7 +23,7 @@ export default function Blog({ posts, numberOfPages }: Props) {
         <title>blog | hstrada</title>
       </Head>
       <BlogHeader />
-      <section className="px-6">
+      <section className="px-6 pb-12">
         <div className="max-w-screen-lg flex flex-col mx-auto">
           <BlogSpan />
           {/* <Categories categories={allCategories} /> */}
