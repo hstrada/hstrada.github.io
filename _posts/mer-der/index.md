@@ -27,7 +27,7 @@ Para explicar os conceitos correlacionados sobre MER e DER, eu gosto de partir s
 
 Para o exemplo aplicado, criaremos um contexto de negócio para abordar as principais caraterísticas.
 
-## Loja online / e-commerce
+### Loja online / e-commerce
 
 *Vale ressaltar que as regras aqui aplicadas são apenas um contexto delimitado para apresentar sobre as entidades, atributos e relacionamentos. Em um cenário real, provavelmente outras perguntas seriam levantadas bem como regras diferentes seriam definidas. A sugestão aqui é apenas idealizar e apresentar os contextos citados acima.*
 
@@ -47,7 +47,7 @@ Nesse processo de identificação do exemplo, teremos inicialmente 2 (duas) enti
 
 *Se você já tem contexto sobre o tema apresentado nesse post, você já deve ter identificado outra entidade, mas eu quero ir desenvolvendo o problema, para então ir apresentando os outros conceitos relacionados.*
 
-### Entidades
+## Entidades
 
 As entidades no DER são representadas por retângulos e devem ser únicos dentro de uma esquema de banco de dados.
 
@@ -66,18 +66,32 @@ Sendo assim, temos um relacionamento:
 ![Categorias e Produtos](/assets/blog/mer-der/bd-02.png)
 *Relacionamento entre as entidades de Categorias e Produtos.*
 
-### Relacionamentos
+## Relacionamentos
 
 Os relacionamentos podem ser classificados em três tipos: 
 
-- 1:1 (um para um): onde uma entidade A se associa exclusivamente a uma ocorrência de uma entidade B. Então uma pessoa teria apenas um número de CNH associada a ela.
+- **1:1 (um para um)**: onde uma entidade A se associa exclusivamente a uma ocorrência de uma entidade B. Então uma pessoa teria apenas um número de CNH associada a ela.
 
 ![Relacionamento um para um](/assets/blog/mer-der/1_1.png)
 
-- 1:N (um para muitos): onde uma entidade A pode se associar a muitas ocorrências de uma entidade B, porém B se relaciona a apenas uma ocorrência. Por exemplo, uma pessoa por ter mais de um e-mail associado a ela, porém, um e-mail pertence somente a uma pessoa.
+- **1:N (um para muitos)**: onde uma entidade A pode se associar a muitas ocorrências de uma entidade B, porém B se relaciona a apenas uma ocorrência. Por exemplo, uma pessoa por ter mais de um e-mail associado a ela, porém, um e-mail pertence somente a uma pessoa.
 
 ![Relacionamento um para muitos](/assets/blog/mer-der/1_N.png)
 
-- N:N (muitos para muitos): onde uma entidade A pode se associar a várias ocorrências de uma entidade B e a entidade B pode se associar a várias ocorrências de uma entidade A. Por exemplo, os alunos podem participar de várias aulas durante o curso, e essas aulas são compostas por vários alunos.
+- **N:N (muitos para muitos)**: onde uma entidade A pode se associar a várias ocorrências de uma entidade B e a entidade B pode se associar a várias ocorrências de uma entidade A. Por exemplo, os alunos podem participar de várias aulas durante o curso, e essas aulas são compostas por vários alunos.
 
 ![Relacionamento muitos para muitos](/assets/blog/mer-der/N_N.png)
+
+## Solução
+
+No nosso caso, uma categoria pode possuir vários produtos associados a ele, porém, um produto está relacionado a apenas uma categoria.
+
+![Categorias e Produtos](/assets/blog/mer-der/bd-03.png)
+*Relacionamento entre as entidades de Categorias e Produtos.*
+
+## Atributos
+
+Enquanto temos as entidades que serão nossas tabelas no banco de dados e os relacionamentos que determinam as possíveis relações entre elas, precisamos preencher quais serão os campos que nossas tabelas irão possuir. Por exemplo: a categoria possui um nome. Os produtos possuem nome, preço, descrição e a categorias.
+
+![Atributos de Categorias e Produtos](/assets/blog/mer-der/atributos.png)
+*Atributos das entidades de Categorias e Produtos.*
