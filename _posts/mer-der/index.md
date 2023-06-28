@@ -1,6 +1,6 @@
 ---
 title: 'MER e DER'
-excerpt: 'Como desenhar e validar o esqueleto do banco de dados antes do código.'
+excerpt: 'Como desenhar, descrever e validar o banco de dados.'
 coverImage: '/assets/blog/mer-der/cover.jpg'
 date: '2023-06-20T19:00:00.000Z'
 author: Helena Strada
@@ -95,3 +95,36 @@ Enquanto temos as entidades que serão nossas tabelas no banco de dados e os rel
 
 ![Atributos de Categorias e Produtos](/assets/blog/mer-der/atributos.png)
 *Atributos das entidades de Categorias e Produtos.*
+
+## E as cores disponíveis dos produtos?
+
+Você deve ter percebido que nós adicionamos as categorias e os protudos. Na prática, simulando em uma planilha apenas para desenhar e ajudar na validação, o resultado até então estaria algo como:
+
+![Tabelas de Categorias e Produtos](/assets/blog/mer-der/tabelas-categorias-produtos.png)
+*Tabelas criadas de Categorias e Produtos.*
+
+Um spoiler: no relacionamento 1:N ou N:1, a tabela com N carregará o id da outra tabela da chave de referência.
+
+### Dúvida
+
+E as cores, onde seriam adicionadas?
+
+![Cores](/assets/blog/mer-der/cores.png)
+*Adicionando as cores disponíveis para cada produto.*
+
+Caso adicionássemos mais uma coluna para as cores, seria muito difícil atualizar / procurar por um registro. 
+
+Não teríamos nenhum tipo de integridade dos registros, filtrar por essas informações seria quase impossível e imagina que precisássemos atualizar todos os registros que contenham uma determinada cor ou até mesmo excluir uma cor que não esteja mais disponível. São muitos problemas para contornar e pensar.
+
+Sendo assim, como então criaríamos uma base unificada das cores disponíveis?
+
+Podemos extrair as cores disponíveis para uma tabela.
+
+![Tabela de Cores](/assets/blog/mer-der/cores-1.png)
+*Adicionando a tabela de cores.*
+
+E o relacionamento N:N nos permite ter um registro da tabela A associado a um ou vários registros da tabela B, assim como os registros da tabela B associados a muitos registros da tabela A.
+Perceba o quanto facilita nosso processo de atualização, filtro, buscas, inserção dos dados.
+
+![Tabela de Cores](/assets/blog/mer-der/cores-2.png)
+*Adicionando a tabela de cores.*
