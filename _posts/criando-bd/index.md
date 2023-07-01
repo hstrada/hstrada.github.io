@@ -16,12 +16,32 @@ categories: ['Banco de Dados', 'SQL', 'Modelagem BD', 'DDL']
 
 Depois da modelagem e da validação de como será a estrutura do seu banco de dados, nós começamos a criação.
 
-Todo o nosso desenho tem sido feito do conceito do modelo de dados relacionais em que os dados são organizados em tabelas com linhas e colunas. Onde as colunas representam os campos que serão inseridos e as linhas representam os registros da tabela.
+Todo o nosso desenho tem sido feito do conceito do modelo de dados relacionais em que os dados são organizados em tabelas com linhas e colunas. Onde as colunas representam os atributos que a tabela contém e as linhas representam os registros da tabela.
 
 ![Colunas e linhas](/assets/blog/criando-bd/tabelas-categorias-produtos.png)
 *Colunas e linhas.*
 
-E o nosso modelo relacional criado consiste no resultado:
+E o nosso modelo relacional criado consiste no resultado abaixo:
 
 ![Modelo Conceitual](/assets/blog/criando-bd/categorias-produtos-cores.png)
 *Modelo Conceitual.*
+
+Sendo assim, partimos para a construção. Transformar nosso modelo em código.
+
+## RDBMs
+
+Alguns dos RDBMs (sistemas de gerenciamento de banco de dados relacional), como são chamados, fornecem as interfaces para interagirmos com os bancos de dados. Entre alguns modelos de exemplo, temos: MySQL, SQL Server e PostgreSQL.
+
+Em grande parte do conteúdo, estaremos utilizando o SQL Server.
+
+## Instalação
+
+Para as instalações, vou disponibilizar alguns guias separados no blog / links para que você faça a instalação.
+
+- Docker
+- https://azure.microsoft.com/pt-br/products/data-studio
+- https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
+
+## SQL
+
+
