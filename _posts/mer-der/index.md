@@ -128,3 +128,8 @@ Perceba o quanto facilita nosso processo de atualização, filtro, buscas, inser
 
 ![Tabela de Cores](/assets/blog/mer-der/cores-2.png)
 *Adicionando a tabela de cores.*
+
+## Resultado
+
+![Modelo conceitual criado](/assets/blog/mer-der/categorias-produtos-cores.png)
+*Modelo conceitual criado.*
