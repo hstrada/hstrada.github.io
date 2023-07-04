@@ -57,3 +57,20 @@ A partir da instalação das ferramentas necessárias, iremos abrir o programa e
 Como comentamos anteriormente, os comandos da classe DDL são utilizados para definir a estrutura do banco de dados.
 
 São os comandos: `CREATE`, `ALTER` e `DROP`. 
+
+## Criando o banco de dados
+
+```sql
+-- Criando o banco de dados
+CREATE DATABASE Shopping
+```
+
+## Criando as tabelas
+
+```sql
+-- Criando a tabela de categorias (categories) com Id e Nome da categoria
+CREATE TABLE Categories (
+    Id      INT IDENTITY PRIMARY KEY,
+    Title   VARCHAR(64) NOT NULL UNIQUE
+)
+```
