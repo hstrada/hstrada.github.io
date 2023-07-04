@@ -28,13 +28,13 @@ E o nosso modelo relacional criado consiste no resultado abaixo:
 
 Modelo conceitual -> desenvolvimento do código. Mas antes de iniciar o código, precisamos contextualizar sobre alguns itens.
 
-Primeiro item: precisamos realizar a instalação / configuração do banco de dados. No caso do nosso exemplo, estaremos utilizando o SQL Server.
+**Primeiro item**: precisamos realizar a instalação / configuração do banco de dados. No caso do nosso exemplo, estaremos utilizando o SQL Server.
 
-Segundo item: o que é SQL.
+**Segundo item**: o que é SQL.
 
-Terceiro item: criar (DDL).
+**Terceiro item**: criar (DDL).
 
-## Primeiro item: RDBMs.
+## Item 1: RDBMs.
 
 Alguns dos RDBMs (sistemas de gerenciamento de banco de dados relacional), como são chamados, fornecem as interfaces para interagirmos com os bancos de dados. Entre alguns modelos de exemplo, temos: MySQL, SQL Server e PostgreSQL.
 
@@ -46,17 +46,23 @@ Para as instalações, vou disponibilizar alguns guias separados no blog / links
 - https://azure.microsoft.com/pt-br/products/data-studio
 - https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
 
-## Segundo item: SQL.
+## Item 2: SQL.
 
 SQL (linguagem de consulta estruturada) é uma linguagem de programação em que instruções são utilizadas para atualizar, criar, remover, modificar, informações de bancos de dados relacionais. A partir do momento da finalização da nossa modelagem, a próxima etapa é criar o banco de dados e posteriormente começar a realizar as ações mencionadas na frase anterior.
 
-## Terceiro item: Criação (DDL).
+## Item 3: Criação (DDL).
 
 A partir da instalação das ferramentas necessárias, iremos abrir o programa e começar a utilizar os comandos SQL que estão na classe que chamamos de DDL.
 
 Como comentamos anteriormente, os comandos da classe DDL são utilizados para definir a estrutura do banco de dados.
 
-São os comandos: `CREATE`, `ALTER` e `DROP`. 
+São os comandos: `CREATE`, `ALTER` e `DROP`.
+
+## Azure Data Studio
+
+![Azure Data Studio](/assets/blog/criando-bd/bd/azure-data-studio.png)
+
+New Query
 
 ## Criando o banco de dados
 
@@ -64,6 +70,22 @@ São os comandos: `CREATE`, `ALTER` e `DROP`.
 -- Criando o banco de dados
 CREATE DATABASE Shopping
 ```
+
+![](/assets/blog/criando-bd/bd/create-db.png)
+
+![](/assets/blog/criando-bd/bd/create-db-out.png)
+
+### Colocando-o em uso
+
+![](/assets/blog/criando-bd/bd/use.png)
+
+![](/assets/blog/criando-bd/bd/use-shopping.png)
+
+### Atualizando a lista
+
+![](/assets/blog/criando-bd/bd/refresh.png)
+
+![](/assets/blog/criando-bd/bd/refresh-out.png)
 
 ## Criando as tabelas
 
