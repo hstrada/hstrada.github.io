@@ -89,6 +89,8 @@ CREATE DATABASE Shopping
 
 ## Criando as tabelas
 
+### Categorias
+
 ```sql
 -- Criando a tabela de categorias (categories) com Id e Nome da categoria
 CREATE TABLE Categories (
@@ -96,3 +98,24 @@ CREATE TABLE Categories (
     Title   VARCHAR(64) NOT NULL UNIQUE
 )
 ```
+
+![](/assets/blog/criando-bd/data/categories.png)
+
+### Produtos
+
+```sql
+-- Criando a tabela de produtos (products) com Id, Nome, Descrição, Preço e a Categorias relacionada
+CREATE TABLE Products ( 
+    Id              INT IDENTITY PRIMARY KEY,
+    Name           VARCHAR(64),
+    Description     TEXT, 
+    Price           DECIMAL(12,2),
+    CategoryId      INT FOREIGN KEY REFERENCES Categories(Id)
+)
+```
+
+![](/assets/blog/criando-bd/data/products.png)
+
+### Atualizando a lista
+
+![](/assets/blog/criando-bd/data/refresh.png)
