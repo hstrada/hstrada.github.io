@@ -10,8 +10,6 @@ export const Hero = () => {
         </span>
         <h1 className="text-7xl leading-tight font-bold max-w-screen-lg font-sans">
           {Translate('hero.title')}
-          <br />
-          {Translate('hero.area')}
         </h1>
         <p className="pt-8 max-w-screen-sm text-gray-700 text-sm font-light font-display leading-[2]">
           {Translate('hero.description')}
