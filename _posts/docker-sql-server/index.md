@@ -38,10 +38,12 @@ Com o prompt de comando aberto na pasta em que o arquivo foi criado, você pode 
 
 Isso fará com que uma instância do SQL Server seja criada.
 
-## Conectando
+## Azure Data Studio
 
 Após a criação da instância, com o Azure Data Studio ou o sistema de sua preferência, você pode se conectar através dos dados mencionados:
 
 **Usuário**: sa
 
 **Senha**: Sa#p4ssword
+
+Ou pela string de conexão.
