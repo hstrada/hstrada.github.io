@@ -9,7 +9,13 @@ categories: ['Banco de Dados', 'SQL', 'SQL Server', 'Docker']
 
 ## Docker
 
-Instalação do docker
+Você pode realizar a instalação do docker através das instruções do site oficial: `https://www.docker.com/`.
+
+Após realizada a instalação do docker de acordo com o seu sistema operacional, você pode copiar o conteúdo da imagem abaixo e colar em um arquivo como:
+
+`docker-compose.yaml`
+
+Conteúdo do arquivo.
 
 ```yaml
 version: '3'
@@ -23,3 +29,19 @@ services:
     ports:
       - "1433:1433"
 ```
+
+## Prompt
+
+Com o prompt de comando aberto na pasta em que o arquivo foi criado, você pode executar o comando: 
+
+> docker-compose up -d
+
+Isso fará com que uma instância do SQL Server seja criada.
+
+## Conectando
+
+Após a criação da instância, com o Azure Data Studio ou o sistema de sua preferência, você pode se conectar através dos dados mencionados:
+
+**Usuário**: sa
+
+**Senha**: Sa#p4ssword
