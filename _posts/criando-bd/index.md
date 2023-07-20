@@ -60,38 +60,56 @@ São os comandos: `CREATE`, `ALTER` e `DROP`.
 
 ## Azure Data Studio
 
+Nesse caso, estaremos utilizando o Azure Data Studio, mas nada te impede de utilizar outros sistemas como o SQL Server Management Studio.
+
+Após abrir o software, clique em `New Query` para começarmos a criação do nosso banco de dados.
+
 ![Azure Data Studio](/assets/blog/criando-bd/bd/azure-data-studio.png)
 
-New Query
-
 ## Criando o banco de dados
+
+Após o espaço para a query ser aberto, vamos começar com os comandos DDL que definem a nossa estrutura do bd.
+
+![Escrevendo a query](/assets/blog/criando-bd/bd/create-db.png)
+
+*Código da imagem*
 
 ```sql
 -- Criando o banco de dados
 CREATE DATABASE Shopping
 ```
 
-![](/assets/blog/criando-bd/bd/create-db.png)
+Selecione o código que foi digitado e clique em `Run`. Isso fará com que o comando selecionado seja executado e não todo o comando do arquivo.
 
-![](/assets/blog/criando-bd/bd/create-db-out.png)
+![Após a execução da criação do banco de dados](/assets/blog/criando-bd/bd/create-db-out.png)
+
+Após a execução da instrução SQL, a resposta do comando será apresentado, normalmente o resultado é apresentado na parte inferior da imagem.
 
 ### Colocando-o em uso
 
-![](/assets/blog/criando-bd/bd/use.png)
+Você pode atualizar a lista e verificar o novo banco de dados que foi criado. Ou você pode utilizar a instrução da próxima imagem para realizar a sua utilização.
 
-![](/assets/blog/criando-bd/bd/use-shopping.png)
+![Mudando pela lista de databases](/assets/blog/criando-bd/bd/use.png)
+
+Para cada projeto de um software, um banco de dados será criado com a sua respectiva modelagem e estrutura para atender os requisitos do sistema.
+
+![Colocando-o em uso por instrução](/assets/blog/criando-bd/bd/use-shopping.png)
 
 ### Atualizando a lista
 
-![](/assets/blog/criando-bd/bd/refresh.png)
+Para atualizar a lista e apresentar o novo banco de dados criado, clique com o botão direito sobre a lista e clique em `Refresh` ou `Atualizar`.
+
+![Atualizando a lista](/assets/blog/criando-bd/bd/refresh.png)
 
 ```sql
 USE Shopping
 ```
 
-![](/assets/blog/criando-bd/bd/refresh-out.png)
+![Saída da instrução de uso](/assets/blog/criando-bd/bd/refresh-out.png)
 
 ## Criando as tabelas
+
+
 
 ### Categorias
 
@@ -103,7 +121,7 @@ CREATE TABLE Categories (
 )
 ```
 
-![](/assets/blog/criando-bd/data/categories.png)
+![Resultado de categorias](/assets/blog/criando-bd/data/categories.png)
 
 ### Produtos
 
@@ -119,8 +137,8 @@ CREATE TABLE Products (
 )
 ```
 
-![](/assets/blog/criando-bd/data/products.png)
+![Resultado de produtos](/assets/blog/criando-bd/data/products.png)
 
 ### Atualizando a lista
 
-![](/assets/blog/criando-bd/data/refresh.png)
+![Atualizando a lista das tabelas](/assets/blog/criando-bd/data/refresh.png)
