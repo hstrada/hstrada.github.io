@@ -117,6 +117,8 @@ Essa informação é relevante para entender e compreender como essa informaçã
 
 ### Categorias
 
+Normalmente iniciamos a criação das tabelas que não possuem chaves estrangeiras, menos dependentes. Como a tabela de produtos depende da chave de categoria, iniciamos pelas categorias.
+
 ```sql
 -- Criando a tabela de categorias (categories) com Id e Nome da categoria
 CREATE TABLE Categories (
@@ -128,6 +130,12 @@ CREATE TABLE Categories (
 ![Resultado de categorias](/assets/blog/criando-bd/data/categories.png)
 
 ### Produtos
+
+Criando a tabela de produtos.
+
+![Resultado de produtos](/assets/blog/criando-bd/data/products.png)
+
+Instrução para a criação da tabela de produtos.
 
 ```sql
 -- Criando a tabela de produtos (products) com: 
@@ -141,8 +149,8 @@ CREATE TABLE Products (
 )
 ```
 
-![Resultado de produtos](/assets/blog/criando-bd/data/products.png)
-
 ### Atualizando a lista
+
+Para atualizar a lista de tabelas do banco de dados do shopping, atualize a lista conforme a imagem.
 
 ![Atualizando a lista das tabelas](/assets/blog/criando-bd/data/refresh.png)
