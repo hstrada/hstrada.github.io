@@ -109,7 +109,11 @@ USE Shopping
 
 ## Criando as tabelas
 
+Para criar as tabelas, vamos continuar utilizando o comando `CREATE`. Mas um outro ponto é importante antes de apresentar o comando em si que será como um determinado dado será armazenado. Ou seja, o SQL Server fornece um conjunto de tipos de dados dos quais podem ser utilizados para especificar uma coluna podendo ser dados inteiros, caracteres ou data e hora, por exemplo.
 
+Os tipos podem ser encontrados em: https://learn.microsoft.com/pt-br/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16.
+
+Essa informação é relevante para entender e compreender como essa informação seja armazenada para restringir o tipo de dado que pode ser armazenado e também pelo tamanho do campo. Por exemplo: a sigla de um estado pode conter somente 2 caracteres: SP para São Paulo, RJ para Rio de Janeiro e assim por diante. Faz sentido determinar uma coluna com uma quantidade de caracteres superiores ao que é necessário? Ou até mesmo utilizar um tipo que não poderá ser adicionado um caracter.
 
 ### Categorias
 
