@@ -20,3 +20,9 @@
 .markdown pre {
   @apply bg-slate-50 p-4 rounded-md;
 }
+
+.markdown blockquote {
+  border-left: 1px solid #ccc;
+  font-style: italic;
+  padding: 1px 24px;
+}
