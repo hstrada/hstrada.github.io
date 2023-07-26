@@ -1,15 +1,20 @@
 ---
-title: 'Manipulando os dados'
+title: '#01 - Inserindo registros'
 excerpt: 'DML - Manipulando os dados.'
-coverImage: '/assets/blog/manipulando-dados/cover.jpg'
+coverImage: '/assets/blog/inserindo-registros/cover.jpg'
 date: '2023-07-26T21:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DML']
 ---
 
+## Tópicos que você verá nesse post
+
+- Relembrando DML
+- Como inserir registros
+
 ## DML
 
-Nas outras etapas do desenvolvimento, aprendemos sobre a modelagem dos dados e sobre como criar a base de dados utilizando os comandos DDL para definir as estruturas das nossas tabelas. Nesse post iremos ver como inserir, deletar e atualizar os registros das tabelas. Comandos que interajam com os dados.
+Nas outras etapas do desenvolvimento, aprendemos sobre a modelagem dos dados e sobre como criar a base de dados utilizando os comandos DDL para definir as estruturas das nossas tabelas. Nesse post iremos começar a ver os comandos de manipulação que interagem com os dados das tabelas. Começaremos com o comando de inserção, o: `INSERT`.
 
 ## Inserindo as categorias
 
@@ -19,10 +24,16 @@ O comando de inserção é o: `INSERT`. Talvez nesse momento possa te preocupar 
 
 Muito além de conhecer um determinado comando, acho que um dos pontos principais que favorecem nosso processo de crescimento profissional e capacidade técnica é pesquisar pela necessidade do problema e testar casos de uso.
 
+## INSERT
+
+Para inserir um determinado registro, podemos utilizar a sintaxe:
+
 ```sql
 -- Inserindo registro com a coluna nomeada
 INSERT INTO Categories (Title) VALUES ('Camisetas')
 ```
+
+O comando segue a instrução de: inserir um determinado registro em uma determinada tabela informando os campos que devem ser inseridos.
 
 ```sql
 -- Inserindo registro com a omissão da coluna
