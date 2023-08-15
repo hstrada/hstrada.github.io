@@ -35,10 +35,14 @@ INSERT INTO Categories (Title) VALUES ('Camisetas')
 
 O comando segue a instrução de: inserir um determinado registro em uma determinada tabela informando os campos que devem ser inseridos.
 
+No SQL Server você tem uma das opções de não informar quais são as colunas em que eles serão inseridos, mas eles irão seguir a ordem de construção das tabelas.
+
 ```sql
 -- Inserindo registro com a omissão da coluna
 INSERT INTO Categories VALUES ('Tênis')
 ```
+
+Você também pode optar por inserir mais de um registro por vez indicando os valores entre parênteses, e colocando vírgula após o fechamento do primeiro valor.
 
 ```sql
 -- Inserindo mais de um registro em uma mesma instrução
