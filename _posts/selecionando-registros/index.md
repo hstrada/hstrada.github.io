@@ -41,3 +41,11 @@ FROM Categories c
 -- Utilizamos alias para auxiliar no processo de seleção principalmente quando precisamos fazer consultas em mais de uma tabela.
 SELECT c.Id, c.Title FROM Categories c
 ```
+
+### WHERE
+
+```sql
+-- A cláusula WHERE é um dos comandos mais utilizados ao precisarmos retornar a informação de uma determinada linha da tabela e buscar unicamente por esse registro.
+SELECT Id, Title FROM Categories 
+WHERE Id = 1
+```
