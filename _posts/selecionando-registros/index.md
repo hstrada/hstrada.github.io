@@ -2,7 +2,7 @@
 title: '#02 - Selecionando registros'
 excerpt: 'DQL - Selecionando os dados.'
 coverImage: '/assets/blog/selecionando-registros/cover.jpg'
-date: '2023-07-26T21:00:00.000Z'
+date: '2023-10-16T20:40:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DQL']
 ---
