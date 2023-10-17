@@ -33,6 +33,8 @@ Para inserir um determinado registro, podemos utilizar a sintaxe:
 INSERT INTO Categories (Title) VALUES ('Camisetas')
 ```
 
+![Inserindo registro com a coluna nomeada](/assets/blog/inserindo-registros/insert.png)
+
 O comando segue a instrução de: inserir um determinado registro em uma determinada tabela informando os campos que devem ser inseridos.
 
 No SQL Server você tem uma das opções de não informar quais são as colunas em que eles serão inseridos, mas eles irão seguir a ordem de construção das tabelas.
@@ -42,9 +44,13 @@ No SQL Server você tem uma das opções de não informar quais são as colunas 
 INSERT INTO Categories VALUES ('Tênis')
 ```
 
+![Inserindo registro sem a coluna nomeada](/assets/blog/inserindo-registros/insert-nao-nomeada.png)
+
 Você também pode optar por inserir mais de um registro por vez indicando os valores entre parênteses, e colocando vírgula após o fechamento do primeiro valor.
 
 ```sql
 -- Inserindo mais de um registro em uma mesma instrução
 INSERT INTO Categories (Title) VALUES ('Blusas'), ('Jaquetas')
 ```
+
+![Inserindo múltiplos registros em uma mesma instrução](/assets/blog/inserindo-registros/insert-multiplos-registros.png)

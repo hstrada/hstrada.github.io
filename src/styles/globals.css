@@ -36,3 +36,8 @@ a {
 span {
   color: var(--primary-600-color);
 }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
