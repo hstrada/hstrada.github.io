@@ -52,6 +52,8 @@ SELECT c.Id, c.Title FROM Categories c
 
 ### WHERE
 
+A cláusula WHERE é utilizada para filtrar registros a partir de uma determinada condição.
+
 ```sql
 -- A cláusula WHERE é um dos comandos mais utilizados ao precisarmos retornar a informação de uma determinada linha da tabela e buscar unicamente por esse registro.
 SELECT Id, Title FROM Categories 
