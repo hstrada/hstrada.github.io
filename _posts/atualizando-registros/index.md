@@ -16,7 +16,7 @@ categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DML', 'Update']
 
 Nas outras etapas do desenvolvimento, aprendemos sobre a modelagem dos dados e sobre como criar a base de dados utilizando os comandos DDL para definir as estruturas das nossas tabelas. E um dos comandos de DML, o `INSERT` para inserir registros em nossas tabelas. `SELECT` para retornar os registros da tabela.
 
-Neste tópico iremos apresentar como atualizar um valor.
+Neste tópico iremos apresentar como atualizar um registro.
 
 ## Relembrando
 
@@ -36,7 +36,7 @@ WHERE Id = 1
 
 ## UPDATE
 
-Quando você entra na sua página de perfil para atualizar uma informação sobre você ou no exemplo do nosso contexto de categorias, ao atualizarmos um registro não queremos que toda a base sofra aquela mudança que estamos prevendo. Nosso desejo é apenas atualizar a informação de uma linha de informação da nossa tabela.
+Quando você entra na sua página de perfil para atualizar uma informação sobre você ou no exemplo do nosso contexto de categorias, ao atualizarmos um registro não queremos que toda a base sofra aquela mudança pois ela é segmentada e filtrada por um denominador que estamos passando. Nosso desejo é apenas atualizar a informação de uma linha de informação da nossa tabela.
 
 Por isso o uso da cláusula `WHERE` visto anteriormente.
 
@@ -44,3 +44,5 @@ Por isso o uso da cláusula `WHERE` visto anteriormente.
 -- Estamos atualizando o valor do título da categoria para um `novo valor` onde o registro seja o de Id igual a 1.
 UPDATE Categories SET Title = 'Novo Valor' WHERE Id = 1
 ```
+
+Nem sempre utilizaremos a cláusula WHERE, mas a ausência dela pode acabar ocasionando a atualização de registros da nossa base de dados que não devem ser alterados. Então cuidado ao atualizar registros.
