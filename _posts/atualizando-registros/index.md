@@ -12,7 +12,7 @@ categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DML', 'Update']
 - Relembrando DML
 - Como atualizar registros
 
-## DQL
+## DML
 
 Nas outras etapas do desenvolvimento, aprendemos sobre a modelagem dos dados e sobre como criar a base de dados utilizando os comandos DDL para definir as estruturas das nossas tabelas. E um dos comandos de DML, o `INSERT` para inserir registros em nossas tabelas. `SELECT` para retornar os registros da tabela.
 
