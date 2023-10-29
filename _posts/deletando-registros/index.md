@@ -2,7 +2,7 @@
 title: '#04 - Deletando registros'
 excerpt: 'DML - Deletando os dados.'
 coverImage: '/assets/blog/deletando-registros/cover.jpg'
-date: '2023-10-19T21:30:00.000Z'
+date: '2023-10-29T21:30:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DML', 'Delete']
 ---
@@ -54,15 +54,29 @@ ALTER TABLE Categories
 ADD status BIT
 ```
 
+![Alterando a tabela de categorias](/assets/blog/deletando-registros/atualizando-estrutura.png)
+
 Isso permite a ativação ou desativação de produtos, categorias ou outros registros em suas tabelas, mas sem necessariamente excluir o registro e perder todas as suas referências.
 
 A diferença é que na próxima "deleção", ao invés de utilizar o `DELETE`, você atualiza a linha da sua tabela com o valor de true ou false. Ou qualquer outro estado que a sua aplicação possa fazer uso. Por exemplo, em um blog, você pode ter um post em rascunho e pode ter um post publicado. Depende da estratégia da sua aplicação.
 
 ```sql
--- Desativando a categoria onde o Id é igual a 1.
+-- Alterando todas as categorias para ativadas.
 UPDATE Categories
-SET status = 0 WHERE Id = 1
+SET status = 1
 ```
+
+![Atualizando os status](/assets/blog/deletando-registros/atualizando-todos-os-registros.png)
+
+```sql
+-- Selecionando todas as categorias com status
+SELECT c.Id
+	   ,c.Title
+	   ,c.Status
+FROM Categories c
+```
+
+![Selecionando os registros](/assets/blog/deletando-registros/selecionando-status.png)
 
 Para retornar as categorias, você pode filtrar a sua lista para o cliente para que somente as categorias ativas sejam exibidas.
 

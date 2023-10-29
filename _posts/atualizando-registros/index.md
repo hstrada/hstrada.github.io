@@ -40,9 +40,15 @@ Quando você entra na sua página de perfil para atualizar uma informação sobr
 
 Por isso o uso da cláusula `WHERE` visto anteriormente.
 
+![Selecionando um item da lista com o comando WHERE](/assets/blog/atualizando-registros/selecionando-categoria.png)
+
 ```sql
 -- Estamos atualizando o valor do título da categoria para um `novo valor` onde o registro seja o de Id igual a 1.
 UPDATE Categories SET Title = 'Novo Valor' WHERE Id = 1
 ```
 
+![Atualizando um item da lista](/assets/blog/atualizando-registros/atualizando-categoria.png)
+
 Nem sempre utilizaremos a cláusula WHERE, mas a ausência dela pode acabar ocasionando a atualização de registros da nossa base de dados que não devem ser alterados. Então cuidado ao atualizar registros.
+
+![Selecionando a categoria após a alteração](/assets/blog/atualizando-registros/selecionando-categoria-atualizada.png)
