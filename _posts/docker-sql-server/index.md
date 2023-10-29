@@ -19,6 +19,7 @@ Conteúdo do arquivo.
 
 ```yaml
 version: '3'
+name: mssql-server-blog
 services:
   mssql-server:
     image: mcr.microsoft.com/mssql/server:2022-latest
