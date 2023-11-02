@@ -1,8 +1,6 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import Post from '../interfaces/post'
-import TPost from '../interfaces/post'
 
 const postsDirectory = join(process.cwd(), '_posts')
 

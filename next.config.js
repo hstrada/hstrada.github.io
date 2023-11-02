@@ -5,10 +5,10 @@ const nextConfig = {
     return [
       {
         source: '/blog',
-        destination: '/blog/1',
-      },
-    ]
-  },
-}
+        destination: '/blog/1'
+      }
+    ];
+  }
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
