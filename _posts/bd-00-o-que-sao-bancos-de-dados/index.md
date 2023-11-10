@@ -1,5 +1,5 @@
 ---
-title: 'O que são Bancos de Dados?'
+title: '[BD00] O que são Bancos de Dados?'
 excerpt: 'O que são bancos de dados e quais são os tipos.'
 coverImage: '/assets/blog/o-que-sao-bancos-de-dados/cover.jpg'
 date: '2023-05-10T19:00:00.000Z'

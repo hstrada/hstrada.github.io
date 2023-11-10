@@ -1,5 +1,5 @@
 ---
-title: 'Modelagem de dados'
+title: '[BD01] Modelagem de dados'
 excerpt: 'O que é e por quê realizar a modelagem de dados.'
 coverImage: '/assets/blog/modelagem-de-dados/cover.jpg'
 date: '2023-06-04T16:00:00.000Z'

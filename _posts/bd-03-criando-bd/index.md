@@ -1,5 +1,5 @@
 ---
-title: 'Criando o banco de dados'
+title: '[BD03] Criando o banco de dados'
 excerpt: 'DDL - Criando o banco de dados.'
 coverImage: '/assets/blog/criando-bd/cover.jpg'
 date: '2023-06-30T21:00:00.000Z'

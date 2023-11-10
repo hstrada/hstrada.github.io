@@ -1,5 +1,5 @@
 ---
-title: '#04 - Deletando registros'
+title: '[BD08] Deletando registros'
 excerpt: 'DML - Deletando os dados.'
 coverImage: '/assets/blog/deletando-registros/cover.jpg'
 date: '2023-10-29T21:30:00.000Z'

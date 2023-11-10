@@ -1,5 +1,5 @@
 ---
-title: '#03 - Atualizando registros'
+title: '[BD07] Atualizando registros'
 excerpt: 'DML - Atualizando os dados.'
 coverImage: '/assets/blog/atualizando-registros/cover.jpg'
 date: '2023-10-19T21:30:00.000Z'

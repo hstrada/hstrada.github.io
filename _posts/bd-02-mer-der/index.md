@@ -1,5 +1,5 @@
 ---
-title: 'MER e DER'
+title: '[BD02] MER e DER'
 excerpt: 'Como desenhar, descrever e validar o banco de dados.'
 coverImage: '/assets/blog/mer-der/cover.jpg'
 date: '2023-06-20T19:00:00.000Z'

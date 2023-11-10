@@ -1,5 +1,5 @@
 ---
-title: '#02 - Selecionando registros'
+title: '[BD06] Selecionando registros'
 excerpt: 'DQL - Selecionando os dados.'
 coverImage: '/assets/blog/selecionando-registros/cover.jpg'
 date: '2023-10-16T20:40:00.000Z'

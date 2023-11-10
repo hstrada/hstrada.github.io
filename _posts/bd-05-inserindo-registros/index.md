@@ -1,5 +1,5 @@
 ---
-title: '#01 - Inserindo registros'
+title: '[BD05] Inserindo registros'
 excerpt: 'DML - Manipulando os dados.'
 coverImage: '/assets/blog/inserindo-registros/cover.jpg'
 date: '2023-07-26T21:00:00.000Z'
