@@ -1,7 +1,7 @@
 ---
 title: '[BD02] MER e DER'
 excerpt: 'Como desenhar, descrever e validar o banco de dados.'
-coverImage: '/assets/blog/mer-der/cover.jpg'
+coverImage: '/assets/blog/bd-02-mer-der/cover.jpg'
 date: '2023-06-20T19:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'MER', 'DER']
@@ -18,7 +18,7 @@ categories: ['Banco de Dados', 'SQL', 'MER', 'DER']
 
 Em um projeto do desenho de uma arquitetura de uma aplicação, uma das etapas importantes é como os dados serão armazenados. O MER (Modelo Entidade Relacionamento) é utilizado para descrever os objetos do mundo real enquanto o DER (Diagrama Entidade Relacionamento) é a representação em forma gráfica do que foi descrito no MER.
 
-![Loja virtual.](/assets/blog/mer-der/shopping.png)
+![Loja virtual.](/assets/blog/bd-02-mer-der/shopping.png)
 *Exemplo de um site de produtos e categorias*
 
 ## Criando um exemplo
@@ -51,19 +51,19 @@ Nesse processo de identificação do exemplo, teremos inicialmente 2 (duas) enti
 
 As entidades no DER são representadas por retângulos e devem ser únicos dentro de uma esquema de banco de dados.
 
-![Categorias e Produtos](/assets/blog/mer-der/bd-01.png)
+![Categorias e Produtos](/assets/blog/bd-02-mer-der/bd-01.png)
 *Identificando as entidades de Categorias e Produtos.*
 
 Mas as entidades podem possuir uma relação entre si. Isso significa que na prática quando cadastrarmos um produto, ele estará vinculado a uma categoria. Normalmente essas *relações* são descritas por verbos. E essa associação é definida como **relacionamento**.
 
-![Cadastrando um produto](/assets/blog/mer-der/add-produto.png)
+![Cadastrando um produto](/assets/blog/bd-02-mer-der/add-produto.png)
 *Exemplo de um cadastro de um produto.*
 
 Pensar em modelos, tabelas do excel ou até mesmo uma interface desenhada na mão, como um esboço me ajuda a visualizar os domínios e funcionalidades. Não significa que é necessário, mas me ajuda a tangebilizar a ideia. É como um esboço.
 
 Sendo assim, temos um relacionamento:
 
-![Categorias e Produtos](/assets/blog/mer-der/bd-02.png)
+![Categorias e Produtos](/assets/blog/bd-02-mer-der/bd-02.png)
 *Relacionamento entre as entidades de Categorias e Produtos.*
 
 ## Relacionamentos
@@ -72,35 +72,35 @@ Os relacionamentos podem ser classificados em três tipos:
 
 - **1:1 (um para um)**: onde uma entidade A se associa exclusivamente a uma ocorrência de uma entidade B. Então uma pessoa teria apenas um número de CNH associada a ela.
 
-![Relacionamento um para um](/assets/blog/mer-der/1_1.png)
+![Relacionamento um para um](/assets/blog/bd-02-mer-der/1_1.png)
 
 - **1:N (um para muitos)**: onde uma entidade A pode se associar a muitas ocorrências de uma entidade B, porém B se relaciona a apenas uma ocorrência. Por exemplo, uma pessoa por ter mais de um e-mail associado a ela, porém, um e-mail pertence somente a uma pessoa.
 
-![Relacionamento um para muitos](/assets/blog/mer-der/1_N.png)
+![Relacionamento um para muitos](/assets/blog/bd-02-mer-der/1_N.png)
 
 - **N:N (muitos para muitos)**: onde uma entidade A pode se associar a várias ocorrências de uma entidade B e a entidade B pode se associar a várias ocorrências de uma entidade A. Por exemplo, os alunos podem participar de várias aulas durante o curso, e essas aulas são compostas por vários alunos.
 
-![Relacionamento muitos para muitos](/assets/blog/mer-der/N_N.png)
+![Relacionamento muitos para muitos](/assets/blog/bd-02-mer-der/N_N.png)
 
 ## Solução
 
 No nosso caso, uma categoria pode possuir vários produtos associados a ele, porém, um produto está relacionado a apenas uma categoria.
 
-![Categorias e Produtos](/assets/blog/mer-der/bd-03.png)
+![Categorias e Produtos](/assets/blog/bd-02-mer-der/bd-03.png)
 *Relacionamento entre as entidades de Categorias e Produtos.*
 
 ## Atributos
 
 Enquanto temos as entidades que serão nossas tabelas no banco de dados e os relacionamentos que determinam as possíveis relações entre elas, precisamos preencher quais serão os campos que nossas tabelas irão possuir. Por exemplo: a categoria possui um nome. Os produtos possuem nome, preço, descrição e a categorias.
 
-![Atributos de Categorias e Produtos](/assets/blog/mer-der/atributos.png)
+![Atributos de Categorias e Produtos](/assets/blog/bd-02-mer-der/atributos.png)
 *Atributos das entidades de Categorias e Produtos.*
 
 ## E as cores disponíveis dos produtos?
 
 Você deve ter percebido que nós adicionamos as categorias e os protudos. Na prática, simulando em uma planilha apenas para desenhar e ajudar na validação, o resultado até então estaria algo como:
 
-![Tabelas de Categorias e Produtos](/assets/blog/mer-der/tabelas-categorias-produtos.png)
+![Tabelas de Categorias e Produtos](/assets/blog/bd-02-mer-der/tabelas-categorias-produtos.png)
 *Tabelas criadas de Categorias e Produtos.*
 
 Um spoiler: no relacionamento 1:N ou N:1, a tabela com N carregará o id da outra tabela da chave de referência.
@@ -109,7 +109,7 @@ Um spoiler: no relacionamento 1:N ou N:1, a tabela com N carregará o id da outr
 
 E as cores, onde seriam adicionadas?
 
-![Cores](/assets/blog/mer-der/cores.png)
+![Cores](/assets/blog/bd-02-mer-der/cores.png)
 *Adicionando as cores disponíveis para cada produto.*
 
 Caso adicionássemos mais uma coluna para as cores, seria muito difícil atualizar / procurar por um registro. 
@@ -120,16 +120,16 @@ Sendo assim, como então criaríamos uma base unificada das cores disponíveis?
 
 Podemos extrair as cores disponíveis para uma tabela.
 
-![Tabela de Cores](/assets/blog/mer-der/cores-1.png)
+![Tabela de Cores](/assets/blog/bd-02-mer-der/cores-1.png)
 *Adicionando a tabela de cores.*
 
 E o relacionamento N:N nos permite ter um registro da tabela A associado a um ou vários registros da tabela B, assim como os registros da tabela B associados a muitos registros da tabela A.
 Perceba o quanto facilita nosso processo de atualização, filtro, buscas, inserção dos dados.
 
-![Tabela de Cores](/assets/blog/mer-der/cores-2.png)
+![Tabela de Cores](/assets/blog/bd-02-mer-der/cores-2.png)
 *Adicionando a tabela de cores.*
 
 ## Resultado
 
-![Modelo conceitual criado](/assets/blog/mer-der/categorias-produtos-cores.png)
+![Modelo conceitual criado](/assets/blog/bd-02-mer-der/categorias-produtos-cores.png)
 *Modelo conceitual criado.*
