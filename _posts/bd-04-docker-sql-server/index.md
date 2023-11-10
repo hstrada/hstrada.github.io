@@ -1,7 +1,7 @@
 ---
 title: '[BD04] Docker - SQL Server'
 excerpt: 'Docker & SQL Server.'
-coverImage: '/assets/blog/docker-sql-server/cover.jpg'
+coverImage: '/assets/blog/bd-04-docker-sql-server/cover.jpg'
 date: '2023-07-01T21:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'Docker']

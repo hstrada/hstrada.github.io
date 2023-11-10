@@ -1,7 +1,7 @@
 ---
 title: '[BD05] Inserindo registros'
 excerpt: 'DML - Manipulando os dados.'
-coverImage: '/assets/blog/inserindo-registros/cover.jpg'
+coverImage: '/assets/blog/bd-05-inserindo-registros/cover.jpg'
 date: '2023-07-26T21:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DML']
@@ -33,7 +33,7 @@ Para inserir um determinado registro, podemos utilizar a sintaxe:
 INSERT INTO Categories (Title) VALUES ('Camisetas')
 ```
 
-![Inserindo registro com a coluna nomeada](/assets/blog/inserindo-registros/insert.png)
+![Inserindo registro com a coluna nomeada](/assets/blog/bd-05-inserindo-registros/insert.png)
 
 O comando segue a instrução de: inserir um determinado registro em uma determinada tabela informando os campos que devem ser inseridos.
 
@@ -44,7 +44,7 @@ No SQL Server você tem uma das opções de não informar quais são as colunas 
 INSERT INTO Categories VALUES ('Tênis')
 ```
 
-![Inserindo registro sem a coluna nomeada](/assets/blog/inserindo-registros/insert-nao-nomeada.png)
+![Inserindo registro sem a coluna nomeada](/assets/blog/bd-05-inserindo-registros/insert-nao-nomeada.png)
 
 Você também pode optar por inserir mais de um registro por vez indicando os valores entre parênteses, e colocando vírgula após o fechamento do primeiro valor.
 
@@ -53,4 +53,4 @@ Você também pode optar por inserir mais de um registro por vez indicando os va
 INSERT INTO Categories (Title) VALUES ('Blusas'), ('Jaquetas')
 ```
 
-![Inserindo múltiplos registros em uma mesma instrução](/assets/blog/inserindo-registros/insert-multiplos-registros.png)
+![Inserindo múltiplos registros em uma mesma instrução](/assets/blog/bd-05-inserindo-registros/insert-multiplos-registros.png)

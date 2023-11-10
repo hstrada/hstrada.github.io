@@ -1,7 +1,7 @@
 ---
 title: '[BD00] O que são Bancos de Dados?'
 excerpt: 'O que são bancos de dados e quais são os tipos.'
-coverImage: '/assets/blog/o-que-sao-bancos-de-dados/cover.jpg'
+coverImage: '/assets/blog/bd-00-o-que-sao-bancos-de-dados/cover.jpg'
 date: '2023-05-10T19:00:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL']
@@ -20,34 +20,34 @@ Pesquisando por uma notícia ou aplicativo que você utiliza para ver os conteú
 
 Para contextualizar sobre banco de dados, iremos apresentar o site de uma tela que exibe as categorias disponíveis para seleção em um e-commerce e os respectivos produtos que compõem cada categoria.
 
-![Loja virtual.](/assets/blog/o-que-sao-bancos-de-dados/shopping.png)
+![Loja virtual.](/assets/blog/bd-00-o-que-sao-bancos-de-dados/shopping.png)
 *Exemplo de um site de produtos e categorias*
 
 Nesse fluxo de informações, dentre um desenho de arquiteturas e sistemas disponíveis, para explicar o contexto de banco de dados, vamos sintetizar a apresentação dessa tela que você acessou no seu navegador, em três itens:
 
 O desenho da sua tela, a representação visual das informações é constituída pelo frontend. Dado um design para a sua página, a construção dela fica na primeira camada. Sendo responsável por solicitar os registros disponíveis de categorias e produtos para o backend.
 
-![FrontEnd](/assets/blog/o-que-sao-bancos-de-dados/frontend.png)
+![FrontEnd](/assets/blog/bd-00-o-que-sao-bancos-de-dados/frontend.png)
 *FrontEnd*
 
 As informações sobre as categorias e produtos normalmente são dinâmicas, ou seja, caso o administrador da loja virtual crie / adicione uma categoria ou produto, essa informação será atualizada para o usuário final acessando a aplicação web. O intermédio de processamento das informações são realizados pelo backend. Sendo uma camada de processamento e validação das informações que estão sendo solicitadas / enviadas para o usuário final.
 
 Seja do administrador da página, salvando um produto com valor ausente, seja do cliente final solicitando um filtro de produtos por uma determinada categoria.
 
-![BackEnd](/assets/blog/o-que-sao-bancos-de-dados/backend.png)
+![BackEnd](/assets/blog/bd-00-o-que-sao-bancos-de-dados/backend.png)
 *BackEnd*
 
 E as informações precisam ser persistidas (armazenadas) de uma maneira segura para que possam ser recuperadas de forma consistente quando solicitadas. Sendo assim, as informações são armazenadas em bancos de dados.
 
-![Banco de Dados](/assets/blog/o-que-sao-bancos-de-dados/bd.png)
+![Banco de Dados](/assets/blog/bd-00-o-que-sao-bancos-de-dados/bd.png)
 *Banco de Dados*
 
 Essas informações normalmente são modeladas em linhas e colunas, semelhantes a uma planilha (Google Sheets, Microsoft Excel), mas apesar deste tipo ser o mais comum, existem outros que serão apresentados.
 
-![Planilha Eletrônica.](/assets/blog/o-que-sao-bancos-de-dados/google-sheets.png)
+![Planilha Eletrônica.](/assets/blog/bd-00-o-que-sao-bancos-de-dados/google-sheets.png)
 *Exemplo de uma planilha no Google Sheets*
 
-![Tabela no PostgreSQL.](/assets/blog/o-que-sao-bancos-de-dados/postgresql-tabela.png)
+![Tabela no PostgreSQL.](/assets/blog/bd-00-o-que-sao-bancos-de-dados/postgresql-tabela.png)
 *Exemplo de uma tabela no PostgreSQL*
 
 Mas então, qual é a diferença entre um banco de dados e uma planilha?

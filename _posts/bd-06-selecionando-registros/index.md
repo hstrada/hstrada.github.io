@@ -1,7 +1,7 @@
 ---
 title: '[BD06] Selecionando registros'
 excerpt: 'DQL - Selecionando os dados.'
-coverImage: '/assets/blog/selecionando-registros/cover.jpg'
+coverImage: '/assets/blog/bd-06-selecionando-registros/cover.jpg'
 date: '2023-10-16T20:40:00.000Z'
 author: Helena Strada
 categories: ['Banco de Dados', 'SQL', 'SQL Server', 'DQL']
@@ -26,14 +26,14 @@ O comando de seleção é o: `SELECT`. Para retornar todos os registros de uma d
 SELECT * FROM Categories
 ```
 
-![Selecionando registros](/assets/blog/selecionando-registros/select-default.png)
+![Selecionando registros](/assets/blog/bd-06-selecionando-registros/select-default.png)
 
 ```sql
 -- Para selecionar com as colunas nomeadas que desejamos retornar da base
 SELECT Id, Title FROM Categories
 ```
 
-![Selecionando com as colunas nomeadas](/assets/blog/selecionando-registros/select-nomeada.png)
+![Selecionando com as colunas nomeadas](/assets/blog/bd-06-selecionando-registros/select-nomeada.png)
 
 ```sql
 -- O nome da coluna também pode ser modificado na projeção de saída
@@ -41,14 +41,14 @@ SELECT Id, Title as Título
 FROM Categories
 ```
 
-![Selecionando os registros alterando o nome do retorno da coluna na projeção de saída](/assets/blog/selecionando-registros/select-nome-coluna.png)
+![Selecionando os registros alterando o nome do retorno da coluna na projeção de saída](/assets/blog/bd-06-selecionando-registros/select-nome-coluna.png)
 
 ```sql
 -- Utilizamos alias para auxiliar no processo de seleção principalmente quando precisamos fazer consultas em mais de uma tabela.
 SELECT c.Id, c.Title FROM Categories c
 ```
 
-![Selecionando os registros com alias](/assets/blog/selecionando-registros/select-alias.png)
+![Selecionando os registros com alias](/assets/blog/bd-06-selecionando-registros/select-alias.png)
 
 ### WHERE
 
@@ -60,4 +60,4 @@ SELECT Id, Title FROM Categories
 WHERE Id = 1
 ```
 
-![Buscando um determinado registro utilizando a cláusula WHERE](/assets/blog/selecionando-registros/select-where.png)
+![Buscando um determinado registro utilizando a cláusula WHERE](/assets/blog/bd-06-selecionando-registros/select-where.png)

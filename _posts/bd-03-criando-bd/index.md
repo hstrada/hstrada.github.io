@@ -18,12 +18,12 @@ Depois da modelagem e da validação de como será a estrutura do seu banco de d
 
 Todo o nosso desenho tem sido feito do conceito do modelo de dados relacionais em que os dados são organizados em tabelas com linhas e colunas. Onde as colunas representam os atributos que a tabela contém e as linhas representam os registros da tabela.
 
-![Colunas e linhas](/assets/blog/criando-bd/tabelas-categorias-produtos.png)
+![Colunas e linhas](/assets/blog/bd-03-criando-bd/tabelas-categorias-produtos.png)
 *Colunas e linhas.*
 
 E o nosso modelo relacional criado consiste no resultado abaixo:
 
-![Modelo Conceitual](/assets/blog/criando-bd/categorias-produtos-cores.png)
+![Modelo Conceitual](/assets/blog/bd-03-criando-bd/categorias-produtos-cores.png)
 *Modelo Conceitual.*
 
 Modelo conceitual -> desenvolvimento do código. Mas antes de iniciar o código, precisamos contextualizar sobre alguns itens.
@@ -64,13 +64,13 @@ Nesse caso, estaremos utilizando o Azure Data Studio, mas nada te impede de util
 
 Após abrir o software, clique em `New Query` para começarmos a criação do nosso banco de dados.
 
-![Azure Data Studio](/assets/blog/criando-bd/bd/azure-data-studio.png)
+![Azure Data Studio](/assets/blog/bd-03-criando-bd/bd/azure-data-studio.png)
 
 ## Criando o banco de dados
 
 Após o espaço para a query ser aberto, vamos começar com os comandos DDL que definem a nossa estrutura do bd.
 
-![Escrevendo a query](/assets/blog/criando-bd/bd/create-db.png)
+![Escrevendo a query](/assets/blog/bd-03-criando-bd/bd/create-db.png)
 
 *Código da imagem*
 
@@ -81,7 +81,7 @@ CREATE DATABASE Shopping
 
 Selecione o código que foi digitado e clique em `Run`. Isso fará com que o comando selecionado seja executado e não todo o comando do arquivo.
 
-![Após a execução da criação do banco de dados](/assets/blog/criando-bd/bd/create-db-out.png)
+![Após a execução da criação do banco de dados](/assets/blog/bd-03-criando-bd/bd/create-db-out.png)
 
 Após a execução da instrução SQL, a resposta do comando será apresentado, normalmente o resultado é apresentado na parte inferior da imagem.
 
@@ -89,23 +89,23 @@ Após a execução da instrução SQL, a resposta do comando será apresentado, 
 
 Você pode atualizar a lista e verificar o novo banco de dados que foi criado. Ou você pode utilizar a instrução da próxima imagem para realizar a sua utilização.
 
-![Mudando pela lista de databases](/assets/blog/criando-bd/bd/use.png)
+![Mudando pela lista de databases](/assets/blog/bd-03-criando-bd/bd/use.png)
 
 Para cada projeto de um software, um banco de dados será criado com a sua respectiva modelagem e estrutura para atender os requisitos do sistema.
 
-![Colocando-o em uso por instrução](/assets/blog/criando-bd/bd/use-shopping.png)
+![Colocando-o em uso por instrução](/assets/blog/bd-03-criando-bd/bd/use-shopping.png)
 
 ### Atualizando a lista
 
 Para atualizar a lista e apresentar o novo banco de dados criado, clique com o botão direito sobre a lista e clique em `Refresh` ou `Atualizar`.
 
-![Atualizando a lista](/assets/blog/criando-bd/bd/refresh.png)
+![Atualizando a lista](/assets/blog/bd-03-criando-bd/bd/refresh.png)
 
 ```sql
 USE Shopping
 ```
 
-![Saída da instrução de uso](/assets/blog/criando-bd/bd/refresh-out.png)
+![Saída da instrução de uso](/assets/blog/bd-03-criando-bd/bd/refresh-out.png)
 
 ## Criando as tabelas
 
@@ -127,13 +127,13 @@ CREATE TABLE Categories (
 )
 ```
 
-![Resultado de categorias](/assets/blog/criando-bd/data/categories.png)
+![Resultado de categorias](/assets/blog/bd-03-criando-bd/data/categories.png)
 
 ### Produtos
 
 Criando a tabela de produtos.
 
-![Resultado de produtos](/assets/blog/criando-bd/data/products.png)
+![Resultado de produtos](/assets/blog/bd-03-criando-bd/data/products.png)
 
 Instrução para a criação da tabela de produtos.
 
@@ -153,4 +153,4 @@ CREATE TABLE Products (
 
 Para atualizar a lista de tabelas do banco de dados do shopping, atualize a lista conforme a imagem.
 
-![Atualizando a lista das tabelas](/assets/blog/criando-bd/data/refresh.png)
+![Atualizando a lista das tabelas](/assets/blog/bd-03-criando-bd/data/refresh.png)
