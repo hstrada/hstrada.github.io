@@ -45,7 +45,7 @@ resume
 **FrontEnd/Mobile**
 
     - HTML5, CSS3;
-    - ReactJs / React Native;
+    - ReactJs, NextJS / React Native;
     - Global State (Redux / Context);
     - Styled-Components;
     - ES6;
