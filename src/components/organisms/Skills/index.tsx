@@ -4,16 +4,17 @@ import { SectionDiv } from '../../atoms/SectionDiv';
 import styles from './styles.module.css';
 
 const backend = [
-  '- Java, Spring Boot, Spring MVC, Spring Security, Hibernate;',
+  '- Java, Kotlin, Spring Framework, Hibernate;',
   '- C#, .NET Core, EF Core;',
   '- API, REST, GraphQL, CQRS;',
   '- Clean Code, Clean Architecture, Design Patterns;',
-  '- SQL Server, MySQL, Redis.'
+  '- SQL Server, MySQL, Redis;',
+  '- Monolith, Microservices.'
 ];
 
 const frontend = [
   '- HTML5, CSS3;',
-  '- ReactJs / React Native;',
+  '- ReactJs, NextJS / React Native;',
   '- Global State (Redux / Context);',
   '- Styled-Components;',
   '- ES6;',
