@@ -35,11 +35,12 @@ resume
 
 **Backend**
 
-    - Java, Spring Boot, Spring MVC, Spring Security, Hibernate;
+    - Java, Kotlin, Spring Framework, Hibernate;
     - C#, .NET Core, EF Core;
     - API, REST, GraphQL, CQRS;
     - Clean Code, Clean Architecture, Design Patterns;
-    - SQL Server, MySQL, Redis.
+    - SQL Server, MySQL, Redis;
+    - Monolith, Microservices.
 
 **FrontEnd/Mobile**
 
