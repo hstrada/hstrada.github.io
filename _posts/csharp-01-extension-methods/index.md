@@ -1,16 +1,15 @@
 ---
-title: 'Extension Methods no C# & Extension Functions no Kotlin'
-excerpt: 'Extension Methods no C# & Extension Functions no Kotlin'
+title: '[C#01] Extension Methods'
+excerpt: 'Extension Methods no C#'
 coverImage: '/assets/blog/csharp-01-extension-methods/cover.jpg'
 date: '2024-04-02T13:30:00.000Z'
 author: Helena Strada
-categories: ['Extension Methods', 'C#', 'Kotlin', 'Extension Functions']
+categories: ['Extension Methods', 'C#']
 ---
 
 ## Tópicos que você verá nesse post
 
 - O que são e como criar Extension Methods no C#
-- Extension Function no Kotlin
 
 ## Contexto
 
@@ -48,6 +47,8 @@ public static class ExtensionMethods
 }
 ```
 
+Utilizando a extension method criada.
+
 ```csharp
 class Program
 {
@@ -62,26 +63,4 @@ class Program
 
 ```console
 aeiou_aeiou_ao
-```
-
-## Extension Function
-
-Assim como no C#, no Kotlin temos a funcionalidade de adicionar o mesmo recurso. Isso facilita o processo de alteração a partir do momento em que esse método precisa ser reescrito, não precisamos alterar a lógica em todos os lugares que o chamam, mas somente no método de extensão.
-E auxilia também nos testes. A partir do momento em que essa extensão sofrer alteração, os testes irão notificar a mudança e devem quebrar ao serem executados.
-
-```kotlin
-import java.text.Normalizer
-
-fun main() {
-    val wordWithAccent = "áéíóú_ãõ_àèìòù"
-    println(wordWithAccent.unaccented())
-}
-
-fun String.unaccented(): String {
-    val regex = Regex("[^\\p{ASCII}]")
-
-    return Normalizer
-        .normalize(this, Normalizer.Form.NFD)
-        .replace(regex, String())
-}
 ```
