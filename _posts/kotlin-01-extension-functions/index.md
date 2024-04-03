@@ -2,7 +2,7 @@
 title: '[Kotlin01] Extension Functions'
 excerpt: 'Extension Functions no Kotlin'
 coverImage: '/assets/blog/kotlin-01-extension-functions/cover.jpg'
-date: '2024-04-02T13:30:00.000Z'
+date: '2024-04-03T08:40:00.000Z'
 author: Helena Strada
 categories: ['Kotlin', 'Extension Functions']
 ---
