@@ -24,7 +24,9 @@ output: aeiou_aeiou_ao
 
 ## Extension Functions
 
-Assim como no C#, no Kotlin temos a funcionalidade de adicionar o mesmo recurso de extensão a tipos. Isso facilita o processo de alteração a partir do momento em que essa função precisa ser reescrita, não precisamos alterar a lógica em todos os lugares em que o chamam, mas somente no método de extensão.
+Assim como no C# onde chamamos de extension methods, no Kotlin temos a funcionalidade de adicionar o mesmo recurso de extensão a tipos chamando de extension functions. 
+
+Isso facilita o processo de alteração a partir do momento em que essa função precisa ser reescrita, não precisamos alterar a lógica em todos os lugares em que o chamam, mas somente no método de extensão.
 
 Isso facilita também o processo de construção dos testes dado que a partir do momento em que essa estrutura sofrer alguma alteração, os testes irão falhar.
 
