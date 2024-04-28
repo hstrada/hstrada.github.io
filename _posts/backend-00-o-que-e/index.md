@@ -44,6 +44,6 @@ Imagina que você acessa um aplicativo, mas ele demora 20 segundos para carregar
 
 Existem livros que você poderá ler e utilizar como referência e crescimento na sua carreira de desenvolvimento de software. Mas não necessariamente pode ser que faça sentido para o momento de carreira que você está passando, mas eu gosto de algumas referências:
 
-- [Fundamentals of Software Architecture: An Engineering Approach (English Edition)](https://a.co/d/0cyCOM9)
-- [Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition)](https://a.co/d/6bNRS8l)
-- [Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series) (English Edition)](https://a.co/d/eJqS6He)
+- [Fundamentals of Software Architecture: An Engineering Approach (English Edition)](https://amzn.to/3JEHM3q)
+- [Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition)](https://amzn.to/4aTsi7H)
+- [Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series) (English Edition)](https://amzn.to/4aSyhtb)
