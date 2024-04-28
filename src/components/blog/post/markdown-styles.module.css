@@ -26,3 +26,7 @@
   font-style: italic;
   padding: 1px 24px;
 }
+
+.markdown a:link {
+  color: var(--primary-600-color);
+}
