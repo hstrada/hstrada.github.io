@@ -8,34 +8,41 @@
     "title": "Experiência Profissional",
     "jobs": {
       "0": {
+        "date": "2024 - Atual",
+        "job": {
+          "title": "Engenheiro de Software",
+          "company": "Stone"
+        }
+      },
+      "1": {
         "date": "2020 - Atual",
         "job": {
           "title": "Engenheiro de Software",
           "company": "Creditas"
         }
       },
-      "1": {
+      "2": {
         "date": "2020 - 2021",
         "job": {
           "title": "Professor Conteudista",
           "company": "Escola SENAI de Informática"
         }
       },
-      "2": {
+      "3": {
         "date": "2020 - 2020",
         "job": {
           "title": "Bootcamp Tech Lead",
           "company": "{reprograma}"
         }
       },
-      "3": {
+      "4": {
         "date": "2017 - 2020",
         "job": {
           "title": "Instrutor de Formação Profissional III",
           "company": "Escola SENAI de Informática"
         }
       },
-      "4": {
+      "5": {
         "date": "2016 - 2018",
         "job": {
           "title": "Desenvolvedor BackEnd/FrontEnd",
