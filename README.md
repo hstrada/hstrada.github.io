@@ -21,7 +21,9 @@ resume
 
 ## ⏳ Work Experience
 
-**Software Engineer** - 2020 - Current
+**Software Engineer** - 2024 - current
+
+**Software Engineer** - 2020 - 2024
 
 **Content Creator** - 2020 - 2021
 
