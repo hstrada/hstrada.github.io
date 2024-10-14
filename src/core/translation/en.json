@@ -8,34 +8,41 @@
     "title": "Work Experience",
     "jobs": {
       "0": {
-        "date": "2020 - Current",
+        "date": "2024 - Current",
+        "job": {
+          "title": "Software Engineer",
+          "company": "Stone"
+        }
+      },
+      "1": {
+        "date": "2020 - 2024",
         "job": {
           "title": "Software Engineer",
           "company": "Creditas"
         }
       },
-      "1": {
+      "2": {
         "date": "2020 - 2021",
         "job": {
           "title": "Content Creator",
           "company": "Escola SENAI de Informática"
         }
       },
-      "2": {
+      "3": {
         "date": "2020 - 2020",
         "job": {
           "title": "Bootcamp Tech Lead",
           "company": "{reprograma}"
         }
       },
-      "3": {
+      "4": {
         "date": "2017 - 2020",
         "job": {
           "title": "Training Instructor III",
           "company": "Escola SENAI de Informática"
         }
       },
-      "4": {
+      "5": {
         "date": "2016 - 2018 ",
         "job": {
           "title": "BackEnd/FrontEnd Developer",
