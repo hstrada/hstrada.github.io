@@ -7,23 +7,37 @@ type Props = {
   coverImage: string;
   date: string;
   author: string;
+  categories?: string[];
 };
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const PostHeader = ({ title, coverImage, date, author, categories }: Props) => {
   return (
-    <>
+    <header className="mt-8">
       <PostTitle>{title}</PostTitle>
 
-      <div className="text-gray-500 text-xs font-sans">
+      <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-ink-600">
+        <span className="font-medium text-ink">{author}</span>
+        <span aria-hidden className="h-1 w-1 rounded-full bg-yellow-600" />
         <DateFormatter dateString={date} />
       </div>
 
-      <div className="mt-8 mb-8 sm:mx-0">
+      {categories?.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <span
+              key={category}
+              className="rounded-full border border-paper-300 px-2.5 py-0.5 text-xs text-ink-600"
+            >
+              {category}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <div className="my-10 overflow-hidden rounded-2xl border border-paper-300">
         <CoverImage title={title} src={coverImage} />
       </div>
-
-      <div className="text-sm font-display text-gray-500">{author}</div>
-    </>
+    </header>
   );
 };
 

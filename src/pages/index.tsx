@@ -1,21 +1,30 @@
-import { Blog } from 'components/organisms/Blog'
-import { Footer } from 'components/organisms/Footer'
-import { Skills } from 'components/organisms/Skills'
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Educational } from '../components/organisms/Educational'
-import { Header } from '../components/organisms/Header'
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-import { Hero } from '../components/organisms/Hero'
-import { OpenSource } from '../components/organisms/OpenSource'
-import { WorkExperience } from '../components/organisms/Work'
+import TPost from 'interfaces/post';
+import { getAllPosts, getSeries, Series } from 'lib/api';
 
-const Home: NextPage = () => {
+import { Header } from 'components/organisms/Header';
+import { Hero } from 'components/organisms/Hero';
+import { WorkExperience } from 'components/organisms/Work';
+import { Writing } from 'components/organisms/Writing';
+import { Stack } from 'components/organisms/Stack';
+import { Footer } from 'components/organisms/Footer';
+
+type Props = {
+  series: Series[];
+  latest: TPost[];
+};
+
+const Home: NextPage<Props> = ({ series, latest }) => {
   return (
-    <div>
+    <>
       <Head>
-        <title>hstrada</title>
-        <meta name="description" content="hstrada backend software engineer" />
+        <title>Helena Strada — Software Engineer</title>
+        <meta
+          name="description"
+          content="Helena Strada, engenheira de software backend. Kotlin, Java e C# em fintech, e séries para aprender backend do zero."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -24,15 +33,24 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <WorkExperience />
-        <Educational />
-        <OpenSource />
-        <Skills />
-        <Blog />
+        <Writing series={series} latest={latest} />
+        <Stack />
       </main>
 
       <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Home
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts(['title', 'date', 'slug', 'categories']);
+
+  return {
+    props: {
+      series: getSeries(allPosts),
+      latest: allPosts.slice(0, 5)
+    }
+  };
+};
+
+export default Home;

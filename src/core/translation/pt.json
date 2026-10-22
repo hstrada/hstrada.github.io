@@ -1,95 +1,85 @@
 {
+  "nav": {
+    "work": "Trajetória",
+    "writing": "Escrita",
+    "stack": "Stack",
+    "blog": "Blog",
+    "language": "EN"
+  },
   "hero": {
-    "title": "Software Engineer",
-    "area": "@ BackEnd",
-    "description": "Atuo como engenheira de software e sou apaixonada por livros e tecnologia. Principais interesses em arquitetura de software, código limpo e sempre estou buscando algo para aprimorar e/ou aprender."
+    "role": "Engenheira de Software · Backend",
+    "title_1": "Construo backends",
+    "title_2": "e",
+    "title_marker": "ensino",
+    "title_3": "como eles funcionam.",
+    "description": "Engenheira de software em fintech, trabalhando com Kotlin, Java e C# em sistemas que precisam ser confiáveis. Antes de escrever código em produção, passei anos em sala de aula — e até hoje explicar é a forma como eu aprendo.",
+    "now_label": "Agora",
+    "now": "Software Engineer na Stone",
+    "cta_writing": "Ler o blog",
+    "cta_contact": "LinkedIn"
+  },
+  "pillars": {
+    "build": {
+      "title": "Construir",
+      "description": "APIs, integrações e serviços em fintech. Interesse em arquitetura, código limpo e sistemas fáceis de manter."
+    },
+    "teach": {
+      "title": "Ensinar",
+      "description": "Instrutora no SENAI, tech lead de bootcamp na {reprograma} e autora de séries sobre banco de dados e backend."
+    },
+    "learn": {
+      "title": "Aprender",
+      "description": "Livros, leitura de código e o hábito de transformar dúvidas em posts. Foco, persistência e consistência."
+    }
   },
   "work": {
-    "title": "Experiência Profissional",
+    "eyebrow": "01 — Trajetória",
+    "title": "Uma carreira entre o código e a sala de aula.",
+    "engineering": "Engenharia",
+    "teaching": "Ensino",
     "jobs": {
-      "0": {
-        "date": "2024 - Atual",
-        "job": {
-          "title": "Engenheiro de Software",
-          "company": "Stone"
-        }
-      },
-      "1": {
-        "date": "2020 - 2024",
-        "job": {
-          "title": "Engenheiro de Software",
-          "company": "Creditas"
-        }
-      },
-      "2": {
-        "date": "2020 - 2021",
-        "job": {
-          "title": "Professor Conteudista",
-          "company": "Escola SENAI de Informática"
-        }
-      },
-      "3": {
-        "date": "2020 - 2020",
-        "job": {
-          "title": "Bootcamp Tech Lead",
-          "company": "{reprograma}"
-        }
-      },
-      "4": {
-        "date": "2017 - 2020",
-        "job": {
-          "title": "Instrutor de Formação Profissional III",
-          "company": "Escola SENAI de Informática"
-        }
-      },
-      "5": {
-        "date": "2016 - 2018",
-        "job": {
-          "title": "Desenvolvedor BackEnd/FrontEnd",
-          "company": "MesclaLab"
-        }
-      }
+      "0": { "date": "2024 — Atual", "title": "Engenheira de Software", "company": "Stone" },
+      "1": { "date": "2020 — 2024", "title": "Engenheira de Software", "company": "Creditas" },
+      "2": { "date": "2020 — 2021", "title": "Professora Conteudista", "company": "Escola SENAI de Informática" },
+      "3": { "date": "2020", "title": "Bootcamp Tech Lead", "company": "{reprograma}" },
+      "4": { "date": "2017 — 2020", "title": "Instrutora de Formação Profissional III", "company": "Escola SENAI de Informática" },
+      "5": { "date": "2016 — 2018", "title": "Desenvolvedora BackEnd/FrontEnd", "company": "MesclaLab" }
     }
   },
-  "educational": {
-    "title": "Experiência Acadêmica",
-    "tooltip": "Você pode encontrar outros cursos intensivos, livres e certificados em meu LinkedIn.",
-    "xp": {
-      "0": {
-        "level": "MBA",
-        "title": "Desenvolvimento de Aplicações Java - SOA e Internet das Coisas",
-        "place": "FIAP [2016-2017]"
-      },
-      "1": {
-        "level": "Graduação",
-        "title": "Sistemas de Informação",
-        "place": "PUCSP [2012-2016]"
-      },
-      "2": {
-        "level": "Curso Técnico",
-        "title": "Técnico em Informática",
-        "place": "SENAC [2010-2012]"
-      }
+  "writing": {
+    "eyebrow": "02 — Escrita",
+    "title": "Séries para aprender backend do zero.",
+    "description": "Conteúdo em português, passo a passo, do jeito que eu explicaria em sala.",
+    "posts": "posts",
+    "start": "Começar a série",
+    "latest": "Publicações recentes",
+    "elsewhere": "Em outros lugares",
+    "all": "Ver todos os posts"
+  },
+  "stack": {
+    "eyebrow": "03 — Stack",
+    "title": "Ferramentas do dia a dia.",
+    "backend": "Backend",
+    "data": "Dados",
+    "practices": "Práticas",
+    "frontend": "Frontend & mobile",
+    "education": "Formação",
+    "edu": {
+      "0": { "level": "MBA", "title": "Desenvolvimento de Aplicações Java — SOA e IoT", "place": "FIAP · 2016–2017" },
+      "1": { "level": "Graduação", "title": "Sistemas de Informação", "place": "PUC-SP · 2012–2016" },
+      "2": { "level": "Técnico", "title": "Técnico em Informática", "place": "SENAC · 2010–2012" }
     }
   },
-  "opensource": {
-    "datase": {
-      "description": "Datase é uma DSL para ajudar na criação de consultas e queries SQL.",
-      "button": "datase"
-    },
-    "readit": {
-      "description": "O readit-readme é um projeto focado em criar e gerar readme’s para os seus projetos de forma pragmática e interativa.",
-      "button": "readit-readme"
-    },
-    "pure": {
-      "description": "purê-css é um projeto para auxiliar os desenvolvedores a criarem visualmente as bordas css.",
-      "button": "purê-css"
-    }
-  },
-  "skills": {
-    "title": "Habilidades Técnicas"
+  "footer": {
+    "title": "Vamos conversar sobre backend, ensino ou livros?",
+    "motto": "Foco, persistência e consistência."
   },
   "blog": {
-    "title": "Últimas Publicações"
+    "title": "Blog",
+    "description": "Séries e notas sobre banco de dados, backend, Kotlin e C#.",
+    "back": "Voltar ao blog",
+    "home": "Início",
+    "previous": "Anterior",
+    "next": "Próxima"
   }
 }

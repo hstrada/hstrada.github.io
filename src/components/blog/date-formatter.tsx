@@ -1,5 +1,5 @@
 import { parseISO, format } from 'date-fns'
-import pt from 'date-fns/locale/pt'
+import { pt } from 'date-fns/locale'
 
 type Props = {
   dateString: string

@@ -1,67 +1,61 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { Translate } from '../../core/utils/translate';
 
 interface Props {
   numberOfPages: number;
 }
 
-const defaultClassName = 'border px-3 py-1 rounded-md';
-const selectedClassName = 'px-3 py-1 rounded-md bg-slate-800 text-slate-100';
-
-const disabledIconColor = '#b8b8b8';
-const activeIconColor = '#121212';
+const pageClassName =
+  'flex h-9 min-w-[2.25rem] items-center justify-center rounded-full px-3 font-display text-sm transition-colors';
+const navClassName =
+  'rounded-full border border-paper-300 px-4 py-2 text-sm transition-colors hover:border-ink';
+const disabledClassName =
+  'rounded-full border border-paper-300 px-4 py-2 text-sm text-ink-400 opacity-50';
 
 export const Pagination = ({ numberOfPages }: Props) => {
   const router = useRouter();
-  const actualPage = Number(router.query.page);
+  const actualPage = Number(router.query.page ?? 1);
 
-  const hasPreviousPage = numberOfPages >= 2 && actualPage >= 2;
+  const hasPreviousPage = actualPage >= 2;
   const hasNextPage = actualPage < numberOfPages;
 
-  return (
-    <div className="flex flex-row justify-between font-sans mt-24">
-      <Link href={`/blog/${actualPage - 1}`}>
-        <button
-          className="border px-3 py-2 rounded-md flex content-center items-center disabled:text-gray-500"
-          disabled={!hasPreviousPage}
-        >
-          <BsArrowLeft
-            color={hasPreviousPage ? activeIconColor : disabledIconColor}
-            size={16}
-            className="mr-2"
-          />
-          Anterior
-        </button>
-      </Link>
+  if (numberOfPages <= 1) return null;
 
-      <ul className="flex flex-row space-x-2 items-center">
-        {Array.from(Array(numberOfPages).keys()).map((page) => {
-          return (
-            <li
-              key={page}
-              className={
-                actualPage === page + 1 ? selectedClassName : defaultClassName
-              }
+  return (
+    <nav className="mt-16 flex items-center justify-between">
+      {hasPreviousPage ? (
+        <Link href={`/blog/${actualPage - 1}`} className={navClassName}>
+          ← {Translate('blog.previous')}
+        </Link>
+      ) : (
+        <span className={disabledClassName}>← {Translate('blog.previous')}</span>
+      )}
+
+      <ul className="flex items-center gap-1">
+        {Array.from(Array(numberOfPages).keys()).map((page) => (
+          <li key={page}>
+            <Link
+              href={`/blog/${page + 1}`}
+              className={`${pageClassName} ${
+                actualPage === page + 1
+                  ? 'bg-ink text-paper'
+                  : 'hover:bg-paper-200'
+              }`}
             >
-              <Link href={`/blog/${page + 1}`}>{page + 1}</Link>
-            </li>
-          );
-        })}
+              {page + 1}
+            </Link>
+          </li>
+        ))}
       </ul>
-      <Link href={`/blog/${actualPage + 1}`}>
-        <button
-          disabled={!hasNextPage}
-          className="border px-3 py-2 rounded-md flex content-center items-center disabled:text-gray-500"
-        >
-          Próxima
-          <BsArrowRight
-            color={hasNextPage ? activeIconColor : disabledIconColor}
-            size={16}
-            className="ml-2"
-          />
-        </button>
-      </Link>
-    </div>
+
+      {hasNextPage ? (
+        <Link href={`/blog/${actualPage + 1}`} className={navClassName}>
+          {Translate('blog.next')} →
+        </Link>
+      ) : (
+        <span className={disabledClassName}>{Translate('blog.next')} →</span>
+      )}
+    </nav>
   );
 };

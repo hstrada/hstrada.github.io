@@ -1,35 +1,31 @@
 import type { AppProps } from 'next/app';
-import { Sora, Poppins } from 'next/font/google';
+import { Space_Grotesk, IBM_Plex_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-
-import { IconContext } from 'react-icons';
 
 import { TranslationProvider } from '../core/hooks/useTranslate';
 import '../styles/globals.css';
 
-
-const poppins = Poppins({
+const grotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  variable: '--font-poppins'
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-grotesk'
 });
 
-const sora = Sora({
+const plex = IBM_Plex_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  variable: '--font-sora'
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-plex'
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${poppins.variable} ${sora.variable}`}>
+    <div className={`${grotesk.variable} ${plex.variable} font-sans`}>
       <TranslationProvider>
-        <IconContext.Provider value={{ className: 'icon-shared', color: '#121212', size: '20px' }}>
-          <Component {...pageProps} />
-          <Analytics />
-        </IconContext.Provider>
+        <Component {...pageProps} />
+        <Analytics />
       </TranslationProvider>
-    </main>
+    </div>
   );
 }
 

@@ -1,32 +1,78 @@
+@reference "../../../styles/globals.css";
+
 .markdown {
-  @apply text-sm leading-6 font-sans text-justify;
+  @apply text-[1.0625rem] leading-[1.8] text-ink-800;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
-.markdown blockquote {
+.markdown blockquote,
+.markdown pre {
   @apply my-6;
 }
 
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown li {
+  @apply my-1.5;
+}
+
+.markdown li::marker {
+  color: var(--primary-600-color);
+}
+
 .markdown h2 {
-  @apply text-2xl mt-12 mb-4 font-bold leading-snug;
+  @apply mt-14 mb-4 font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl;
 }
 
 .markdown h3 {
-  @apply text-xl mt-8 mb-4 font-bold leading-snug;
+  @apply mt-10 mb-3 font-display text-xl font-semibold leading-snug text-ink;
+}
+
+.markdown strong {
+  @apply font-semibold text-ink;
+}
+
+.markdown code {
+  @apply rounded-md bg-paper-200 px-1.5 py-0.5 font-mono text-[0.9em];
 }
 
 .markdown pre {
-  @apply bg-slate-50 p-4 rounded-md;
+  @apply overflow-x-auto rounded-xl bg-ink p-5 text-sm leading-relaxed text-paper-300;
+}
+
+.markdown pre code {
+  @apply bg-transparent p-0 text-inherit;
 }
 
 .markdown blockquote {
-  border-left: 1px solid #ccc;
-  font-style: italic;
-  padding: 1px 24px;
+  @apply border-l-4 border-yellow-500 pl-5 italic text-ink-600;
 }
 
-.markdown a:link {
-  color: var(--primary-600-color);
+.markdown img {
+  @apply my-8 rounded-xl border border-paper-300;
+}
+
+.markdown a {
+  @apply underline decoration-yellow-500 decoration-2 underline-offset-4 hover:decoration-ink;
+}
+
+.markdown table {
+  @apply my-8 w-full border-collapse text-sm;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-paper-300 px-3 py-2 text-left;
+}
+
+.markdown th {
+  @apply bg-paper-200 font-display font-semibold;
 }

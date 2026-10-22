@@ -1,5 +1,6 @@
 import TPost from 'interfaces/post';
 import Link from 'next/link';
+import DateFormatter from './date-formatter';
 
 interface Props {
   posts: TPost[];
@@ -7,37 +8,37 @@ interface Props {
 
 export const Posts = ({ posts }: Props) => {
   return (
-    <div>
+    <ul className="divide-y divide-paper-300 border-y border-paper-300">
       {posts.map((post) => {
         return (
-          <div className="mb-16" key={post.slug}>
-            <h2 className="text-2xl leading-tight font-bold max-w-screen-lg font-sans">
-              <Link
-                as={`/blog/post/${post.slug}`}
-                href="/blog/post/[slug]"
-                className="hover:underline font-sans"
-              >
-                {post.title}
-              </Link>
-            </h2>
-            <p className="mt-1 font-display font-light text-justify leading-6 text-gray-600 text-sm">
-              {post.excerpt}
-            </p>
-            <div className="flex flex-row mt-3">
-              {post.categories.map((category) => {
-                return (
-                  <span
-                    key={category}
-                    className="bg-slate-200 px-3 py-1 rounded font-sans text-gray-600 mr-2 text-xs flex items-center"
-                  >
-                    {category}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
+          <li key={post.slug}>
+            <Link
+              href={`/blog/post/${post.slug}`}
+              className="group grid gap-2 py-8 md:grid-cols-12 md:gap-6"
+            >
+              <span className="text-sm tabular-nums text-ink-400 md:col-span-3 md:pt-1.5">
+                <DateFormatter dateString={post.date} />
+              </span>
+              <div className="md:col-span-9">
+                <h2 className="font-display text-2xl font-semibold leading-tight tracking-tight transition-colors group-hover:text-yellow-600">
+                  {post.title}
+                </h2>
+                <p className="mt-2 max-w-2xl text-ink-600">{post.excerpt}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {post.categories?.map((category) => (
+                    <span
+                      key={category}
+                      className="rounded-full border border-paper-300 px-2.5 py-0.5 text-xs text-ink-600"
+                    >
+                      {category}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 };

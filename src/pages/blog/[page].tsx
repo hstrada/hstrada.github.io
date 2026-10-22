@@ -8,7 +8,8 @@ import Post from '../../interfaces/post';
 import { Pagination } from 'components/blog/pagination';
 import { Posts } from 'components/blog/posts';
 import { BlogHeader } from 'components/blog/blog-header';
-import { BlogSpan } from 'components/blog/blog-span';
+import { Header } from 'components/organisms/Header';
+import { Footer } from 'components/organisms/Footer';
 
 type Props = {
   posts: Post[];
@@ -20,19 +21,17 @@ export default function Blog({ posts, numberOfPages }: Props) {
   return (
     <>
       <Head>
-        <title>blog | hstrada</title>
+        <title>Blog — Helena Strada</title>
       </Head>
-      <BlogHeader />
-      <section className="px-6 pb-12">
-        <div className="max-w-screen-lg flex flex-col mx-auto">
-          <BlogSpan />
-          {/* <Categories categories={allCategories} /> */}
-
+      <Header />
+      <main>
+        <BlogHeader />
+        <section className="container-site pb-24">
           <Posts posts={posts} />
-
           <Pagination numberOfPages={numberOfPages} />
-        </div>
-      </section>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }
@@ -72,8 +71,6 @@ export const getStaticProps = async ({ params }) => {
   const numberOfPages = Math.ceil(allPosts.length / numberOfPostsPerPage);
 
   const posts = renderPostsByPage(allPosts, params.page);
-
-  // const allCategories = getAllCategories(allPosts);
 
   return {
     props: { posts, numberOfPages }

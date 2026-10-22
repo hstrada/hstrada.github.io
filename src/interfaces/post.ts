@@ -5,7 +5,7 @@ type TPost = {
     coverImage: string
     author: string
     excerpt: string
-    categories?: []
+    categories?: string[]
     content: string
 }
 

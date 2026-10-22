@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/blog',
-          destination: '/blog/1'
-        }
-      ]
-    };
+  // GitHub Pages only serves static files.
+  output: 'export',
+  images: {
+    unoptimized: true
   }
 };
 
