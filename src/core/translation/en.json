@@ -108,7 +108,7 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Step-by-step series on databases, backend, Kotlin and C# — written the way I'd explain them in class (in Portuguese).",
+    "description": "Step-by-step series on databases, backend, frontend, Kotlin and C# — written the way I'd explain them in class (in Portuguese).",
     "back": "Back to blog",
     "posts": "posts",
     "series_count": "series",

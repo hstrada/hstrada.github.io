@@ -108,7 +108,7 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Séries passo a passo sobre banco de dados, backend, Kotlin e C# — escritas do jeito que eu explicaria em sala.",
+    "description": "Séries passo a passo sobre banco de dados, backend, frontend, Kotlin e C# — escritas do jeito que eu explicaria em sala.",
     "back": "Voltar ao blog",
     "posts": "posts",
     "series_count": "séries",

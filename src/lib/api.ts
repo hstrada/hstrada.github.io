@@ -57,6 +57,7 @@ export type Series = {
 const SERIES_NAMES: { [key: string]: string } = {
   BD: 'Banco de Dados',
   BackEnd: 'BackEnd',
+  FrontEnd: 'FrontEnd',
   'C#': 'C#',
   Kotlin: 'Kotlin'
 }
