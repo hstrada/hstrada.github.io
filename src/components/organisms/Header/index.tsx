@@ -3,7 +3,11 @@ import { useTranslation } from '../../../core/hooks/useTranslate';
 import { Translate } from '../../../core/utils/translate';
 import { Logo } from '../../atoms/Logo';
 
-export const Header = () => {
+type THeaderProps = {
+  wide?: boolean;
+};
+
+export const Header = ({ wide = false }: THeaderProps) => {
   const { changeCountry } = useTranslation();
 
   const nav = [
@@ -14,7 +18,11 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-20 border-b border-paper-300/70 bg-paper/85 backdrop-blur">
-      <div className="container-site flex h-16 items-center justify-between">
+      <div
+        className={`container-site flex h-16 items-center justify-between ${
+          wide ? 'max-w-[84rem]' : ''
+        }`}
+      >
         <Logo />
         <nav className="flex items-center gap-1 text-sm">
           {nav.map(({ href, label }) => (

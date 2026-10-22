@@ -12,9 +12,7 @@
     "title_2": "and",
     "title_marker": "teach",
     "title_3": "how they work.",
-    "description": "Software engineer in fintech, working with Kotlin, Java and C# on systems that have to be reliable. Before shipping code to production I spent years in the classroom — and explaining things is still how I learn.",
-    "now_label": "Now",
-    "now": "Software Engineer at Stone",
+    "description": "Backend software engineer in fintech, working with Kotlin, Java and C#. Focused on software architecture, scalability and distributed systems — APIs and services that can grow without losing their simplicity.",
     "cta_writing": "Read the blog",
     "cta_contact": "LinkedIn"
   },
@@ -38,20 +36,42 @@
     "engineering": "Engineering",
     "teaching": "Teaching",
     "jobs": {
-      "0": { "date": "2024 — Now", "title": "Software Engineer", "company": "Stone" },
-      "1": { "date": "2020 — 2024", "title": "Software Engineer", "company": "Creditas" },
-      "2": { "date": "2020 — 2021", "title": "Content Creator", "company": "Escola SENAI de Informática" },
-      "3": { "date": "2020", "title": "Bootcamp Tech Lead", "company": "{reprograma}" },
-      "4": { "date": "2017 — 2020", "title": "Training Instructor III", "company": "Escola SENAI de Informática" },
-      "5": { "date": "2016 — 2018", "title": "BackEnd/FrontEnd Developer", "company": "MesclaLab" }
+      "0": {
+        "date": "2024 — 2025",
+        "title": "Software Engineer",
+        "company": "Stone"
+      },
+      "1": {
+        "date": "2020 — 2024",
+        "title": "Software Engineer",
+        "company": "Creditas"
+      },
+      "2": {
+        "date": "2020 — 2021",
+        "title": "Content Creator",
+        "company": "Escola SENAI de Informática"
+      },
+      "3": {
+        "date": "2020",
+        "title": "Bootcamp Tech Lead",
+        "company": "{reprograma}"
+      },
+      "4": {
+        "date": "2017 — 2020",
+        "title": "Training Instructor III",
+        "company": "Escola SENAI de Informática"
+      },
+      "5": {
+        "date": "2016 — 2018",
+        "title": "BackEnd/FrontEnd Developer",
+        "company": "MesclaLab"
+      }
     }
   },
   "writing": {
     "eyebrow": "02 — Writing",
-    "title": "Series to learn backend from scratch.",
-    "description": "Written in Portuguese, step by step, the way I'd explain it in class.",
-    "posts": "posts",
-    "start": "Start the series",
+    "title": "Notes on backend, data and architecture.",
+    "description": "Step-by-step posts (in Portuguese) about what I study and build day to day.",
     "latest": "Recent posts",
     "elsewhere": "Elsewhere",
     "all": "See all posts"
@@ -65,9 +85,21 @@
     "frontend": "Frontend & mobile",
     "education": "Education",
     "edu": {
-      "0": { "level": "Graduate", "title": "Java Application Development — SOA and IoT", "place": "FIAP · 2016–2017" },
-      "1": { "level": "Undergraduate", "title": "Information Systems", "place": "PUC-SP · 2012–2016" },
-      "2": { "level": "Technical", "title": "Computer Technician", "place": "SENAC · 2010–2012" }
+      "0": {
+        "level": "Graduate",
+        "title": "Java Application Development — SOA and IoT",
+        "place": "FIAP · 2016–2017"
+      },
+      "1": {
+        "level": "Undergraduate",
+        "title": "Information Systems",
+        "place": "PUC-SP · 2012–2016"
+      },
+      "2": {
+        "level": "Technical",
+        "title": "Computer Technician",
+        "place": "SENAC · 2010–2012"
+      }
     }
   },
   "footer": {
@@ -76,10 +108,26 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Series and notes on databases, backend, Kotlin and C# (in Portuguese).",
+    "description": "Step-by-step series on databases, backend, Kotlin and C# — written the way I'd explain them in class (in Portuguese).",
     "back": "Back to blog",
-    "home": "Home",
+    "posts": "posts",
+    "series_count": "series",
+    "minutes": "min read",
+    "search": "Search by title, topic or technology…",
+    "all": "All",
+    "standalone": "Standalone",
+    "latest": "Latest",
+    "read": "Read post",
+    "results": "results",
+    "empty_title": "Nothing found.",
+    "empty_description": "Try another term or clear the filters.",
+    "clear": "Clear filters",
+    "series_order": "In reading order",
+    "in_series": "In this series",
+    "on_this_page": "On this page",
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "part": "Part",
+    "since": "first post"
   }
 }

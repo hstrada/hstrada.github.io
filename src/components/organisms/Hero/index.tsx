@@ -50,17 +50,6 @@ export const Hero = () => {
             {Translate('hero.description')}
           </p>
 
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-paper-300 bg-white/60 py-1.5 pl-2 pr-4 text-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-yellow-500 opacity-75 motion-reduce:hidden" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-yellow-600" />
-            </span>
-            <span className="font-display text-xs font-semibold uppercase tracking-wider">
-              {Translate('hero.now_label')}
-            </span>
-            <span className="text-ink-600">{Translate('hero.now')}</span>
-          </div>
-
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               href="/blog"

@@ -29,7 +29,7 @@
 }
 
 .markdown h2 {
-  @apply mt-14 mb-4 font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl;
+  @apply mt-14 mb-4 scroll-mt-24 font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl;
 }
 
 .markdown h3 {

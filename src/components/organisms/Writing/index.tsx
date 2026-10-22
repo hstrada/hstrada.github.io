@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import TPost from 'interfaces/post';
-import { Series } from 'lib/api';
+import { PostSummary } from 'lib/api';
 import DateFormatter from 'components/blog/date-formatter';
 import { Translate } from '../../../core/utils/translate';
 import { Section } from '../../atoms/Section';
@@ -33,11 +32,10 @@ const elsewhere = [
 ];
 
 type TWritingProps = {
-  series: Series[];
-  latest: TPost[];
+  latest: PostSummary[];
 };
 
-export const Writing = ({ series, latest }: TWritingProps) => {
+export const Writing = ({ latest }: TWritingProps) => {
   return (
     <Section
       id="escrita"
@@ -45,44 +43,7 @@ export const Writing = ({ series, latest }: TWritingProps) => {
       title={Translate('writing.title')}
       description={Translate('writing.description')}
     >
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {series.map((item, index) => (
-          <Link
-            key={item.key}
-            href={`/blog/post/${item.firstSlug}`}
-            className={`group flex min-h-[15rem] flex-col justify-between rounded-2xl p-6 transition-transform hover:-translate-y-1 ${
-              index === 0
-                ? 'bg-yellow-500 text-ink'
-                : 'border border-paper-300 bg-white/60 hover:border-ink'
-            }`}
-          >
-            <div>
-              <span className="font-display text-xs font-semibold uppercase tracking-wider opacity-70">
-                [{item.key}]
-              </span>
-              <h3 className="mt-3 font-display text-2xl font-semibold leading-tight">
-                {item.name}
-              </h3>
-              <p className="mt-2 text-sm opacity-70">
-                {item.categories.filter((c) => c !== item.name).slice(0, 3).join(' · ')}
-              </p>
-            </div>
-            <div className="mt-6 flex items-end justify-between">
-              <span className="font-display text-4xl font-bold tabular-nums leading-none">
-                {String(item.count).padStart(2, '0')}
-                <span className="ml-1 text-sm font-medium">
-                  {Translate('writing.posts')}
-                </span>
-              </span>
-              <span className="text-sm font-medium opacity-0 transition-opacity group-hover:opacity-100">
-                {Translate('writing.start')} →
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      <div className="mt-16 grid gap-12 lg:grid-cols-12">
+      <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <h3 className="eyebrow">{Translate('writing.latest')}</h3>
           <ul className="mt-4 divide-y divide-paper-300 border-t border-paper-300">

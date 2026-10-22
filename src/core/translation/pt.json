@@ -12,9 +12,7 @@
     "title_2": "e",
     "title_marker": "ensino",
     "title_3": "como eles funcionam.",
-    "description": "Engenheira de software em fintech, trabalhando com Kotlin, Java e C# em sistemas que precisam ser confiáveis. Antes de escrever código em produção, passei anos em sala de aula — e até hoje explicar é a forma como eu aprendo.",
-    "now_label": "Agora",
-    "now": "Software Engineer na Stone",
+    "description": "Engenheira de software backend em fintech, trabalhando com Kotlin, Java e C#. Foco em arquitetura de software, escalabilidade e sistemas distribuídos — APIs e serviços que aguentam crescer sem perder a simplicidade.",
     "cta_writing": "Ler o blog",
     "cta_contact": "LinkedIn"
   },
@@ -38,20 +36,42 @@
     "engineering": "Engenharia",
     "teaching": "Ensino",
     "jobs": {
-      "0": { "date": "2024 — Atual", "title": "Engenheira de Software", "company": "Stone" },
-      "1": { "date": "2020 — 2024", "title": "Engenheira de Software", "company": "Creditas" },
-      "2": { "date": "2020 — 2021", "title": "Professora Conteudista", "company": "Escola SENAI de Informática" },
-      "3": { "date": "2020", "title": "Bootcamp Tech Lead", "company": "{reprograma}" },
-      "4": { "date": "2017 — 2020", "title": "Instrutora de Formação Profissional III", "company": "Escola SENAI de Informática" },
-      "5": { "date": "2016 — 2018", "title": "Desenvolvedora BackEnd/FrontEnd", "company": "MesclaLab" }
+      "0": {
+        "date": "2024 — 2025",
+        "title": "Engenheira de Software",
+        "company": "Stone"
+      },
+      "1": {
+        "date": "2020 — 2024",
+        "title": "Engenheira de Software",
+        "company": "Creditas"
+      },
+      "2": {
+        "date": "2020 — 2021",
+        "title": "Professora Conteudista",
+        "company": "Escola SENAI de Informática"
+      },
+      "3": {
+        "date": "2020",
+        "title": "Bootcamp Tech Lead",
+        "company": "{reprograma}"
+      },
+      "4": {
+        "date": "2017 — 2020",
+        "title": "Instrutora de Formação Profissional III",
+        "company": "Escola SENAI de Informática"
+      },
+      "5": {
+        "date": "2016 — 2018",
+        "title": "Desenvolvedora BackEnd/FrontEnd",
+        "company": "MesclaLab"
+      }
     }
   },
   "writing": {
     "eyebrow": "02 — Escrita",
-    "title": "Séries para aprender backend do zero.",
-    "description": "Conteúdo em português, passo a passo, do jeito que eu explicaria em sala.",
-    "posts": "posts",
-    "start": "Começar a série",
+    "title": "Notas sobre backend, dados e arquitetura.",
+    "description": "Posts em português, passo a passo, sobre o que estudo e construo no dia a dia.",
     "latest": "Publicações recentes",
     "elsewhere": "Em outros lugares",
     "all": "Ver todos os posts"
@@ -65,9 +85,21 @@
     "frontend": "Frontend & mobile",
     "education": "Formação",
     "edu": {
-      "0": { "level": "MBA", "title": "Desenvolvimento de Aplicações Java — SOA e IoT", "place": "FIAP · 2016–2017" },
-      "1": { "level": "Graduação", "title": "Sistemas de Informação", "place": "PUC-SP · 2012–2016" },
-      "2": { "level": "Técnico", "title": "Técnico em Informática", "place": "SENAC · 2010–2012" }
+      "0": {
+        "level": "MBA",
+        "title": "Desenvolvimento de Aplicações Java — SOA e IoT",
+        "place": "FIAP · 2016–2017"
+      },
+      "1": {
+        "level": "Graduação",
+        "title": "Sistemas de Informação",
+        "place": "PUC-SP · 2012–2016"
+      },
+      "2": {
+        "level": "Técnico",
+        "title": "Técnico em Informática",
+        "place": "SENAC · 2010–2012"
+      }
     }
   },
   "footer": {
@@ -76,10 +108,26 @@
   },
   "blog": {
     "title": "Blog",
-    "description": "Séries e notas sobre banco de dados, backend, Kotlin e C#.",
+    "description": "Séries passo a passo sobre banco de dados, backend, Kotlin e C# — escritas do jeito que eu explicaria em sala.",
     "back": "Voltar ao blog",
-    "home": "Início",
+    "posts": "posts",
+    "series_count": "séries",
+    "minutes": "min de leitura",
+    "search": "Buscar por título, assunto ou tecnologia…",
+    "all": "Todos",
+    "standalone": "Avulsos",
+    "latest": "Mais recente",
+    "read": "Ler post",
+    "results": "resultados",
+    "empty_title": "Nada encontrado.",
+    "empty_description": "Tente outro termo ou limpe os filtros.",
+    "clear": "Limpar filtros",
+    "series_order": "Em ordem de leitura",
+    "in_series": "Nesta série",
+    "on_this_page": "Nesta página",
     "previous": "Anterior",
-    "next": "Próxima"
+    "next": "Próximo",
+    "part": "Parte",
+    "since": "primeiro post"
   }
 }

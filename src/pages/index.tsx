@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import TPost from 'interfaces/post';
-import { getAllPosts, getSeries, Series } from 'lib/api';
+import { getPostSummaries, PostSummary } from 'lib/api';
 
 import { Header } from 'components/organisms/Header';
 import { Hero } from 'components/organisms/Hero';
@@ -12,11 +11,10 @@ import { Stack } from 'components/organisms/Stack';
 import { Footer } from 'components/organisms/Footer';
 
 type Props = {
-  series: Series[];
-  latest: TPost[];
+  latest: PostSummary[];
 };
 
-const Home: NextPage<Props> = ({ series, latest }) => {
+const Home: NextPage<Props> = ({ latest }) => {
   return (
     <>
       <Head>
@@ -33,7 +31,7 @@ const Home: NextPage<Props> = ({ series, latest }) => {
       <main>
         <Hero />
         <WorkExperience />
-        <Writing series={series} latest={latest} />
+        <Writing latest={latest} />
         <Stack />
       </main>
 
@@ -43,12 +41,9 @@ const Home: NextPage<Props> = ({ series, latest }) => {
 };
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'date', 'slug', 'categories']);
-
   return {
     props: {
-      series: getSeries(allPosts),
-      latest: allPosts.slice(0, 5)
+      latest: getPostSummaries().slice(0, 5)
     }
   };
 };
