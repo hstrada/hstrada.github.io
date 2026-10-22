@@ -99,24 +99,24 @@ Por isso, o frontend solicita esses dados para o backend, normalmente através d
 
 ```javascript
 async function carregarProdutos(categoria) {
-  const resposta = await fetch(`/api/produtos?categoria=${categoria}`);
+  const resposta = await fetch(`/api/products?category=${categoria}`);
   const produtos = await resposta.json();
 
   const lista = document.querySelector('.produtos');
   lista.innerHTML = produtos
-    .map((produto) => `<li class="produto">${produto.nome}</li>`)
+    .map((produto) => `<li class="produto">${produto.name}</li>`)
     .join('');
 }
 
-carregarProdutos('camisetas');
+carregarProdutos('Camisetas');
 ```
 
 A resposta do backend poderia ser algo como:
 
 ```json
 [
-  { "id": 1, "nome": "Camiseta A", "preco": 59.9 },
-  { "id": 2, "nome": "Camiseta B", "preco": 59.9 }
+  { "id": 1, "name": "Camiseta A", "price": 59.90, "category": "Camisetas" },
+  { "id": 2, "name": "Camiseta B", "price": 59.90, "category": "Camisetas" }
 ]
 ```
 
