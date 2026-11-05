@@ -1,25 +1,24 @@
 import Link from 'next/link';
-import { PostSeries, PostSummary } from 'lib/api';
+import { Journey } from 'lib/api';
 import { Translate } from '../../../core/utils/translate';
 
 type Props = {
-  series: PostSeries;
-  posts: PostSummary[];
+  journey: Journey;
   currentSlug: string;
 };
 
-export const SeriesNav = ({ series, posts, currentSlug }: Props) => {
+export const JourneyNav = ({ journey, currentSlug }: Props) => {
   return (
-    <nav aria-label={Translate('blog.in_series')}>
-      <p className="eyebrow">{Translate('blog.in_series')}</p>
+    <nav aria-label={Translate('blog.in_journey')}>
+      <p className="eyebrow">{Translate('blog.in_journey')}</p>
       <Link
-        href={`/blog?serie=${encodeURIComponent(series.key)}`}
-        className="mt-2 block font-display text-lg font-semibold hover:underline"
+        href={`/blog/jornada/${journey.slug}`}
+        className="mt-2 block font-display text-lg font-semibold leading-snug hover:underline"
       >
-        {series.name}
+        {journey.name}
       </Link>
       <ol className="mt-4 space-y-1">
-        {posts.map((post) => {
+        {journey.lessons.map((post, index) => {
           const current = post.slug === currentSlug;
           return (
             <li key={post.slug}>
@@ -33,7 +32,7 @@ export const SeriesNav = ({ series, posts, currentSlug }: Props) => {
                 }`}
               >
                 <span className="font-display tabular-nums opacity-60">
-                  {String(post.series.number).padStart(2, '0')}
+                  {String(index + 1).padStart(2, '0')}
                 </span>
                 <span>{post.shortTitle}</span>
               </Link>

@@ -2,16 +2,17 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import {
+  getJourney,
   getPostBySlug,
   getPostSummaries,
-  getSeriesPosts,
+  Journey,
   PostSummary
 } from 'lib/api';
 import markdownToHtml, { Heading, withHeadingIds } from 'lib/markdownToHtml';
 
 import PostHeader from 'components/blog/post/post-header';
 import PostBody from 'components/blog/post/post-body';
-import { SeriesNav } from 'components/blog/post/series-nav';
+import { JourneyNav } from 'components/blog/post/journey-nav';
 import { TableOfContents } from 'components/blog/post/table-of-contents';
 import { Header } from 'components/organisms/Header';
 import { Footer } from 'components/organisms/Footer';
@@ -22,47 +23,46 @@ type Props = {
   author: string;
   content: string;
   headings: Heading[];
-  seriesPosts: PostSummary[];
+  journey: Journey | null;
 };
 
 const Neighbour = ({
-  post,
-  direction
+  href,
+  label,
+  title,
+  alignRight = false
 }: {
-  post?: PostSummary;
-  direction: 'previous' | 'next';
-}) => {
-  if (!post) return <div className="hidden sm:block" />;
-
-  const isNext = direction === 'next';
-  return (
-    <Link
-      href={`/blog/post/${post.slug}`}
-      className={`group flex flex-col rounded-2xl border border-paper-300 p-5 transition-colors hover:border-ink hover:bg-white/60 ${
-        isNext ? 'sm:items-end sm:text-right' : ''
-      }`}
-    >
-      <span className="eyebrow">
-        {isNext ? `${Translate('blog.next')} →` : `← ${Translate('blog.previous')}`}
-      </span>
-      <span className="mt-2 font-display text-lg font-semibold leading-snug group-hover:text-yellow-600">
-        {post.shortTitle}
-      </span>
-    </Link>
-  );
-};
+  href: string;
+  label: string;
+  title: string;
+  alignRight?: boolean;
+}) => (
+  <Link
+    href={href}
+    className={`group flex flex-col rounded-2xl border border-paper-300 p-5 transition-colors hover:border-ink hover:bg-white/60 ${
+      alignRight ? 'sm:col-start-2 sm:items-end sm:text-right' : ''
+    }`}
+  >
+    <span className="eyebrow">{label}</span>
+    <span className="mt-2 font-display text-lg font-semibold leading-snug group-hover:text-yellow-600">
+      {title}
+    </span>
+  </Link>
+);
 
 export default function Post({
   post,
   author,
   content,
   headings,
-  seriesPosts
+  journey
 }: Props) {
-  const index = seriesPosts.findIndex((item) => item.slug === post.slug);
-  const previous = index > 0 ? seriesPosts[index - 1] : undefined;
-  const next = index >= 0 ? seriesPosts[index + 1] : undefined;
-  const hasSeries = post.series && seriesPosts.length > 1;
+  const index = journey
+    ? journey.lessons.findIndex((item) => item.slug === post.slug)
+    : -1;
+  const previous = index > 0 ? journey.lessons[index - 1] : undefined;
+  const next = index >= 0 ? journey.lessons[index + 1] : undefined;
+  const nextJourney = index >= 0 && !next ? journey.next : null;
 
   return (
     <>
@@ -79,12 +79,8 @@ export default function Post({
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-[15rem_minmax(0,1fr)] xl:grid-cols-[15rem_minmax(0,1fr)_13rem]">
           <aside className="hidden lg:block">
             <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pb-6">
-              {hasSeries ? (
-                <SeriesNav
-                  series={post.series}
-                  posts={seriesPosts}
-                  currentSlug={post.slug}
-                />
+              {journey ? (
+                <JourneyNav journey={journey} currentSlug={post.slug} />
               ) : (
                 <div>
                   <p className="eyebrow">Tags</p>
@@ -106,20 +102,37 @@ export default function Post({
           <article className="min-w-0 max-w-3xl">
             <PostBody content={content} />
 
-            {hasSeries && (
+            {journey && (previous || next || nextJourney) && (
               <div className="mt-16 grid gap-4 border-t border-paper-300 pt-8 sm:grid-cols-2">
-                <Neighbour post={previous} direction="previous" />
-                <Neighbour post={next} direction="next" />
+                {previous && (
+                  <Neighbour
+                    href={`/blog/post/${previous.slug}`}
+                    label={`← ${Translate('blog.previous')}`}
+                    title={previous.shortTitle}
+                  />
+                )}
+                {next && (
+                  <Neighbour
+                    href={`/blog/post/${next.slug}`}
+                    label={`${Translate('blog.next')} →`}
+                    title={next.shortTitle}
+                    alignRight
+                  />
+                )}
+                {nextJourney && (
+                  <Neighbour
+                    href={`/blog/jornada/${nextJourney.slug}`}
+                    label={`${Translate('blog.next_journey')} →`}
+                    title={nextJourney.name}
+                    alignRight
+                  />
+                )}
               </div>
             )}
 
-            {hasSeries && (
+            {journey && (
               <div className="mt-12 rounded-2xl border border-paper-300 p-5 lg:hidden">
-                <SeriesNav
-                  series={post.series}
-                  posts={seriesPosts}
-                  currentSlug={post.slug}
-                />
+                <JourneyNav journey={journey} currentSlug={post.slug} />
               </div>
             )}
 
@@ -166,7 +179,7 @@ export async function getStaticProps({ params }: Params) {
       author: author || 'Helena Strada',
       content: html,
       headings,
-      seriesPosts: post.series ? getSeriesPosts(summaries, post.series.key) : []
+      journey: post.journey ? getJourney(summaries, post.journey.slug) : null
     }
   };
 }

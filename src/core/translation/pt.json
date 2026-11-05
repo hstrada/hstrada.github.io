@@ -74,7 +74,7 @@
     "description": "Posts em português, passo a passo, sobre o que estudo e construo no dia a dia.",
     "latest": "Publicações recentes",
     "elsewhere": "Em outros lugares",
-    "all": "Ver todos os posts"
+    "all": "Ver as jornadas"
   },
   "stack": {
     "eyebrow": "03 — Stack",
@@ -107,27 +107,29 @@
     "motto": "Foco, persistência e consistência."
   },
   "blog": {
-    "title": "Blog",
-    "description": "Séries passo a passo sobre banco de dados, backend, frontend, Kotlin e C# — escritas do jeito que eu explicaria em sala.",
-    "back": "Voltar ao blog",
-    "posts": "posts",
-    "series_count": "séries",
+    "title": "Jornadas",
+    "description": "Cursos escritos, passo a passo, sobre banco de dados, backend e frontend — do jeito que eu explicaria em sala.",
+    "back": "Voltar às jornadas",
+    "areas": "áreas",
+    "journeys": "jornadas",
+    "lesson": "Aula",
+    "lessons": "aulas",
+    "of": "de",
     "minutes": "min de leitura",
     "search": "Buscar por título, assunto ou tecnologia…",
-    "all": "Todos",
+    "all": "Todas",
     "standalone": "Avulsos",
-    "latest": "Mais recente",
-    "read": "Ler post",
     "results": "resultados",
     "empty_title": "Nada encontrado.",
     "empty_description": "Tente outro termo ou limpe os filtros.",
     "clear": "Limpar filtros",
-    "series_order": "Em ordem de leitura",
-    "in_series": "Nesta série",
+    "start": "Começar jornada",
+    "see_journey": "Ver jornada",
+    "more_lessons": "mais",
+    "in_journey": "Nesta jornada",
     "on_this_page": "Nesta página",
-    "previous": "Anterior",
-    "next": "Próximo",
-    "part": "Parte",
-    "since": "primeiro post"
+    "previous": "Aula anterior",
+    "next": "Próxima aula",
+    "next_journey": "Próxima jornada"
   }
 }

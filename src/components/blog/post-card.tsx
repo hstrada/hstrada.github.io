@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PostSummary } from 'lib/api';
 import DateFormatter from './date-formatter';
-import { SeriesBadge } from './series-badge';
 import { Translate } from '../../core/utils/translate';
 
 type Props = {
@@ -35,8 +34,10 @@ export const PostCard = ({ post, priority = false }: Props) => {
           priority={priority}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {post.series && (
-          <SeriesBadge series={post.series} className="absolute left-4 top-4" />
+        {post.journey && (
+          <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] truncate rounded-full bg-yellow-500 px-2.5 py-1 font-display text-[11px] font-semibold uppercase tracking-wider text-ink">
+            {post.journey.name} · {post.journey.lesson}/{post.journey.total}
+          </span>
         )}
       </div>
       <div className="flex flex-1 flex-col p-5 md:p-6">
@@ -48,54 +49,6 @@ export const PostCard = ({ post, priority = false }: Props) => {
         </p>
         <div className="mt-5">
           <Meta post={post} />
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-export const FeaturedPostCard = ({ post }: Props) => {
-  return (
-    <Link
-      href={`/blog/post/${post.slug}`}
-      className="group grid overflow-hidden rounded-3xl bg-ink text-paper lg:grid-cols-12"
-    >
-      <div className="relative aspect-[16/10] overflow-hidden lg:col-span-7 lg:aspect-auto lg:min-h-[26rem]">
-        <Image
-          src={post.wideCover}
-          alt=""
-          fill
-          priority
-          sizes="(min-width: 1024px) 60vw, 100vw"
-          className="object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
-      <div className="flex flex-col justify-between gap-10 p-6 sm:p-8 lg:col-span-5 lg:p-10">
-        <div>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="rounded-full bg-yellow-500 px-3 py-1 font-display text-[11px] font-semibold uppercase tracking-wider text-ink">
-              {Translate('blog.latest')}
-            </span>
-            {post.series && (
-              <span className="font-display text-xs uppercase tracking-wider text-ink-400">
-                {post.series.name} · {Translate('blog.part')}{' '}
-                {String(post.series.number).padStart(2, '0')}
-              </span>
-            )}
-          </div>
-          <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            {post.shortTitle}
-          </h2>
-          <p className="mt-4 max-w-md text-paper-300/80">{post.excerpt}</p>
-        </div>
-        <div className="flex items-end justify-between gap-4">
-          <div className="text-xs text-ink-400">
-            <DateFormatter dateString={post.date} /> · {post.readingTime}{' '}
-            {Translate('blog.minutes')}
-          </div>
-          <span className="rounded-full border border-ink-600 px-4 py-2 text-sm font-medium transition-colors group-hover:border-yellow-500 group-hover:bg-yellow-500 group-hover:text-ink">
-            {Translate('blog.read')} →
-          </span>
         </div>
       </div>
     </Link>

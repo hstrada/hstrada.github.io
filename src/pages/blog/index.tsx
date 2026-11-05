@@ -3,16 +3,17 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FiSearch, FiX } from 'react-icons/fi';
 
-import { getPostSummaries, getSeries, PostSummary, Series } from 'lib/api';
+import { Area, getAreas, getPostSummaries, PostSummary } from 'lib/api';
 
 import { Header } from 'components/organisms/Header';
 import { Footer } from 'components/organisms/Footer';
-import { FeaturedPostCard, PostCard } from 'components/blog/post-card';
+import { JourneyCard } from 'components/blog/journey-card';
+import { PostCard } from 'components/blog/post-card';
 import { Translate } from '../../core/utils/translate';
 
 type Props = {
   posts: PostSummary[];
-  series: Series[];
+  areas: Area[];
 };
 
 const ALL = 'all';
@@ -26,16 +27,21 @@ const normalize = (text: string) =>
 
 const searchableText = (post: PostSummary) =>
   normalize(
-    [post.title, post.excerpt, post.series?.name, ...post.categories].join(' ')
+    [
+      post.title,
+      post.excerpt,
+      post.journey?.name,
+      post.journey?.areaName,
+      ...post.categories
+    ].join(' ')
   );
 
-export default function Blog({ posts, series }: Props) {
+export default function Blog({ posts, areas }: Props) {
   const router = useRouter();
   const [query, setQuery] = useState('');
 
-  // The selected series lives in the URL, so /blog?serie=BD can be shared.
-  const filter =
-    typeof router.query.serie === 'string' ? router.query.serie : ALL;
+  // The selected area lives in the URL, so /blog?area=backend can be shared.
+  const filter = typeof router.query.area === 'string' ? router.query.area : ALL;
 
   // Keeps the selected chip visible in the horizontally scrolling row.
   const chipsRef = useRef<HTMLDivElement>(null);
@@ -53,62 +59,58 @@ export default function Blog({ posts, series }: Props) {
   }, [filter, router.isReady]);
 
   const selectFilter = (value: string) => {
-    const nextQuery = value === ALL ? {} : { serie: value };
+    const nextQuery = value === ALL ? {} : { area: value };
     router.replace({ pathname: '/blog', query: nextQuery }, undefined, {
       shallow: true,
       scroll: false
     });
   };
 
-  const activeSeries = series.find((item) => item.key === filter);
   const isSearching = query.trim().length > 0;
-  const showFeatured = filter === ALL && !isSearching;
+  const standalonePosts = posts.filter((post) => !post.journey);
+  const journeyCount = areas.reduce((total, area) => total + area.journeys.length, 0);
 
   const results = useMemo(() => {
     const terms = normalize(query).split(/\s+/).filter(Boolean);
 
-    const filtered = posts.filter((post) => {
-      if (filter === STANDALONE && post.series) return false;
-      if (filter !== ALL && filter !== STANDALONE && post.series?.key !== filter)
+    return posts.filter((post) => {
+      if (filter === STANDALONE && post.journey) return false;
+      if (filter !== ALL && filter !== STANDALONE && post.journey?.areaKey !== filter)
         return false;
 
       const text = searchableText(post);
       return terms.every((term) => text.includes(term));
     });
+  }, [posts, query, filter]);
 
-    // A series reads best in order; everything else stays newest first.
-    if (activeSeries) {
-      return [...filtered].sort((a, b) => a.series.number - b.series.number);
-    }
-    return filtered;
-  }, [posts, query, filter, activeSeries]);
-
-  const grid = showFeatured ? results.slice(1) : results;
-  const firstYear = Math.min(...posts.map((post) => Number(post.date.slice(0, 4))));
-  const hasStandalone = posts.some((post) => !post.series);
+  const visibleAreas = areas.filter(
+    (area) => filter === ALL || filter === area.key
+  );
+  const showStandalone =
+    standalonePosts.length > 0 && (filter === ALL || filter === STANDALONE);
 
   const filters = [
-    { key: ALL, label: Translate('blog.all'), count: posts.length },
-    ...series.map((item) => ({
-      key: item.key,
-      label: item.name,
-      count: item.count
+    { key: ALL, label: Translate('blog.all'), count: journeyCount },
+    ...areas.map((area) => ({
+      key: area.key,
+      label: area.name,
+      count: area.journeys.length
     })),
-    ...(hasStandalone
+    ...(standalonePosts.length > 0
       ? [
           {
             key: STANDALONE,
             label: Translate('blog.standalone'),
-            count: posts.filter((post) => !post.series).length
+            count: standalonePosts.length
           }
         ]
       : [])
   ];
 
   const stats = [
-    { value: posts.length, label: Translate('blog.posts') },
-    { value: series.length, label: Translate('blog.series_count') },
-    { value: firstYear, label: Translate('blog.since') }
+    { value: areas.length, label: Translate('blog.areas') },
+    { value: journeyCount, label: Translate('blog.journeys') },
+    { value: posts.length - standalonePosts.length, label: Translate('blog.lessons') }
   ];
 
   const clear = () => {
@@ -119,7 +121,7 @@ export default function Blog({ posts, series }: Props) {
   return (
     <>
       <Head>
-        <title>Blog — Helena Strada</title>
+        <title>{`${Translate('blog.title')} — Helena Strada`}</title>
         <meta name="description" content={Translate('blog.description')} />
       </Head>
       <Header />
@@ -210,48 +212,75 @@ export default function Blog({ posts, series }: Props) {
           </div>
         </div>
 
-        <section className="container-site pb-24 pt-10 md:pt-12">
-          {showFeatured && results[0] && (
-            <div className="mb-12">
-              <FeaturedPostCard post={results[0]} />
-            </div>
-          )}
+        <div className="container-site pb-24 pt-10 md:pt-12">
+          {isSearching ? (
+            <section>
+              {results.length > 0 ? (
+                <>
+                  <h2 className="mb-8 font-display text-2xl font-semibold tracking-tight">
+                    {results.length} {Translate('blog.results')}
+                  </h2>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {results.map((post) => (
+                      <PostCard key={post.slug} post={post} />
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <div className="rounded-3xl border border-dashed border-paper-300 px-6 py-20 text-center">
+                  <p className="font-display text-2xl font-semibold">
+                    {Translate('blog.empty_title')}
+                  </p>
+                  <p className="mt-2 text-ink-600">
+                    {Translate('blog.empty_description')}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={clear}
+                    className="mt-6 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-yellow-500 hover:text-ink"
+                  >
+                    {Translate('blog.clear')}
+                  </button>
+                </div>
+              )}
+            </section>
+          ) : (
+            <div className="space-y-16 md:space-y-20">
+              {visibleAreas.map((area) => (
+                <section key={area.key} aria-labelledby={`area-${area.key}`}>
+                  <h2
+                    id={`area-${area.key}`}
+                    className="font-display text-3xl font-bold tracking-tight sm:text-4xl"
+                  >
+                    {area.name}
+                  </h2>
+                  <p className="mt-2 text-ink-600">{area.description}</p>
+                  <div className="mt-8 grid gap-6 lg:grid-cols-2">
+                    {area.journeys.map((journey) => (
+                      <JourneyCard key={journey.slug} journey={journey} />
+                    ))}
+                  </div>
+                </section>
+              ))}
 
-          {(activeSeries || isSearching) && results.length > 0 && (
-            <div className="mb-8 flex flex-wrap items-baseline justify-between gap-2">
-              <h2 className="font-display text-2xl font-semibold tracking-tight">
-                {activeSeries ? activeSeries.name : `${results.length} ${Translate('blog.results')}`}
-              </h2>
-              {activeSeries && (
-                <span className="eyebrow">{Translate('blog.series_order')}</span>
+              {showStandalone && (
+                <section aria-labelledby="area-standalone">
+                  <h2
+                    id="area-standalone"
+                    className="font-display text-3xl font-bold tracking-tight sm:text-4xl"
+                  >
+                    {Translate('blog.standalone')}
+                  </h2>
+                  <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {standalonePosts.map((post) => (
+                      <PostCard key={post.slug} post={post} />
+                    ))}
+                  </div>
+                </section>
               )}
             </div>
           )}
-
-          {results.length > 0 ? (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {grid.map((post, index) => (
-                <PostCard key={post.slug} post={post} priority={index < 3} />
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-3xl border border-dashed border-paper-300 px-6 py-20 text-center">
-              <p className="font-display text-2xl font-semibold">
-                {Translate('blog.empty_title')}
-              </p>
-              <p className="mt-2 text-ink-600">
-                {Translate('blog.empty_description')}
-              </p>
-              <button
-                type="button"
-                onClick={clear}
-                className="mt-6 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-yellow-500 hover:text-ink"
-              >
-                {Translate('blog.clear')}
-              </button>
-            </div>
-          )}
-        </section>
+        </div>
       </main>
 
       <Footer />
@@ -265,7 +294,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts,
-      series: getSeries(posts)
+      areas: getAreas(posts)
     }
   };
 };

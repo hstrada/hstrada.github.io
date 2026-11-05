@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PostSummary } from 'lib/api';
 import DateFormatter from '../date-formatter';
-import { SeriesBadge } from '../series-badge';
 import PostTitle from './post-title';
 import { Translate } from '../../../core/utils/translate';
 
@@ -16,19 +15,17 @@ const PostHeader = ({ post, author }: Props) => {
     <header>
       <div className="max-w-4xl">
         <Link
-          href="/blog"
+          href={post.journey ? `/blog/jornada/${post.journey.slug}` : '/blog'}
           className="text-sm text-ink-600 transition-colors hover:text-ink"
         >
-          ← {Translate('blog.back')}
+          ← {post.journey ? post.journey.name : Translate('blog.back')}
         </Link>
 
-        {post.series && (
-          <div className="mt-8 flex items-center gap-3">
-            <SeriesBadge series={post.series} />
-            <span className="font-display text-sm text-ink-600">
-              {post.series.name}
-            </span>
-          </div>
+        {post.journey && (
+          <p className="eyebrow mt-8">
+            {post.journey.areaName} · {Translate('blog.lesson')}{' '}
+            {post.journey.lesson} {Translate('blog.of')} {post.journey.total}
+          </p>
         )}
 
         <div className="mt-4">

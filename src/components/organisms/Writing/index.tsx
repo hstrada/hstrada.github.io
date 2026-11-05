@@ -54,7 +54,7 @@ export const Writing = ({ latest }: TWritingProps) => {
                   className="group flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
                 >
                   <span className="font-medium transition-colors group-hover:text-yellow-600">
-                    {post.title}
+                    {post.shortTitle}
                   </span>
                   <span className="shrink-0 text-xs text-ink-400">
                     <DateFormatter dateString={post.date} />
